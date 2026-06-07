@@ -1,0 +1,40 @@
+[20:09:54] han/S01001/do ▶ F1=0.33 ROC=0.69 PR=0.23 Brier=0.002 α*=0.40 events=5/1945
+[20:09:54]   han/S01001/toc 고정기준 단일클래스 → 분위기준 thr=2.178
+[20:09:54] han/S01001/toc ▶ F1=0.66 ROC=0.90 PR=0.69 Brier=0.049 α*=0.35 events=185/1870
+[20:09:54]   han/S01001/tn 고정기준 단일클래스 → 분위기준 thr=2.186
+[20:09:54] han/S01001/tn ▶ F1=0.69 ROC=0.91 PR=0.66 Brier=0.051 α*=0.35 events=190/1910
+[20:09:55]   han/S01001/tp 고정기준 단일클래스 → 분위기준 thr=0.008889
+[20:09:55] han/S01001/tp ▶ F1=0.53 ROC=0.86 PR=0.55 Brier=0.072 α*=0.40 events=180/1805
+[20:09:55] han/S01001/chl-a ▶ F1=0.76 ROC=0.95 PR=0.80 Brier=0.055 α*=0.30 events=300/2000
+[20:09:55] nak/S02020/do ▶ F1=0.55 ROC=0.93 PR=0.60 Brier=0.016 α*=0.65 events=45/1885
+[20:09:55]   nak/S02020/toc 고정기준 단일클래스 → 분위기준 thr=3.483
+[20:09:55] nak/S02020/toc ▶ F1=0.42 ROC=0.79 PR=0.39 Brier=0.080 α*=0.25 events=190/1925
+[20:09:55] nak/S02020/tn ▶ F1=0.86 ROC=0.92 PR=0.92 Brier=0.095 α*=0.45 events=815/1865
+[20:09:56] nak/S02020/tp ▶ F1=0.12 ROC=0.97 PR=0.05 Brier=0.004 α*=0.10 events=5/1855
+[20:09:56] nak/S02020/chl-a ▶ F1=0.82 ROC=0.89 PR=0.89 Brier=0.131 α*=0.45 events=890/1890
+[20:09:56] geum/S03009/do ▶ F1=0.95 ROC=0.99 PR=0.99 Brier=0.017 α*=0.50 events=495/2165
+[20:09:56]   geum/S03009/toc 고정기준 단일클래스 → 분위기준 thr=2.683
+[20:09:56] geum/S03009/toc ▶ F1=0.66 ROC=0.93 PR=0.75 Brier=0.046 α*=0.55 events=210/2100
+[20:09:56]   geum/S03009/tn 고정기준 단일클래스 → 분위기준 thr=1.789
+[20:09:56] geum/S03009/tn ▶ F1=0.65 ROC=0.96 PR=0.68 Brier=0.049 α*=0.20 events=210/2120
+[20:09:56]   geum/S03009/tp 고정기준 단일클래스 → 분위기준 thr=0.03491
+[20:09:57] geum/S03009/tp ▶ F1=0.80 ROC=0.96 PR=0.83 Brier=0.031 α*=0.30 events=210/2140
+[20:09:57]   geum/S03009/chl-a 고정기준 단일클래스 → 분위기준 thr=6.545
+[20:09:57] geum/S03009/chl-a ▶ F1=0.58 ROC=0.89 PR=0.58 Brier=0.061 α*=0.55 events=210/2135
+[20:09:57]   yeong/S04008/do 고정기준 단일클래스 → 분위기준 thr=7.785
+[20:09:57] yeong/S04008/do ▶ F1=0.84 ROC=0.97 PR=0.88 Brier=0.028 α*=0.45 events=215/2160
+[20:09:57]   yeong/S04008/toc 고정기준 단일클래스 → 분위기준 thr=2.361
+[20:09:57] yeong/S04008/toc ▶ F1=0.82 ROC=0.97 PR=0.88 Brier=0.029 α*=0.45 events=210/2110
+[20:09:57]   yeong/S04008/tn 고정기준 단일클래스 → 분위기준 thr=1.586
+[20:09:58] yeong/S04008/tn ▶ F1=0.84 ROC=0.97 PR=0.89 Brier=0.026 α*=0.70 events=205/2060
+[20:09:58]   yeong/S04008/tp 고정기준 단일클래스 → 분위기준 thr=0.009913
+[20:09:58] yeong/S04008/tp ▶ F1=0.53 ROC=0.91 PR=0.60 Brier=0.067 α*=0.55 events=204/2050
+[20:09:58] yeong/S04008/chl-a ▶ F1=0.77 ROC=0.91 PR=0.81 Brier=0.111 α*=0.35 events=672/2110
+[20:09:58] alert_skill_zeroshot.csv 저장 (20행)
+[20:09:58] phase5_alert_zeroshot.md 저장
+[20:09:58] 타임라인 저장 C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\reports\figures\alert_timeline_zeroshot_han_S01001_tp.png
+[20:09:58] 타임라인 저장 C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\reports\figures\alert_timeline_zeroshot_han_S01001_do.png
+[20:09:59] 타임라인 저장 C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\reports\figures\alert_timeline_zeroshot_han_S01001_toc.png
+[20:09:59] 타임라인 저장 C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\reports\figures\alert_timeline_zeroshot_han_S01001_tn.png
+[20:09:59] 타임라인 저장 C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\reports\figures\alert_timeline_zeroshot_han_S01001_tp.png
+[20:09:59] 타임라인 저장 C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\reports\figures\alert_timeline_zeroshot_han_S01001_chl-a.png

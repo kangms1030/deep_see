@@ -1,0 +1,8 @@
+{
+  "target": "tn",
+  "tag": "ctx1024",
+  "context": 1024,
+  "rank": 16,
+  "num_steps": 1500,
+  "lora_lr": 5e-05
+}

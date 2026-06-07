@@ -1,0 +1,54 @@
+[00:42:49] 대표지점 공변량 윈도우 확보: ['S01001', 'S02020', 'S03009', 'S04008']
+[00:43:36] 로드 완료 | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=2.33GB
+[00:43:50] S01001/do zs NSE nocov=0.843 cov=0.837 (Δ=-0.006) | CRPS 0.275->0.277
+[00:43:55] S02020/do zs NSE nocov=0.848 cov=0.851 (Δ=+0.002) | CRPS 0.519->0.516
+[00:43:58] S03009/do zs NSE nocov=0.815 cov=0.800 (Δ=-0.016) | CRPS 0.183->0.185
+[00:44:02] S04008/do zs NSE nocov=0.786 cov=0.781 (Δ=-0.005) | CRPS 0.326->0.325
+[00:44:02] [lora_nocov/do] fit items=67 steps=400
+[00:45:35] S01001/do lora_nocov NSE=0.844 CRPS=0.273
+[00:45:37] S02020/do lora_nocov NSE=0.848 CRPS=0.518
+[00:45:38] S03009/do lora_nocov NSE=0.814 CRPS=0.182
+[00:45:38] S04008/do lora_nocov NSE=0.787 CRPS=0.324
+[00:45:39] [lora_cov/do] fit items=67 steps=400
+[00:47:24] S01001/do lora_cov NSE=0.838 CRPS=0.276
+[00:47:26] S02020/do lora_cov NSE=0.851 CRPS=0.516
+[00:47:27] S03009/do lora_cov NSE=0.796 CRPS=0.186
+[00:47:28] S04008/do lora_cov NSE=0.782 CRPS=0.324
+[00:47:28] 완료. cov_ablation.csv (16행)
+[00:47:28] cov_ablation.md 저장
+[00:48:05] 대표지점 공변량 윈도우 확보: ['S01001', 'S02020', 'S03009', 'S04008']
+[00:48:07] 로드 완료 | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=2.30GB
+[00:48:21] S01001/do zs NSE nocov=0.843 cov=0.837 (Δ=-0.006) | CRPS 0.275->0.277
+[00:48:27] S02020/do zs NSE nocov=0.848 cov=0.851 (Δ=+0.002) | CRPS 0.519->0.516
+[00:48:30] S03009/do zs NSE nocov=0.815 cov=0.800 (Δ=-0.016) | CRPS 0.183->0.185
+[00:48:33] S04008/do zs NSE nocov=0.786 cov=0.781 (Δ=-0.005) | CRPS 0.326->0.325
+[00:48:34] [lora_nocov/do] fit items=67 steps=1000
+[00:52:40] S01001/do lora_nocov NSE=0.846 CRPS=0.271
+[00:52:42] S02020/do lora_nocov NSE=0.849 CRPS=0.516
+[00:52:43] S03009/do lora_nocov NSE=0.811 CRPS=0.182
+[00:52:44] S04008/do lora_nocov NSE=0.791 CRPS=0.321
+[00:52:44] [lora_cov/do] fit items=67 steps=1000
+[00:54:18] 대표지점 공변량 윈도우 확보: ['S01001', 'S02020', 'S03009', 'S04008']
+[00:54:20] 로드 완료 | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=2.29GB
+[00:54:34] S01001/do zs NSE nocov=0.843 cov=0.837 (Δ=-0.006) | CRPS 0.275->0.277
+[00:54:39] S02020/do zs NSE nocov=0.848 cov=0.851 (Δ=+0.002) | CRPS 0.519->0.516
+[00:54:43] S03009/do zs NSE nocov=0.815 cov=0.800 (Δ=-0.016) | CRPS 0.183->0.185
+[00:54:46] S04008/do zs NSE nocov=0.786 cov=0.781 (Δ=-0.005) | CRPS 0.326->0.325
+[00:54:51] S01001/toc zs NSE nocov=0.004 cov=-0.007 (Δ=-0.011) | CRPS 0.080->0.079
+[00:54:57] S02020/toc zs NSE nocov=0.566 cov=0.553 (Δ=-0.013) | CRPS 0.163->0.164
+[00:55:00] S03009/toc zs NSE nocov=0.372 cov=0.335 (Δ=-0.037) | CRPS 0.028->0.029
+[00:55:04] S04008/toc zs NSE nocov=0.181 cov=0.106 (Δ=-0.075) | CRPS 0.062->0.066
+[00:55:10] S01001/tn zs NSE nocov=0.429 cov=0.435 (Δ=+0.006) | CRPS 0.073->0.072
+[00:55:15] S02020/tn zs NSE nocov=0.172 cov=0.173 (Δ=+0.001) | CRPS 0.215->0.214
+[00:55:18] S03009/tn zs NSE nocov=-0.493 cov=-0.564 (Δ=-0.071) | CRPS 0.093->0.096
+[00:55:22] S04008/tn zs NSE nocov=-0.137 cov=-0.152 (Δ=-0.015) | CRPS 0.072->0.075
+[00:55:28] S01001/tp zs NSE nocov=0.394 cov=0.403 (Δ=+0.009) | CRPS 0.001->0.001
+[00:55:33] S02020/tp zs NSE nocov=0.589 cov=0.586 (Δ=-0.003) | CRPS 0.004->0.004
+[00:55:36] S03009/tp zs NSE nocov=0.432 cov=0.394 (Δ=-0.039) | CRPS 0.001->0.001
+[00:55:40] S04008/tp zs NSE nocov=0.118 cov=0.112 (Δ=-0.006) | CRPS 0.001->0.001
+[00:55:45] S01001/chl-a zs NSE nocov=0.384 cov=0.387 (Δ=+0.003) | CRPS 1.168->1.173
+[00:55:50] S02020/chl-a zs NSE nocov=0.041 cov=0.033 (Δ=-0.008) | CRPS 4.143->4.191
+[00:55:54] S03009/chl-a zs NSE nocov=-0.252 cov=-0.264 (Δ=-0.012) | CRPS 0.916->0.923
+[00:55:57] S04008/chl-a zs NSE nocov=-0.056 cov=-0.200 (Δ=-0.143) | CRPS 1.109->1.114
+[00:55:57] 완료. cov_ablation.csv (40행)
+[00:55:57] cov_ablation.md 저장

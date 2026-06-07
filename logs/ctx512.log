@@ -1,0 +1,84 @@
+[02:59:09] 로드 완료 | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=2.16GB
+[02:59:37] han zs@512:   4% (1/22) elapsed=  28.5s eta= 598.1s
+[03:00:06] han zs@512:   9% (2/22) elapsed=  57.1s eta= 570.9s
+[03:00:35] han zs@512:  18% (4/22) elapsed=  85.8s eta= 386.0s
+[03:01:15] han zs@512:  27% (6/22) elapsed= 125.8s eta= 335.5s
+[03:01:49] han zs@512:  36% (8/22) elapsed= 160.1s eta= 280.2s
+[03:02:35] han zs@512:  45% (10/22) elapsed= 206.2s eta= 247.4s
+[03:03:04] han zs@512:  50% (11/22) elapsed= 235.0s eta= 235.0s
+[03:03:44] han zs@512:  59% (13/22) elapsed= 275.1s eta= 190.5s
+[03:04:30] han zs@512:  68% (15/22) elapsed= 321.2s eta= 149.9s
+[03:05:16] han zs@512:  77% (17/22) elapsed= 367.3s eta= 108.0s
+[03:06:08] han zs@512:  86% (19/22) elapsed= 418.9s eta=  66.1s
+[03:07:02] han zs@512:  95% (21/22) elapsed= 473.4s eta=  22.5s
+[03:07:30] han zs@512: 100% (22/22) elapsed= 500.9s eta=   0.0s
+[03:07:47] nak zs@512:   4% (1/23) elapsed=  17.2s eta= 378.8s
+[03:08:28] nak zs@512:  13% (3/23) elapsed=  58.4s eta= 389.5s
+[03:09:13] nak zs@512:  21% (5/23) elapsed= 103.8s eta= 373.7s
+[03:09:42] nak zs@512:  26% (6/23) elapsed= 132.1s eta= 374.2s
+[03:10:16] nak zs@512:  34% (8/23) elapsed= 166.5s eta= 312.2s
+[03:10:44] nak zs@512:  39% (9/23) elapsed= 194.1s eta= 301.9s
+[03:11:13] nak zs@512:  47% (11/23) elapsed= 223.0s eta= 243.2s
+[03:11:30] nak zs@512:  52% (12/23) elapsed= 240.3s eta= 220.3s
+[03:12:16] nak zs@512:  60% (14/23) elapsed= 286.0s eta= 183.8s
+[03:12:40] nak zs@512:  65% (15/23) elapsed= 310.8s eta= 165.7s
+[03:13:32] nak zs@512:  73% (17/23) elapsed= 362.6s eta= 128.0s
+[03:13:44] nak zs@512:  78% (18/23) elapsed= 374.2s eta= 104.0s
+[03:14:41] nak zs@512:  86% (20/23) elapsed= 431.6s eta=  64.7s
+[03:15:10] nak zs@512:  91% (21/23) elapsed= 460.3s eta=  43.8s
+[03:16:05] nak zs@512: 100% (23/23) elapsed= 515.4s eta=   0.0s
+[03:16:22] geum zs@512:   7% (1/13) elapsed=  17.2s eta= 207.0s
+[03:16:51] geum zs@512:  15% (2/13) elapsed=  45.9s eta= 252.7s
+[03:17:14] geum zs@512:  23% (3/13) elapsed=  68.4s eta= 228.1s
+[03:17:42] geum zs@512:  30% (4/13) elapsed=  97.0s eta= 218.2s
+[03:17:59] geum zs@512:  38% (5/13) elapsed= 114.3s eta= 182.8s
+[03:18:28] geum zs@512:  46% (6/13) elapsed= 143.0s eta= 166.8s
+[03:18:57] geum zs@512:  53% (7/13) elapsed= 171.7s eta= 147.2s
+[03:19:26] geum zs@512:  61% (8/13) elapsed= 200.4s eta= 125.3s
+[03:19:49] geum zs@512:  69% (9/13) elapsed= 223.5s eta=  99.3s
+[03:20:12] geum zs@512:  76% (10/13) elapsed= 246.5s eta=  74.0s
+[03:20:35] geum zs@512:  84% (11/13) elapsed= 269.5s eta=  49.0s
+[03:21:03] geum zs@512:  92% (12/13) elapsed= 298.2s eta=  24.8s
+[03:21:31] geum zs@512: 100% (13/13) elapsed= 325.6s eta=   0.0s
+[03:21:59] yeong zs@512:  11% (1/9) elapsed=  28.7s eta= 229.5s
+[03:22:28] yeong zs@512:  22% (2/9) elapsed=  57.4s eta= 200.9s
+[03:22:45] yeong zs@512:  33% (3/9) elapsed=  74.7s eta= 149.4s
+[03:23:14] yeong zs@512:  44% (4/9) elapsed= 103.4s eta= 129.2s
+[03:23:42] yeong zs@512:  55% (5/9) elapsed= 131.6s eta= 105.3s
+[03:24:04] yeong zs@512:  66% (6/9) elapsed= 153.7s eta=  76.8s
+[03:24:33] yeong zs@512:  77% (7/9) elapsed= 182.4s eta=  52.1s
+[03:25:02] yeong zs@512:  88% (8/9) elapsed= 211.2s eta=  26.4s
+[03:25:29] yeong zs@512: 100% (9/9) elapsed= 238.7s eta=   0.0s
+[03:25:29] (a) zero-shot@512 완료: 280행 → C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\reports\tables\ctx512_zeroshot_all.csv
+[03:25:29] LoRA@512 config={'r': 16, 'lora_alpha': 32, 'lora_dropout': 0.05} steps=1500 lr=5e-05 bs=16
+[03:25:32] [LoRA512/do] fit items=67 val=67
+[03:29:02] [LoRA512/do] 학습 완료 | VRAM alloc=0.91 reserved=1.63 peak=1.63/15.93GB, smi_used=3.38GB
+[03:29:06] han/S01001/do lora512 NSE=0.865 CRPS=0.307
+[03:29:09] nak/S02020/do lora512 NSE=0.802 CRPS=0.598
+[03:29:12] geum/S03009/do lora512 NSE=0.958 CRPS=0.286
+[03:29:16] yeong/S04008/do lora512 NSE=0.700 CRPS=0.410
+[03:29:18] [LoRA512/toc] fit items=67 val=67
+[03:32:44] [LoRA512/toc] 학습 완료 | VRAM alloc=0.92 reserved=1.63 peak=2.15/15.93GB, smi_used=3.39GB
+[03:32:47] han/S01001/toc lora512 NSE=0.732 CRPS=0.080
+[03:32:50] nak/S02020/toc lora512 NSE=0.320 CRPS=0.222
+[03:32:54] geum/S03009/toc lora512 NSE=0.743 CRPS=0.049
+[03:32:57] yeong/S04008/toc lora512 NSE=0.489 CRPS=0.093
+[03:33:00] [LoRA512/tn] fit items=67 val=67
+[03:36:31] [LoRA512/tn] 학습 완료 | VRAM alloc=0.92 reserved=1.63 peak=2.15/15.93GB, smi_used=3.35GB
+[03:36:34] han/S01001/tn lora512 NSE=0.723 CRPS=0.065
+[03:36:37] nak/S02020/tn lora512 NSE=0.375 CRPS=0.215
+[03:36:41] geum/S03009/tn lora512 NSE=0.751 CRPS=0.057
+[03:36:44] yeong/S04008/tn lora512 NSE=0.838 CRPS=0.066
+[03:36:47] [LoRA512/tp] fit items=67 val=67
+[03:40:16] [LoRA512/tp] 학습 완료 | VRAM alloc=0.92 reserved=1.63 peak=2.15/15.93GB, smi_used=3.39GB
+[03:40:20] han/S01001/tp lora512 NSE=0.302 CRPS=0.001
+[03:40:23] nak/S02020/tp lora512 NSE=0.471 CRPS=0.005
+[03:40:26] geum/S03009/tp lora512 NSE=0.818 CRPS=0.002
+[03:40:30] yeong/S04008/tp lora512 NSE=0.592 CRPS=0.001
+[03:40:32] [LoRA512/chl-a] fit items=67 val=67
+[03:43:59] [LoRA512/chl-a] 학습 완료 | VRAM alloc=0.92 reserved=1.63 peak=2.15/15.93GB, smi_used=3.38GB
+[03:44:02] han/S01001/chl-a lora512 NSE=0.374 CRPS=2.710
+[03:44:05] nak/S02020/chl-a lora512 NSE=0.184 CRPS=4.704
+[03:44:09] geum/S03009/chl-a lora512 NSE=0.332 CRPS=0.492
+[03:44:12] yeong/S04008/chl-a lora512 NSE=0.299 CRPS=4.634
+[03:44:12] phase9_ctx512.md 저장

@@ -1,0 +1,203 @@
+[19:23:54] [do] 어댑터 로드 models\chronos_lora512_do\finetuned-ckpt | VRAM alloc=0.45 reserved=0.48 peak=0.48/15.93GB, smi_used=2.16GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.78GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.78GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.77GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.77GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.78GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.78GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.78GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.78GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.77GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.78GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.77GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.78GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.78GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.78GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.45 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.63 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.45 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+[19:35:04] [do] pooledδ(d5)={80: 0.036, 90: 0.085} α*=0.25 thr=5(low)
+do replay:   0%|          | 0/67 [00:00<?, ?it/s]do replay:   3%|▎         | 2/67 [00:00<00:28,  2.28it/s]do replay:   6%|▌         | 4/67 [00:01<00:25,  2.43it/s]do replay:   9%|▉         | 6/67 [00:02<00:26,  2.30it/s][VRAM-MON] VRAM alloc=0.45 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+do replay:  12%|█▏        | 8/67 [00:03<00:24,  2.40it/s]do replay:  15%|█▍        | 10/67 [00:04<00:23,  2.40it/s]do replay:  18%|█▊        | 12/67 [00:05<00:24,  2.24it/s]do replay:  21%|██        | 14/67 [00:06<00:24,  2.13it/s]do replay:  24%|██▍       | 16/67 [00:07<00:24,  2.04it/s]do replay:  27%|██▋       | 18/67 [00:08<00:23,  2.11it/s]do replay:  30%|██▉       | 20/67 [00:08<00:21,  2.21it/s]do replay:  33%|███▎      | 22/67 [00:09<00:20,  2.18it/s]do replay:  36%|███▌      | 24/67 [00:10<00:18,  2.28it/s]do replay:  39%|███▉      | 26/67 [00:11<00:17,  2.31it/s]do replay:  42%|████▏     | 28/67 [00:12<00:17,  2.29it/s]do replay:  45%|████▍     | 30/67 [00:13<00:16,  2.29it/s]do replay:  48%|████▊     | 32/67 [00:14<00:15,  2.26it/s]do replay:  51%|█████     | 34/67 [00:15<00:14,  2.30it/s]do replay:  54%|█████▎    | 36/67 [00:15<00:13,  2.30it/s]do replay:  57%|█████▋    | 38/67 [00:16<00:12,  2.35it/s]do replay:  60%|█████▉    | 40/67 [00:17<00:11,  2.40it/s][VRAM-MON] VRAM alloc=0.45 reserved=1.11 peak=1.11/15.93GB, smi_used=2.85GB
+do replay:  63%|██████▎   | 42/67 [00:18<00:10,  2.43it/s]do replay:  66%|██████▌   | 44/67 [00:19<00:09,  2.44it/s]do replay:  69%|██████▊   | 46/67 [00:19<00:08,  2.46it/s]do replay:  72%|███████▏  | 48/67 [00:20<00:07,  2.50it/s]do replay:  75%|███████▍  | 50/67 [00:21<00:07,  2.40it/s]do replay:  78%|███████▊  | 52/67 [00:22<00:06,  2.44it/s]do replay:  81%|████████  | 54/67 [00:23<00:05,  2.46it/s]do replay:  84%|████████▎ | 56/67 [00:23<00:04,  2.50it/s]do replay:  87%|████████▋ | 58/67 [00:24<00:03,  2.40it/s]do replay:  90%|████████▉ | 60/67 [00:25<00:02,  2.44it/s]do replay:  93%|█████████▎| 62/67 [00:26<00:02,  2.43it/s]do replay:  96%|█████████▌| 64/67 [00:27<00:01,  2.46it/s]do replay:  99%|█████████▊| 66/67 [00:28<00:00,  2.39it/s]do replay: 100%|██████████| 67/67 [00:28<00:00,  2.35it/s]
+[19:35:35] [toc] 어댑터 로드 models\chronos_lora512_toc\finetuned-ckpt | VRAM alloc=0.45 reserved=0.49 peak=1.11/15.93GB, smi_used=2.23GB
+[VRAM-MON] VRAM alloc=0.57 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.45 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.48 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[19:46:42] [toc] pooledδ(d5)={80: 0.016, 90: 0.02} α*=0.45 thr=6(high)
+toc replay:   0%|          | 0/67 [00:00<?, ?it/s]toc replay:   3%|▎         | 2/67 [00:00<00:24,  2.63it/s][VRAM-MON] VRAM alloc=0.45 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+toc replay:   6%|▌         | 4/67 [00:01<00:27,  2.33it/s]toc replay:   9%|▉         | 6/67 [00:02<00:27,  2.22it/s]toc replay:  12%|█▏        | 8/67 [00:03<00:25,  2.32it/s]toc replay:  15%|█▍        | 10/67 [00:04<00:23,  2.39it/s]toc replay:  18%|█▊        | 12/67 [00:05<00:23,  2.32it/s]toc replay:  21%|██        | 14/67 [00:06<00:23,  2.30it/s]toc replay:  24%|██▍       | 16/67 [00:06<00:21,  2.35it/s]toc replay:  27%|██▋       | 18/67 [00:07<00:21,  2.27it/s]toc replay:  30%|██▉       | 20/67 [00:08<00:20,  2.32it/s]toc replay:  33%|███▎      | 22/67 [00:09<00:19,  2.32it/s]toc replay:  36%|███▌      | 24/67 [00:10<00:19,  2.26it/s]toc replay:  39%|███▉      | 26/67 [00:11<00:18,  2.26it/s]toc replay:  42%|████▏     | 28/67 [00:12<00:17,  2.25it/s]toc replay:  45%|████▍     | 30/67 [00:13<00:16,  2.23it/s]toc replay:  48%|████▊     | 32/67 [00:13<00:15,  2.31it/s]toc replay:  51%|█████     | 34/67 [00:14<00:14,  2.26it/s]toc replay:  54%|█████▎    | 36/67 [00:15<00:13,  2.22it/s][VRAM-MON] VRAM alloc=0.45 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+toc replay:  57%|█████▋    | 38/67 [00:16<00:12,  2.38it/s]toc replay:  60%|█████▉    | 40/67 [00:17<00:12,  2.23it/s]toc replay:  63%|██████▎   | 42/67 [00:18<00:11,  2.16it/s]toc replay:  66%|██████▌   | 44/67 [00:19<00:10,  2.24it/s]toc replay:  69%|██████▊   | 46/67 [00:20<00:09,  2.22it/s]toc replay:  72%|███████▏  | 48/67 [00:21<00:08,  2.26it/s]toc replay:  75%|███████▍  | 50/67 [00:22<00:07,  2.17it/s]toc replay:  78%|███████▊  | 52/67 [00:22<00:06,  2.27it/s]toc replay:  81%|████████  | 54/67 [00:23<00:05,  2.32it/s]toc replay:  84%|████████▎ | 56/67 [00:24<00:05,  2.03it/s]toc replay:  87%|████████▋ | 58/67 [00:25<00:04,  2.17it/s]toc replay:  90%|████████▉ | 60/67 [00:26<00:03,  2.25it/s]toc replay:  93%|█████████▎| 62/67 [00:27<00:02,  2.32it/s]toc replay:  96%|█████████▌| 64/67 [00:28<00:01,  2.26it/s]toc replay:  99%|█████████▊| 66/67 [00:29<00:00,  2.33it/s]toc replay: 100%|██████████| 67/67 [00:29<00:00,  2.27it/s]
+[19:47:14] [tn] 어댑터 로드 models\chronos_lora512_tn\finetuned-ckpt | VRAM alloc=0.45 reserved=0.49 peak=1.11/15.93GB, smi_used=2.24GB
+[VRAM-MON] VRAM alloc=0.45 reserved=0.49 peak=1.11/15.93GB, smi_used=2.24GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.63 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.45 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.66 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.84GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.74GB
+[VRAM-MON] VRAM alloc=0.60 reserved=1.10 peak=1.11/15.93GB, smi_used=2.74GB
+[VRAM-MON] VRAM alloc=0.69 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.82GB
+[19:54:58] [tn] pooledδ(d5)={80: 0.032, 90: 0.059} α*=0.25 thr=3(high)
+tn replay:   0%|          | 0/48 [00:00<?, ?it/s]tn replay:  10%|█         | 5/48 [00:00<00:04,  8.88it/s]tn replay:  21%|██        | 10/48 [00:01<00:04,  9.00it/s]tn replay:  31%|███▏      | 15/48 [00:01<00:03,  9.03it/s]tn replay:  42%|████▏     | 20/48 [00:02<00:03,  9.12it/s]tn replay:  52%|█████▏    | 25/48 [00:02<00:02,  9.18it/s]tn replay:  62%|██████▎   | 30/48 [00:03<00:01,  9.13it/s]tn replay:  73%|███████▎  | 35/48 [00:03<00:01,  9.19it/s][VRAM-MON] VRAM alloc=0.45 reserved=1.10 peak=1.11/15.93GB, smi_used=2.82GB
+tn replay:  83%|████████▎ | 40/48 [00:04<00:00,  8.99it/s]tn replay:  94%|█████████▍| 45/48 [00:04<00:00,  9.03it/s]tn replay: 100%|██████████| 48/48 [00:05<00:00,  9.07it/s]
+[19:55:05] [tp] 어댑터 로드 models\chronos_lora512_tp\finetuned-ckpt | VRAM alloc=0.45 reserved=0.49 peak=1.11/15.93GB, smi_used=2.20GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.82GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.45 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.81GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.60 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[20:02:43] [tp] pooledδ(d5)={80: 0.0, 90: 0.001} α*=0.35 thr=0.1(high)
+tp replay:   0%|          | 0/48 [00:00<?, ?it/s]tp replay:  10%|█         | 5/48 [00:00<00:04,  8.89it/s]tp replay:  21%|██        | 10/48 [00:01<00:04,  8.87it/s]tp replay:  31%|███▏      | 15/48 [00:01<00:03,  8.96it/s]tp replay:  42%|████▏     | 20/48 [00:02<00:03,  9.10it/s]tp replay:  52%|█████▏    | 25/48 [00:02<00:02,  9.19it/s]tp replay:  62%|██████▎   | 30/48 [00:03<00:01,  9.09it/s]tp replay:  73%|███████▎  | 35/48 [00:03<00:01,  9.13it/s]tp replay:  83%|████████▎ | 40/48 [00:04<00:00,  9.04it/s]tp replay:  94%|█████████▍| 45/48 [00:04<00:00,  9.04it/s]tp replay: 100%|██████████| 48/48 [00:05<00:00,  9.05it/s]
+[20:02:49] [chl-a] 어댑터 로드 models\chronos_lora512_chl-a\finetuned-ckpt | VRAM alloc=0.45 reserved=0.49 peak=1.11/15.93GB, smi_used=2.25GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.57 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.48 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.66 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.45 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.85GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.48 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.87GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.86GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.83GB
+[VRAM-MON] VRAM alloc=0.63 reserved=1.10 peak=1.11/15.93GB, smi_used=2.76GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.76GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.76GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.76GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.80GB
+[20:10:47] [chl-a] pooledδ(d5)={80: 0.194, 90: 0.376} α*=0.15 thr=20(high)
+chl-a replay:   0%|          | 0/50 [00:00<?, ?it/s]chl-a replay:  10%|█         | 5/50 [00:00<00:05,  8.85it/s]chl-a replay:  20%|██        | 10/50 [00:01<00:04,  8.85it/s]chl-a replay:  30%|███       | 15/50 [00:01<00:03,  9.00it/s]chl-a replay:  40%|████      | 20/50 [00:02<00:03,  8.95it/s]chl-a replay:  50%|█████     | 25/50 [00:02<00:02,  8.96it/s]chl-a replay:  60%|██████    | 30/50 [00:03<00:02,  8.97it/s]chl-a replay:  70%|███████   | 35/50 [00:03<00:01,  9.12it/s]chl-a replay:  80%|████████  | 40/50 [00:04<00:01,  8.97it/s]chl-a replay:  90%|█████████ | 45/50 [00:05<00:00,  8.94it/s]chl-a replay: 100%|██████████| 50/50 [00:05<00:00,  8.87it/s]chl-a replay: 100%|██████████| 50/50 [00:05<00:00,  8.93it/s]
+[20:10:56] 저장 완료: forecasts 67지점 / alert_log 600630행
+[replay] forecast rows=600630, alert rows=600630

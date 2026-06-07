@@ -1,0 +1,373 @@
+{
+  "station": "S03009",
+  "river": "geum",
+  "name": "현도",
+  "asof": "2019-04-25T22:00:00",
+  "targets": {
+    "do": {
+      "mode": "point+alert",
+      "threshold": 5.0,
+      "unit": "mg/L",
+      "direction": "low",
+      "alpha": 0.25,
+      "low_confidence": true,
+      "lead_day": null,
+      "max_level": null,
+      "baseline_persistence": 10.345763,
+      "horizons": [
+        {
+          "day": 1,
+          "median": 10.348565,
+          "q10": 10.23822,
+          "q90": 10.461995,
+          "q10_cal": 10.258209,
+          "q90_cal": 10.442006,
+          "q05_cal": 10.231102,
+          "q95_cal": 10.469444,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 2,
+          "median": 10.340278,
+          "q10": 10.16449,
+          "q90": 10.524028,
+          "q10_cal": 10.133802,
+          "q90_cal": 10.554715,
+          "q05_cal": 10.053287,
+          "q95_cal": 10.63481,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 3,
+          "median": 10.342367,
+          "q10": 10.12296,
+          "q90": 10.567021,
+          "q10_cal": 10.025281,
+          "q90_cal": 10.664701,
+          "q05_cal": 9.927102,
+          "q95_cal": 10.759401,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 4,
+          "median": 10.330697,
+          "q10": 10.088258,
+          "q90": 10.578712,
+          "q10_cal": 9.998933,
+          "q90_cal": 10.668037,
+          "q05_cal": 9.867612,
+          "q95_cal": 10.796081,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 5,
+          "median": 10.338367,
+          "q10": 10.073207,
+          "q90": 10.607654,
+          "q10_cal": 9.92944,
+          "q90_cal": 10.751421,
+          "q05_cal": 9.789711,
+          "q95_cal": 10.885431,
+          "p_exceed": 0.0,
+          "level": null
+        }
+      ]
+    },
+    "toc": {
+      "mode": "point(보수)+alert",
+      "threshold": 6.0,
+      "unit": "mg/L",
+      "direction": "high",
+      "alpha": 0.45,
+      "low_confidence": true,
+      "lead_day": null,
+      "max_level": null,
+      "baseline_persistence": 2.674895,
+      "horizons": [
+        {
+          "day": 1,
+          "median": 2.684697,
+          "q10": 2.628117,
+          "q90": 2.738847,
+          "q10_cal": 2.626987,
+          "q90_cal": 2.739976,
+          "q05_cal": 2.609905,
+          "q95_cal": 2.756004,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 2,
+          "median": 2.652241,
+          "q10": 2.513826,
+          "q90": 2.772527,
+          "q10_cal": 2.50945,
+          "q90_cal": 2.776903,
+          "q05_cal": 2.457085,
+          "q95_cal": 2.825478,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 3,
+          "median": 2.573914,
+          "q10": 2.342576,
+          "q90": 2.744976,
+          "q10_cal": 2.330146,
+          "q90_cal": 2.757405,
+          "q05_cal": 2.282718,
+          "q95_cal": 2.809843,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 4,
+          "median": 2.5406,
+          "q10": 2.346513,
+          "q90": 2.731554,
+          "q10_cal": 2.323508,
+          "q90_cal": 2.754559,
+          "q05_cal": 2.249783,
+          "q95_cal": 2.838174,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 5,
+          "median": 2.529372,
+          "q10": 2.345186,
+          "q90": 2.730813,
+          "q10_cal": 2.305884,
+          "q90_cal": 2.770115,
+          "q05_cal": 2.263189,
+          "q95_cal": 2.824129,
+          "p_exceed": 0.0,
+          "level": null
+        }
+      ]
+    },
+    "tn": {
+      "mode": "point+alert",
+      "threshold": 3.0,
+      "unit": "mg/L",
+      "direction": "high",
+      "alpha": 0.25,
+      "low_confidence": false,
+      "lead_day": null,
+      "max_level": null,
+      "baseline_persistence": 1.709024,
+      "horizons": [
+        {
+          "day": 1,
+          "median": 1.706596,
+          "q10": 1.657001,
+          "q90": 1.746924,
+          "q10_cal": 1.671599,
+          "q90_cal": 1.732326,
+          "q05_cal": 1.659238,
+          "q95_cal": 1.738185,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 2,
+          "median": 1.685535,
+          "q10": 1.61401,
+          "q90": 1.743807,
+          "q10_cal": 1.615122,
+          "q90_cal": 1.742695,
+          "q05_cal": 1.594834,
+          "q95_cal": 1.755391,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 3,
+          "median": 1.671639,
+          "q10": 1.586621,
+          "q90": 1.742755,
+          "q10_cal": 1.587966,
+          "q90_cal": 1.74141,
+          "q05_cal": 1.573706,
+          "q95_cal": 1.748827,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 4,
+          "median": 1.666377,
+          "q10": 1.578167,
+          "q90": 1.741135,
+          "q10_cal": 1.585112,
+          "q90_cal": 1.734191,
+          "q05_cal": 1.557668,
+          "q95_cal": 1.753692,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 5,
+          "median": 1.661895,
+          "q10": 1.569753,
+          "q90": 1.743053,
+          "q10_cal": 1.576782,
+          "q90_cal": 1.736024,
+          "q05_cal": 1.55367,
+          "q95_cal": 1.752148,
+          "p_exceed": 0.0,
+          "level": null
+        }
+      ]
+    },
+    "tp": {
+      "mode": "alert(보조)",
+      "threshold": 0.1,
+      "unit": "mg/L",
+      "direction": "high",
+      "alpha": 0.35,
+      "low_confidence": true,
+      "lead_day": null,
+      "max_level": null,
+      "baseline_persistence": 0.006125,
+      "horizons": [
+        {
+          "day": 1,
+          "median": 0.006306,
+          "q10": 0.004498,
+          "q90": 0.008487,
+          "q10_cal": 0.004876,
+          "q90_cal": 0.00811,
+          "q05_cal": 0.004155,
+          "q95_cal": 0.009163,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 2,
+          "median": 0.006322,
+          "q10": 0.00359,
+          "q90": 0.009715,
+          "q10_cal": 0.003289,
+          "q90_cal": 0.010015,
+          "q05_cal": 0.002014,
+          "q95_cal": 0.011851,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 3,
+          "median": 0.006448,
+          "q10": 0.0032,
+          "q90": 0.010431,
+          "q10_cal": 0.002956,
+          "q90_cal": 0.010675,
+          "q05_cal": 0.001794,
+          "q95_cal": 0.012513,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 4,
+          "median": 0.006507,
+          "q10": 0.00294,
+          "q90": 0.011027,
+          "q10_cal": 0.002508,
+          "q90_cal": 0.011459,
+          "q05_cal": 0.001087,
+          "q95_cal": 0.013702,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 5,
+          "median": 0.006614,
+          "q10": 0.002706,
+          "q90": 0.011507,
+          "q10_cal": 0.002838,
+          "q90_cal": 0.011375,
+          "q05_cal": 0.000896,
+          "q95_cal": 0.014163,
+          "p_exceed": 0.0,
+          "level": null
+        }
+      ]
+    },
+    "chl-a": {
+      "mode": "alert(녹조중심)",
+      "threshold": 20.0,
+      "unit": "mg/m^3",
+      "direction": "high",
+      "alpha": 0.15,
+      "low_confidence": false,
+      "lead_day": null,
+      "max_level": null,
+      "baseline_persistence": null,
+      "horizons": [
+        {
+          "day": 1,
+          "median": 6.37117,
+          "q10": 5.946138,
+          "q90": 6.743074,
+          "q10_cal": 5.979248,
+          "q90_cal": 6.709964,
+          "q05_cal": 5.802982,
+          "q95_cal": 6.853665,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 2,
+          "median": 5.922022,
+          "q10": 4.927874,
+          "q90": 6.821617,
+          "q10_cal": 4.949763,
+          "q90_cal": 6.799728,
+          "q05_cal": 4.658709,
+          "q95_cal": 7.056341,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 3,
+          "median": 5.548024,
+          "q10": 4.100221,
+          "q90": 6.877829,
+          "q10_cal": 4.088396,
+          "q90_cal": 6.889654,
+          "q05_cal": 3.684101,
+          "q95_cal": 7.294465,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 4,
+          "median": 5.327623,
+          "q10": 3.663071,
+          "q90": 6.953106,
+          "q10_cal": 3.594252,
+          "q90_cal": 7.021925,
+          "q05_cal": 3.097245,
+          "q95_cal": 7.580389,
+          "p_exceed": 0.0,
+          "level": null
+        },
+        {
+          "day": 5,
+          "median": 5.16579,
+          "q10": 3.392582,
+          "q90": 7.033012,
+          "q10_cal": 3.363427,
+          "q90_cal": 7.062167,
+          "q05_cal": 2.58441,
+          "q95_cal": 7.986674,
+          "p_exceed": 0.0,
+          "level": null
+        }
+      ]
+    }
+  }
+}

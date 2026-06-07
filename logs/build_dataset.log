@@ -1,0 +1,90 @@
+[19:32:41] 자동측정망 CSV 77개 발견 (Training+Validation)
+[19:32:52] CSV 로드:   5% (4/77) elapsed=  10.2s eta= 186.6s
+[19:33:05] CSV 로드:  10% (8/77) elapsed=  23.7s eta= 204.3s
+[19:33:19] CSV 로드:  15% (12/77) elapsed=  37.2s eta= 201.6s
+[19:33:34] CSV 로드:  20% (16/77) elapsed=  52.6s eta= 200.5s
+[19:33:59] CSV 로드:  25% (20/77) elapsed=  77.9s eta= 222.1s
+[19:34:29] CSV 로드:  31% (24/77) elapsed= 107.5s eta= 237.4s
+[19:35:01] CSV 로드:  36% (28/77) elapsed= 139.3s eta= 243.8s
+[19:35:30] CSV 로드:  41% (32/77) elapsed= 168.7s eta= 237.3s
+[19:35:57] CSV 로드:  46% (36/77) elapsed= 195.5s eta= 222.7s
+[19:36:15] CSV 로드:  51% (40/77) elapsed= 213.6s eta= 197.6s
+[19:36:34] CSV 로드:  57% (44/77) elapsed= 232.8s eta= 174.6s
+[19:37:01] CSV 로드:  62% (48/77) elapsed= 260.1s eta= 157.2s
+[19:37:31] CSV 로드:  67% (52/77) elapsed= 289.6s eta= 139.2s
+[19:37:58] CSV 로드:  72% (56/77) elapsed= 316.6s eta= 118.7s
+[19:38:09] CSV 로드:  77% (60/77) elapsed= 327.8s eta=  92.9s
+[19:38:22] CSV 로드:  83% (64/77) elapsed= 340.4s eta=  69.1s
+[19:38:34] CSV 로드:  88% (68/77) elapsed= 352.6s eta=  46.7s
+[19:38:45] CSV 로드:  93% (72/77) elapsed= 363.6s eta=  25.2s
+[19:38:58] CSV 로드:  98% (76/77) elapsed= 376.2s eta=   5.0s
+[19:39:01] CSV 로드: 100% (77/77) elapsed= 379.7s eta=   0.0s
+[19:39:01] 정제 long 행수=23,733,310 | 지점수=67
+[19:39:01] [han] long 행수=7,476,212 지점=22 → pivot 시작
+[19:39:01] han pivot:   4% (1/22) elapsed=   0.2s eta=   4.1s
+[19:39:01] han pivot:   9% (2/22) elapsed=   0.4s eta=   3.7s
+[19:39:02] han pivot:  18% (4/22) elapsed=   0.7s eta=   3.1s
+[19:39:02] han pivot:  27% (6/22) elapsed=   1.0s eta=   2.8s
+[19:39:02] han pivot:  36% (8/22) elapsed=   1.3s eta=   2.4s
+[19:39:03] han pivot:  45% (10/22) elapsed=   1.7s eta=   2.0s
+[19:39:03] han pivot:  50% (11/22) elapsed=   1.9s eta=   1.9s
+[19:39:03] han pivot:  59% (13/22) elapsed=   2.2s eta=   1.5s
+[19:39:04] han pivot:  68% (15/22) elapsed=   2.5s eta=   1.2s
+[19:39:04] han pivot:  77% (17/22) elapsed=   2.8s eta=   0.8s
+[19:39:04] han pivot:  86% (19/22) elapsed=   3.2s eta=   0.5s
+[19:39:05] han pivot:  95% (21/22) elapsed=   3.5s eta=   0.2s
+[19:39:05] han pivot: 100% (22/22) elapsed=   3.6s eta=   0.0s
+[19:39:05] [han] 저장 C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\data_processed\han_auto_hourly_wide.parquet  shape=(1211531, 12)
+[19:39:05] [nak] long 행수=8,133,790 지점=23 → pivot 시작
+[19:39:06] nak pivot:   4% (1/23) elapsed=   0.2s eta=   3.8s
+[19:39:06] nak pivot:  13% (3/23) elapsed=   0.5s eta=   3.3s
+[19:39:06] nak pivot:  21% (5/23) elapsed=   0.9s eta=   3.1s
+[19:39:06] nak pivot:  26% (6/23) elapsed=   1.1s eta=   3.0s
+[19:39:07] nak pivot:  34% (8/23) elapsed=   1.4s eta=   2.6s
+[19:39:07] nak pivot:  39% (9/23) elapsed=   1.6s eta=   2.4s
+[19:39:07] nak pivot:  47% (11/23) elapsed=   1.9s eta=   2.0s
+[19:39:07] nak pivot:  52% (12/23) elapsed=   2.0s eta=   1.9s
+[19:39:08] nak pivot:  60% (14/23) elapsed=   2.4s eta=   1.5s
+[19:39:08] nak pivot:  65% (15/23) elapsed=   2.5s eta=   1.3s
+[19:39:08] nak pivot:  73% (17/23) elapsed=   2.9s eta=   1.0s
+[19:39:08] nak pivot:  78% (18/23) elapsed=   3.0s eta=   0.8s
+[19:39:09] nak pivot:  86% (20/23) elapsed=   3.4s eta=   0.5s
+[19:39:09] nak pivot:  91% (21/23) elapsed=   3.6s eta=   0.3s
+[19:39:09] nak pivot: 100% (23/23) elapsed=   4.0s eta=   0.0s
+[19:39:10] [nak] 저장 C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\data_processed\nak_auto_hourly_wide.parquet  shape=(1249553, 12)
+[19:39:10] [geum] long 행수=4,677,940 지점=13 → pivot 시작
+[19:39:10] geum pivot:   7% (1/13) elapsed=   0.1s eta=   1.7s
+[19:39:10] geum pivot:  15% (2/13) elapsed=   0.3s eta=   1.6s
+[19:39:10] geum pivot:  23% (3/13) elapsed=   0.4s eta=   1.4s
+[19:39:10] geum pivot:  30% (4/13) elapsed=   0.6s eta=   1.3s
+[19:39:10] geum pivot:  38% (5/13) elapsed=   0.7s eta=   1.1s
+[19:39:11] geum pivot:  46% (6/13) elapsed=   0.9s eta=   1.0s
+[19:39:11] geum pivot:  53% (7/13) elapsed=   1.0s eta=   0.8s
+[19:39:11] geum pivot:  61% (8/13) elapsed=   1.2s eta=   0.7s
+[19:39:11] geum pivot:  69% (9/13) elapsed=   1.3s eta=   0.6s
+[19:39:11] geum pivot:  76% (10/13) elapsed=   1.4s eta=   0.4s
+[19:39:11] geum pivot:  84% (11/13) elapsed=   1.6s eta=   0.3s
+[19:39:11] geum pivot:  92% (12/13) elapsed=   1.7s eta=   0.1s
+[19:39:12] geum pivot: 100% (13/13) elapsed=   1.8s eta=   0.0s
+[19:39:12] [geum] 저장 C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\data_processed\geum_auto_hourly_wide.parquet  shape=(707694, 12)
+[19:39:12] [yeong] long 행수=3,445,368 지점=9 → pivot 시작
+[19:39:12] yeong pivot:  11% (1/9) elapsed=   0.2s eta=   1.2s
+[19:39:12] yeong pivot:  22% (2/9) elapsed=   0.3s eta=   1.0s
+[19:39:12] yeong pivot:  33% (3/9) elapsed=   0.4s eta=   0.8s
+[19:39:12] yeong pivot:  44% (4/9) elapsed=   0.5s eta=   0.7s
+[19:39:13] yeong pivot:  55% (5/9) elapsed=   0.7s eta=   0.5s
+[19:39:13] yeong pivot:  66% (6/9) elapsed=   0.8s eta=   0.4s
+[19:39:13] yeong pivot:  77% (7/9) elapsed=   0.9s eta=   0.3s
+[19:39:13] yeong pivot:  88% (8/9) elapsed=   1.1s eta=   0.1s
+[19:39:13] yeong pivot: 100% (9/9) elapsed=   1.2s eta=   0.0s
+[19:39:13] [yeong] 저장 C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\data_processed\yeong_auto_hourly_wide.parquet  shape=(494252, 12)
+[19:39:13] [geum] 대표지점 = S03009 (현도)
+[19:39:13] [han] 대표지점 = S01001 (가평)
+[19:39:13] [nak] 대표지점 = S02020 (신암)
+[19:39:13] [yeong] 대표지점 = S04008 (동복호)
+[19:39:13] station_index.csv (67지점) + splits.json 저장 완료
+[19:39:13] === 대표지점 타깃 커버리지 ===
+[19:39:13]   han   S01001 가평       n= 55487 do=0.85 toc=0.83 tn=0.82 tp=0.82 chl-a=0.82
+[19:39:13]   nak   S02020 신암       n= 55487 do=0.89 toc=0.88 tn=0.90 tp=0.90 chl-a=0.90
+[19:39:13]   geum  S03009 현도       n= 55487 do=0.94 toc=0.87 tn=0.87 tp=0.86 chl-a=0.86
+[19:39:13]   yeong S04008 동복호      n= 55487 do=0.93 toc=0.92 tn=0.90 tp=0.91 chl-a=0.83

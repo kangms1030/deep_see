@@ -1,0 +1,25 @@
+[20:25:17] [tune do/ctx1024] base 로드 ctx=1024 rank=16 steps=1500 | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=2.11GB
+[20:25:20] [tune do/ctx1024] fit items=67 val=67
+[20:28:42] [tune do/ctx1024] 학습 완료 → C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\models\cand_ctx1024_do/finetuned-ckpt | VRAM alloc=0.91 reserved=2.14 peak=2.14/15.93GB, smi_used=3.84GB
+[20:29:22] [promote do/ctx1024] incumbent NSE=0.788 CRPS=0.410 cov80=0.73 | cand NSE=0.793 CRPS=0.404 cov80=0.74 | ΔNSE=+0.005 ΔCRPS=-0.007 gate=True
+[20:29:22] [promote do/ctx1024] ✅ 승급 완료(ctx=1024) → registry.json
+[20:29:29] [tune toc/ctx1024] base 로드 ctx=1024 rank=16 steps=1500 | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=2.12GB
+[20:29:33] [tune toc/ctx1024] fit items=67 val=67
+[20:32:57] [tune toc/ctx1024] 학습 완료 → C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\models\cand_ctx1024_toc/finetuned-ckpt | VRAM alloc=0.91 reserved=2.14 peak=2.14/15.93GB, smi_used=3.84GB
+[20:33:37] [promote toc/ctx1024] incumbent NSE=0.783 CRPS=0.098 cov80=0.83 | cand NSE=0.801 CRPS=0.091 cov80=0.83 | ΔNSE=+0.017 ΔCRPS=-0.008 gate=True
+[20:33:37] [promote toc/ctx1024] ✅ 승급 완료(ctx=1024) → registry.json
+[20:33:45] [tune tn/ctx1024] base 로드 ctx=1024 rank=16 steps=1500 | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=2.11GB
+[20:33:48] [tune tn/ctx1024] fit items=67 val=67
+[20:37:12] [tune tn/ctx1024] 학습 완료 → C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\models\cand_ctx1024_tn/finetuned-ckpt | VRAM alloc=0.91 reserved=2.14 peak=2.14/15.93GB, smi_used=3.84GB
+[20:37:52] [promote tn/ctx1024] incumbent NSE=0.930 CRPS=0.093 cov80=0.79 | cand NSE=0.922 CRPS=0.093 cov80=0.83 | ΔNSE=-0.008 ΔCRPS=-0.000 gate=False
+[20:37:52] [promote tn/ctx1024] ❌ 게이트 미달 → incumbent 유지
+[20:38:00] [tune tp/ctx1024] base 로드 ctx=1024 rank=16 steps=1500 | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=2.11GB
+[20:38:03] [tune tp/ctx1024] fit items=67 val=67
+[20:41:30] [tune tp/ctx1024] 학습 완료 → C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\models\cand_ctx1024_tp/finetuned-ckpt | VRAM alloc=0.91 reserved=2.14 peak=2.14/15.93GB, smi_used=3.83GB
+[20:42:10] [promote tp/ctx1024] incumbent NSE=0.702 CRPS=0.002 cov80=0.82 | cand NSE=0.705 CRPS=0.002 cov80=0.82 | ΔNSE=+0.004 ΔCRPS=+0.000 gate=False
+[20:42:10] [promote tp/ctx1024] ❌ 게이트 미달 → incumbent 유지
+[20:42:17] [tune chl-a/ctx1024] base 로드 ctx=1024 rank=16 steps=1500 | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=2.09GB
+[20:42:20] [tune chl-a/ctx1024] fit items=67 val=67
+[20:45:51] [tune chl-a/ctx1024] 학습 완료 → C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\models\cand_ctx1024_chl-a/finetuned-ckpt | VRAM alloc=0.91 reserved=2.14 peak=2.14/15.93GB, smi_used=3.87GB
+[20:46:30] [promote chl-a/ctx1024] incumbent NSE=0.579 CRPS=2.262 cov80=0.78 | cand NSE=0.527 CRPS=2.293 cov80=0.80 | ΔNSE=-0.051 ΔCRPS=+0.032 gate=False
+[20:46:30] [promote chl-a/ctx1024] ❌ 게이트 미달 → incumbent 유지
