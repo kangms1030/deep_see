@@ -114,7 +114,33 @@ CRPS·coverage·경보 BSS/PR-AUC/F1/리드타임을 비교(대표 4지점·전 
 
 ---
 
-## 4. 한계 & 권장 후속 (영향 큰 순)
+## 4. 그림 (Figures)
+
+> `python -m src.eval.make_verification_figures` 로 재생성. 라벨은 영문(컨테이너 한글폰트 부재).
+
+**검증 A — 확률·예보**
+| | |
+|---|---|
+| ![CRPS-skill](reports/figures/verify_crps_skill.png) | ![Alert BSS](reports/figures/verify_alert_bss.png) |
+| 분포 skill: 둘 다 확률화해도 Chronos가 전 타깃 우위 | 경보 BSS: T-P는 레거시 음수, Chronos 양수 |
+
+![Reliability](reports/figures/verify_reliability.png)
+
+신뢰도 곡선: Chronos(ECE=0.009)는 대각선에 밀착, 레거시(ECE=0.034)는 대각선 아래(과신).
+
+**검증 B — 유의성·견고성**
+| | |
+|---|---|
+| ![DM](reports/figures/verify_dm_significance.png) | ![ΔNSE CI](reports/figures/verify_delta_nse_ci.png) |
+| DM 유의 셀: 점추정 11/20·CRPS 11/20(Chl-a 점추정 0/4) | 집계 ΔNSE: DO/TN/TOC만 CI가 0 배제, TP/Chl-a는 불확실 |
+
+![Baseline audit](reports/figures/verify_baseline_audit.png)
+
+베이스라인 정합성: 빨간 원 5개 = 레거시가 원논문 성능이었다면 Chronos가 졌을 셀.
+
+---
+
+## 5. 한계 & 권장 후속 (영향 큰 순)
 
 1. **레거시 정합성 해소**(최우선): 원 TF 모델 직접 실행 또는 재구현 디버그로 strawman 의혹 제거.
    현 클라우드 환경은 GPU·원본데이터 부재로 불가 → 로컬/원 환경에서 수행.
@@ -125,4 +151,4 @@ CRPS·coverage·경보 BSS/PR-AUC/F1/리드타임을 비교(대표 4지점·전 
 
 ---
 
-*독립 검증 산출: `src/eval/prob_compare.py`, `src/eval/robustness_check.py` (기존 자산 불가침).*
+*독립 검증 산출: `src/eval/prob_compare.py`, `src/eval/robustness_check.py`, `src/eval/make_verification_figures.py` (기존 자산 불가침).*
