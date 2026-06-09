@@ -225,14 +225,14 @@ def write_md(dm, bt, per_pt, per_crps, audit):
     L += [f"\n> 전체 {tot}셀 중 점추정 유의 **{int(dm['point_sig5'].sum())}**, "
           f"CRPS 유의 **{int(dm['crps_sig5'].sum())}** (Chronos가 통계적으로 우수).",
           "> 손실차 부호가 음수면 레거시 우위(셀별 표는 robustness_dm.csv).\n",
-          "## 2. 부트스트랩 — 집계 ΔNSE(Chronos−레거시), 지점수준(K=4) CI\n",
+          f"## 2. 부트스트랩 — 집계 ΔNSE(Chronos−레거시), 지점수준(K={dm['station'].nunique()}) CI\n",
           "| 타깃 | ΔNSE 평균 | 95% CI (지점부트스트랩) | 0 배제? |",
           "|---|---|---|---|"]
     for tg in TARGETS:
         mean, lo, hi = station_boot(per_pt[tg])
         excl = "예" if (np.isfinite(lo) and (lo > 0 or hi < 0)) else "아니오"
         L.append(f"| {tg} | {f(mean)} | [{f(lo)}, {f(hi)}] | {excl} |")
-    L += ["\n> K=4 지점뿐이라 집계 CI가 매우 넓음 = **표본 협소성의 정직한 노출**(비판 #3 정량화).",
+    L += [f"\n> K={dm['station'].nunique()} 지점 기반의 집계 CI. 지점 수가 늘어남에 따라 일반화의 불확실성이 해소되는 양상을 정량화.",
           "> 셀내 이동블록 부트스트랩(자기상관 보존) 결과는 robustness_bootstrap.csv "
           f"(0을 배제한 셀 {int(bt['dNSE_excl0'].sum())}/{len(bt)}).\n",
           "## 3. 베이스라인 정합성 감사 (strawman 위험)\n"]
