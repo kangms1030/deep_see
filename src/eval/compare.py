@@ -31,7 +31,18 @@ RIVER_ORDER = ["han", "nak", "geum", "yeong"]
 
 
 def main():
-    leg = pd.read_csv(os.path.join(REP, "legacy_metrics.csv"))
+    # Load and combine all river-specific legacy metrics files if they exist
+    rivers = ["han", "nak", "geum", "yeong"]
+    dfs = []
+    for r in rivers:
+        path = os.path.join(REP, f"legacy_metrics_{r}.csv")
+        if os.path.exists(path):
+            dfs.append(pd.read_csv(path))
+    if dfs:
+        leg = pd.concat(dfs, ignore_index=True)
+    else:
+        leg = pd.read_csv(os.path.join(REP, "legacy_metrics.csv"))
+    
     chr_ = pd.read_csv(os.path.join(REP, "chronos_metrics.csv"))
     
     # Filter to representative stations only (Han=S01001, Nak=S02020, Geum=S03009, Yeong=S04008)
