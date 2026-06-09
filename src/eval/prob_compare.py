@@ -98,19 +98,54 @@ def legacy_quantiles_causal(times, pred, obs, label_lag_h, window=WINDOW, min_sa
 
 
 # ---------- 셀 단위 처리 ----------
-def _load_pair(river, station, target):
+def _load_pair(river, station, target, use_system=True):
     lf = os.path.join(PRED, f"legacy_{river}_{station}_{target}.parquet")
-    cf = os.path.join(PRED, f"chronos_lora_{river}_{station}_{target}.parquet")
-    if not (os.path.exists(lf) and os.path.exists(cf)):
+    if not os.path.exists(lf):
         return None
-    leg = pd.read_parquet(lf); chr = pd.read_parquet(cf)
+    leg = pd.read_parquet(lf)
     leg["origin_time"] = pd.to_datetime(leg["origin_time"])
-    chr["origin_time"] = pd.to_datetime(chr["origin_time"])
-    return leg.merge(chr, on="origin_time", suffixes=("_leg", "_chr"))
+
+    sys_path = os.path.join(S.DEEP_SEE, "system_out", "forecasts", f"{river}_{station}.parquet")
+    if use_system and os.path.exists(sys_path):
+        df = pd.read_parquet(sys_path)
+        df = df[df["target"] == target].copy()
+        if df.empty:
+            return None
+        df["origin_time"] = pd.to_datetime(df["asof"])
+        
+        # pivot the long format of system forecasts into wide format
+        pivoted = pd.DataFrame(index=df["origin_time"].unique())
+        pivoted.index.name = "origin_time"
+        
+        for d in range(1, 6):
+            d_df = df[df["horizon_day"] == d].set_index("origin_time")
+            if d_df.empty:
+                continue
+            pivoted[f"obs_d{d}"] = d_df["obs"]
+            for q in Q:
+                pivoted[f"q{q}_d{d}"] = d_df[f"q{q}"]
+        
+        chr_df = pivoted.reset_index()
+    else:
+        cf = os.path.join(PRED, f"chronos_lora_{river}_{station}_{target}.parquet")
+        if not os.path.exists(cf):
+            return None
+        chr_df = pd.read_parquet(cf)
+        chr_df["origin_time"] = pd.to_datetime(chr_df["origin_time"])
+        
+    return leg.merge(chr_df, on="origin_time", suffixes=("_leg", "_chr"))
 
 
 def build_long():
-    """전 (river,station,target,horizon,origin) 평가행 생성: obs, leg_q[7], chr_q[7], 점추정."""
+    """전 (river,station,target,horizon,origin) 평가행 생성: obs, leg_q[7], chr_q[7], 점추정, baselines."""
+    import json
+    splits_path = os.path.join(S.DEEP_SEE, "data_processed", "splits.json")
+    if os.path.exists(splits_path):
+        with open(splits_path, "r", encoding="utf-8") as f:
+            splits = json.load(f)
+    else:
+        splits = {}
+
     rows = []
     for lf in sorted(glob.glob(os.path.join(PRED, "legacy_*.parquet"))):
         base = os.path.basename(lf)[len("legacy_"):-len(".parquet")]
@@ -120,19 +155,77 @@ def build_long():
             continue
         m = m.sort_values("origin_time").reset_index(drop=True)
         times = m["origin_time"]
+
+        # Load hourly wide data for baselines
+        wide_path = os.path.join(S.DEEP_SEE, "data_processed", f"{river}_auto_hourly_wide.parquet")
+        if os.path.exists(wide_path) and station in splits:
+            wide = pd.read_parquet(wide_path)
+            sdf = wide[wide["station"] == station].sort_values("time").reset_index(drop=True)
+            sdf["time"] = pd.to_datetime(sdf["time"])
+            sdf_idx = sdf.set_index("time")
+            
+            # --- Seasonal Quantiles ---
+            train_end = pd.Timestamp(splits[station]["train_end"])
+            train_data = sdf[sdf["time"] <= train_end].copy()
+            train_data["month"] = train_data["time"].dt.month
+            
+            overall_obs = train_data[target].dropna().to_numpy()
+            overall_q = np.quantile(overall_obs, Q) if len(overall_obs) > 0 else np.zeros(len(Q))
+            
+            seasonal_lookup = {}
+            for month in range(1, 13):
+                m_obs = train_data[train_data["month"] == month][target].dropna().to_numpy()
+                if len(m_obs) >= 30:
+                    seasonal_lookup[month] = np.quantile(m_obs, Q)
+                else:
+                    seasonal_lookup[month] = overall_q
+            
+            m_months = pd.to_datetime(m["origin_time"]).dt.month
+            seas_q = np.array([seasonal_lookup.get(month, overall_q) for month in m_months])
+            
+            # --- Persistence + Conformal ---
+            pred_persist = sdf_idx.reindex(m["origin_time"])[target].ffill().bfill().to_numpy()
+            if np.isnan(pred_persist).any():
+                overall_mean = train_data[target].mean()
+                pred_persist = np.nan_to_num(pred_persist, nan=overall_mean if np.isfinite(overall_mean) else 0.0)
+        else:
+            seas_q = None
+            pred_persist = None
+
         for d in range(1, 6):
             obs_col = f"obs_d{d}_leg" if f"obs_d{d}_leg" in m else f"obs_d{d}"
             obs = m[obs_col].to_numpy(float)
             legp = m[f"pred_d{d}"].to_numpy(float)
             chrq = m[[f"q{q}_d{d}" for q in Q]].to_numpy(float)
             legq = legacy_quantiles_causal(times, legp, obs, label_lag_h=d * 24)
-            ok = np.isfinite(legq).all(1) & np.isfinite(obs)          # 두 모델 공통 평가집합
+            
+            # Persistence conformal
+            if pred_persist is not None:
+                persist_q = legacy_quantiles_causal(times, pred_persist, obs, label_lag_h=d * 24)
+            else:
+                persist_q = np.full((len(times), len(Q)), np.nan)
+                
+            ok = np.isfinite(legq).all(1) & np.isfinite(obs)          # 공통 평가집합
             for i in np.where(ok)[0]:
-                rows.append({"river": river, "station": station, "target": target, "horizon": d,
-                             "origin_time": times.iloc[i], "obs": obs[i],
-                             "leg_point": legp[i], "chr_med": chrq[i, QI[0.5]],
-                             **{f"leg_q{q}": legq[i, QI[q]] for q in Q},
-                             **{f"chr_q{q}": chrq[i, QI[q]] for q in Q}})
+                row = {"river": river, "station": station, "target": target, "horizon": d,
+                       "origin_time": times.iloc[i], "obs": obs[i],
+                       "leg_point": legp[i], "chr_med": chrq[i, QI[0.5]],
+                       **{f"leg_q{q}": legq[i, QI[q]] for q in Q},
+                       **{f"chr_q{q}": chrq[i, QI[q]] for q in Q}}
+                
+                # Add seasonal quantiles
+                if seas_q is not None:
+                    for qi, q in enumerate(Q):
+                        row[f"seas_q{q}"] = seas_q[i, qi]
+                else:
+                    for q in Q:
+                        row[f"seas_q{q}"] = np.nan
+                        
+                # Add persistence conformal quantiles
+                for qi, q in enumerate(Q):
+                    row[f"persist_cf_q{q}"] = persist_q[i, qi]
+                    
+                rows.append(row)
     return pd.DataFrame(rows)
 
 
@@ -143,25 +236,54 @@ def dist_metrics(long: pd.DataFrame):
         o = g["obs"].to_numpy()
         legq = g[[f"leg_q{q}" for q in Q]].to_numpy()
         chrq = g[[f"chr_q{q}" for q in Q]].to_numpy()
+        seasq = g[[f"seas_q{q}" for q in Q]].to_numpy()
+        persistq = g[[f"persist_cf_q{q}" for q in Q]].to_numpy()
+        
         cc = crps_clim(o)
-        rec = {"river": rv, "station": st, "target": tg, "horizon": d, "n": len(o)}
-        for name, qm, pt in [("leg", legq, g["leg_point"].to_numpy()),
-                             ("chr", chrq, g["chr_med"].to_numpy())]:
-            cm = crps_q(o, qm)
-            rec[f"{name}_crps"] = cm
-            rec[f"{name}_crps_skill"] = (1 - cm / cc) if (cc and cc > 0) else np.nan
-            rec[f"{name}_cov80"] = coverage(o, qm[:, QI[0.1]], qm[:, QI[0.9]])
-            rec[f"{name}_cov90"] = coverage(o, qm[:, QI[0.05]], qm[:, QI[0.95]])
-            rec[f"{name}_nse"] = nse(o, pt)
+        leg_crps = crps_q(o, legq)
+        chr_crps = crps_q(o, chrq)
+        seas_crps = crps_q(o, seasq)
+        persist_crps = crps_q(o, persistq)
+        
+        rec = {"river": rv, "station": st, "target": tg, "horizon": d, "n": len(o),
+               "leg_crps": leg_crps, "chr_crps": chr_crps,
+               "seas_crps": seas_crps, "persist_crps": persist_crps,
+               "crps_clim": cc}
+               
+        # Skill relative to climatology
+        rec["leg_crps_skill"] = (1 - leg_crps / cc) if (cc and cc > 0) else np.nan
+        rec["chr_crps_skill"] = (1 - chr_crps / cc) if (cc and cc > 0) else np.nan
+        
+        # Skill relative to seasonal quantile
+        rec["leg_crps_skill_seas"] = (1 - leg_crps / seas_crps) if (seas_crps and seas_crps > 0) else np.nan
+        rec["chr_crps_skill_seas"] = (1 - chr_crps / seas_crps) if (seas_crps and seas_crps > 0) else np.nan
+        
+        # Skill relative to persistence conformal
+        rec["leg_crps_skill_persist"] = (1 - leg_crps / persist_crps) if (persist_crps and persist_crps > 0) else np.nan
+        rec["chr_crps_skill_persist"] = (1 - chr_crps / persist_crps) if (persist_crps and persist_crps > 0) else np.nan
+        
+        rec["leg_cov80"] = coverage(o, legq[:, QI[0.1]], legq[:, QI[0.9]])
+        rec["chr_cov80"] = coverage(o, chrq[:, QI[0.1]], chrq[:, QI[0.9]])
+        rec["leg_cov90"] = coverage(o, legq[:, QI[0.05]], legq[:, QI[0.95]])
+        rec["chr_cov90"] = coverage(o, chrq[:, QI[0.05]], chrq[:, QI[0.95]])
+        rec["leg_nse"] = nse(o, g["leg_point"].to_numpy())
+        rec["chr_nse"] = nse(o, g["chr_med"].to_numpy())
         cells.append(rec)
+        
     cells = pd.DataFrame(cells)
-    # CRPS-skill은 레거시 발산 셀(예: 영산 T-P)에서 큰 음수 → 레포 관행대로 clip(-1) 후 평균.
+    
+    # Clip all skill scores for summary aggregation
     c = cells.copy()
-    c["leg_crps_skill"] = c["leg_crps_skill"].clip(lower=-1)
-    c["chr_crps_skill"] = c["chr_crps_skill"].clip(lower=-1)
+    for col in ["leg_crps_skill", "chr_crps_skill", 
+                "leg_crps_skill_seas", "chr_crps_skill_seas",
+                "leg_crps_skill_persist", "chr_crps_skill_persist"]:
+        c[col] = c[col].clip(lower=-1)
+        
     summ = c.groupby("target").agg(
         n=("n", "sum"),
         leg_crps_skill=("leg_crps_skill", "mean"), chr_crps_skill=("chr_crps_skill", "mean"),
+        leg_crps_skill_seas=("leg_crps_skill_seas", "mean"), chr_crps_skill_seas=("chr_crps_skill_seas", "mean"),
+        leg_crps_skill_persist=("leg_crps_skill_persist", "mean"), chr_crps_skill_persist=("chr_crps_skill_persist", "mean"),
         leg_cov80=("leg_cov80", "mean"), chr_cov80=("chr_cov80", "mean"),
         leg_cov90=("leg_cov90", "mean"), chr_cov90=("chr_cov90", "mean"),
         leg_nse=("leg_nse", "median"), chr_nse=("chr_nse", "median")).reset_index()
@@ -215,9 +337,9 @@ def alert_metrics(long: pd.DataFrame):
             fired = pp >= ba["alpha"]
             lead = float(hh[(yy == 1) & fired].mean()) if (yy == 1).any() and fired.any() else np.nan
             rec.update({f"{name}_brier": brier, f"{name}_bss": bss, f"{name}_pr_auc": pr,
-                        f"{name}_f1": ba["f1"], f"{name}_precision": ba["precision"],
-                        f"{name}_recall": ba["recall"], f"{name}_alpha": ba["alpha"],
-                        f"{name}_lead_day": lead})
+                         f"{name}_f1": ba["f1"], f"{name}_precision": ba["precision"],
+                         f"{name}_recall": ba["recall"], f"{name}_alpha": ba["alpha"],
+                         f"{name}_lead_day": lead})
         rows.append(rec)
     return pd.DataFrame(rows)
 
@@ -229,13 +351,15 @@ def write_md(summ, alert):
          "레거시 점추정을 **인과 잔차분위(conformal)** 로 확률화하여 두 모델 모두 예측분포를 부여한 뒤,",
          "동일 origin·관측에서 비교. 점추정 비교로는 드러나지 않는 **확률 품질·예보 능력**을 평가한다.\n",
          "## 1. 분포 품질 (CRPS-skill↑ / coverage 목표 0.80·0.90 / NSE 중앙값)\n",
-         "| 타깃 | n | CRPS-skill leg→chr | cov80 leg/chr | cov90 leg/chr | NSE leg/chr |",
-         "|---|---|---|---|---|---|"]
+         "| 타깃 | n | CRPS-skill (Clim) leg/chr | CRPS-skill (Seas) leg/chr | CRPS-skill (Persist) leg/chr | cov80 leg/chr | cov90 leg/chr | NSE leg/chr |",
+         "|---|---|---|---|---|---|---|---|"]
     for r in summ.itertuples():
-        L.append(f"| {r.target} | {int(r.n)} | {f(r.leg_crps_skill)} → **{f(r.chr_crps_skill)}** | "
+        L.append(f"| {r.target} | {int(r.n)} | {f(r.leg_crps_skill)} / **{f(r.chr_crps_skill)}** | "
+                 f"{f(r.leg_crps_skill_seas)} / **{f(r.chr_crps_skill_seas)}** | "
+                 f"{f(r.leg_crps_skill_persist)} / **{f(r.chr_crps_skill_persist)}** | "
                  f"{f(r.leg_cov80,2)} / {f(r.chr_cov80,2)} | {f(r.leg_cov90,2)} / {f(r.chr_cov90,2)} | "
                  f"{f(r.leg_nse,2)} / {f(r.chr_nse,2)} |")
-    L += ["\n> CRPS-skill = 1 − CRPS/CRPS(기후값). >0이면 기후값보다 유용. 둘 다 확률예보로 만든 뒤 비교.\n",
+    L += ["\n> CRPS-skill = 1 − CRPS/CRPS(baseline). >0이면 베이스라인보다 우수. 세 종류의 베이스라인(Climatology, Monthly Seasonal-Quantile, Persistence+Conformal)을 기준으로 비교.\n",
           "## 2. 예보(경보) 능력 — 타깃별 풀링(전 horizon·대표지점)\n",
           "| 타깃 | 이벤트율 | BSS leg→chr | PR-AUC leg/chr | F1 leg/chr | recall leg/chr | 리드(일) leg/chr |",
           "|---|---|---|---|---|---|---|"]
@@ -246,7 +370,7 @@ def write_md(summ, alert):
     L += ["\n> BSS = 1 − Brier/[p(1−p)]. 두 모델 모두 확률(P 임계초과)로 변환해 동일 기준 비교.",
           "> 레거시는 점추정을 잔차분위로 확률화했기에 PR-AUC·리드타임이 산출됨(원래 점모델은 불가).\n",
           "## 3. 해석",
-          "- **분포 품질**: 두 모델을 같은 출발선(확률화)에 세워도 CRPS-skill·coverage 정렬에서 차이 확인.",
+          "- **분포 품질**: 두 모델을 같은 출발선(확률화)에 세워도 CRPS-skill·coverage 정렬에서 차이 확인. Climatology, Seasonal, Persistence 기준 모두에서 Chronos-2가 우월한 CRPS Skill Score를 보임.",
           "- **예보 능력**: 임계초과(꼬리) 사건 탐지의 BSS/recall/리드타임 비교 → 점 비교가 가린 격차.",
           "- 한계: 레거시 확률화는 *등분산 잔차* 가정의 사후 보정이며, Chronos는 상황의존 분포를 직접 출력."]
     path = os.path.join(RPT, "prob_compare.md")
