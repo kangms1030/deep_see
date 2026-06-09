@@ -33,6 +33,11 @@ RIVER_ORDER = ["han", "nak", "geum", "yeong"]
 def main():
     leg = pd.read_csv(os.path.join(REP, "legacy_metrics.csv"))
     chr_ = pd.read_csv(os.path.join(REP, "chronos_metrics.csv"))
+    
+    # Filter to representative stations only (Han=S01001, Nak=S02020, Geum=S03009, Yeong=S04008)
+    rep_stations = {"S01001", "S02020", "S03009", "S04008"}
+    leg = leg[leg["station"].isin(rep_stations)].copy()
+    
     zs = chr_[chr_["mode"] == "zeroshot"].set_index(["river", "target"])
     lo = chr_[chr_["mode"] == "lora"].set_index(["river", "target"])
     legi = leg.set_index(["river", "target"])
