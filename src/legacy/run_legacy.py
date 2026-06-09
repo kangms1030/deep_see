@@ -198,11 +198,11 @@ def main():
                                     args.epochs, args.device)
                         if r:
                             rows.append(r)
-                            pd.DataFrame(rows).to_csv(os.path.join(REP, "legacy_metrics.csv"),
+                            pd.DataFrame(rows).to_csv(os.path.join(REP, f"legacy_metrics_{river}.csv"),
                                                       index=False, encoding="utf-8-sig")
                     except Exception as e:
                         log(f"[ERROR GRU] {river}/{station}/{target}: {type(e).__name__}: {e}", TASK)
-    log(f"완료. legacy_metrics.csv 저장 ({len(rows)} 조합)", TASK)
+    log(f"완료. legacy_metrics_{river}.csv 저장 ({len(rows)} 조합)", TASK)
     if rows:
         print(pd.DataFrame(rows)[["river", "station", "target", "nse", "nse_obs", "rmse"]].to_string(index=False))
 
