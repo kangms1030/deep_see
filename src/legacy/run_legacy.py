@@ -15,8 +15,10 @@ import os
 import argparse
 import json
 import warnings
+import random
 import numpy as np
 import pandas as pd
+import torch
 
 warnings.filterwarnings("ignore", category=RuntimeWarning)   # all-NaN slice 등 무해 경고
 
@@ -36,6 +38,14 @@ TASK = "legacy"
 PREDICT_DAY_IDX = 4   # 5일차(0-base)
 
 
+def set_seed(seed: int = 42):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+
 def _split_bounds(times: pd.Series, st_split: dict):
     tr = pd.Timestamp(st_split["train_end"]); va = pd.Timestamp(st_split["val_end"])
     t = pd.to_datetime(times).values
@@ -44,7 +54,7 @@ def _split_bounds(times: pd.Series, st_split: dict):
     return i_tr, i_va
 
 
-def run_one(river, station, target, wide, splits, gain_iters, epochs, device):
+def run_one(river, station, target, wide, imp10, splits, epochs, device):
     tag = f"{river}/{station}/{target}"
     sdf = wide[wide["station"] == station].sort_values("time").reset_index(drop=True)
     sdf = W.add_calendar(sdf)
@@ -59,12 +69,6 @@ def run_one(river, station, target, wide, splits, gain_iters, epochs, device):
     i_tr, i_va = _split_bounds(sdf["time"], splits[station])
     if i_tr < W.IN_W + W.OUT_W:
         log(f"[skip] {tag} train 구간 너무 짧음 ({i_tr})", TASK); return None
-
-    # --- GAIN: train 구간으로만 적합, 전체 변환(누수 방지) ---
-    gain = GAINImputer(dim=len(chans), iterations=gain_iters, device=device, task=TASK)
-    gain.fit(raw10[:i_tr])
-    imp10 = gain.transform(raw10)
-    imp10 = np.nan_to_num(imp10, nan=0.0)                     # 통째 결측 채널은 0
 
     cal_arr = sdf[cal].to_numpy(np.float64)
     feat = np.concatenate([imp10, cal_arr], axis=1)           # [T, 14]
@@ -136,10 +140,13 @@ def main():
     ap.add_argument("--river", default=None, help="han/nak/geum/yeong, 미지정=전체")
     ap.add_argument("--target", default=None, help="do/toc/tn/tp/chl-a, 미지정=전체")
     ap.add_argument("--station", default=None, help="특정 측정소코드(대표지점 무시)")
+    ap.add_argument("--scope", default="rep", choices=["rep", "all"], help="rep: 대표지점만, all: 전체 67지점")
     ap.add_argument("--gain-iters", type=int, default=3000)
     ap.add_argument("--epochs", type=int, default=30)
     ap.add_argument("--device", default="cuda")
     args = ap.parse_args()
+
+    set_seed(42)
 
     sidx = pd.read_csv(os.path.join(OUT, "station_index.csv"))
     splits = json.load(open(os.path.join(OUT, "splits.json"), encoding="utf-8"))
@@ -156,23 +163,48 @@ def main():
             wide["station"] = wide["station"].astype(str)
             if args.station:
                 stations = [args.station]
+            elif args.scope == "all":
+                stations = sidx[sidx["river"] == river]["station"].tolist()
             else:
                 stations = sidx[(sidx["river"] == river) & (sidx["is_representative"])]["station"].tolist()
-            log(f"=== {river} 대표지점 {stations} ===", TASK)
+            log(f"=== {river} 지점목록 {stations} (scope={args.scope}) ===", TASK)
             for station in stations:
+                sdf = wide[wide["station"] == station].sort_values("time").reset_index(drop=True)
+                if sdf.empty:
+                    log(f"[skip] {river}/{station} 데이터 비어있음", TASK); continue
+                
+                chans = S.CHANNEL_ORDER
+                raw10 = sdf[chans].to_numpy(np.float64)
+                
+                if station not in splits:
+                    log(f"[skip] {river}/{station} splits 정보 없음", TASK); continue
+                i_tr, i_va = _split_bounds(sdf["time"], splits[station])
+                if i_tr < W.IN_W + W.OUT_W:
+                    log(f"[skip] {river}/{station} train 구간 너무 짧음 ({i_tr})", TASK); continue
+                
+                # Run GAIN once per station
+                try:
+                    gain = GAINImputer(dim=len(chans), iterations=args.gain_iters, device=args.device, task=TASK)
+                    gain.fit(raw10[:i_tr])
+                    imp10 = gain.transform(raw10)
+                    imp10 = np.nan_to_num(imp10, nan=0.0)
+                except Exception as e:
+                    log(f"[ERROR GAIN] {river}/{station}: {type(e).__name__}: {e}", TASK)
+                    continue
+
                 for target in targets:
                     try:
-                        r = run_one(river, station, target, wide, splits,
-                                    args.gain_iters, args.epochs, args.device)
+                        r = run_one(river, station, target, wide, imp10, splits,
+                                    args.epochs, args.device)
                         if r:
                             rows.append(r)
                             pd.DataFrame(rows).to_csv(os.path.join(REP, "legacy_metrics.csv"),
                                                       index=False, encoding="utf-8-sig")
                     except Exception as e:
-                        log(f"[ERROR] {river}/{station}/{target}: {type(e).__name__}: {e}", TASK)
+                        log(f"[ERROR GRU] {river}/{station}/{target}: {type(e).__name__}: {e}", TASK)
     log(f"완료. legacy_metrics.csv 저장 ({len(rows)} 조합)", TASK)
     if rows:
-        print(pd.DataFrame(rows)[["river", "target", "nse", "nse_obs", "rmse"]].to_string(index=False))
+        print(pd.DataFrame(rows)[["river", "station", "target", "nse", "nse_obs", "rmse"]].to_string(index=False))
 
 
 if __name__ == "__main__":
