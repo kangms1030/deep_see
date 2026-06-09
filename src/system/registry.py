@@ -32,6 +32,18 @@ def load() -> dict:
 
 def save(reg: dict) -> None:
     C.ensure_dirs()
+    # Convert absolute paths under DEEP_SEE to relative for portability
+    for tg, entry in reg.items():
+        if "adapter" in entry:
+            path = entry["adapter"]
+            if os.path.isabs(path) and path.lower().startswith(C.DEEP_SEE.lower()):
+                entry["adapter"] = os.path.relpath(path, C.DEEP_SEE)
+        if "history" in entry:
+            for hist in entry["history"]:
+                if "adapter" in hist and hist["adapter"]:
+                    path = hist["adapter"]
+                    if os.path.isabs(path) and path.lower().startswith(C.DEEP_SEE.lower()):
+                        hist["adapter"] = os.path.relpath(path, C.DEEP_SEE)
     with open(C.REGISTRY_PATH, "w", encoding="utf-8") as f:
         json.dump(reg, f, ensure_ascii=False, indent=2)
 
@@ -39,9 +51,13 @@ def save(reg: dict) -> None:
 def active_adapter(target: str, reg: dict | None = None) -> str:
     reg = reg or load()
     path = reg[target]["adapter"]
+    if not os.path.isabs(path):
+        path = os.path.join(C.DEEP_SEE, path)
     if not os.path.isdir(path):
         # 안전 폴백: 기본 incumbent
         path = _default_entry(target)["adapter"]
+        if not os.path.isabs(path):
+            path = os.path.join(C.DEEP_SEE, path)
     return path
 
 

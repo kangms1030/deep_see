@@ -1,6 +1,6 @@
 {
   "do": {
-    "adapter": "C:\\Users\\minsoo\\Desktop\\수질측정 및 오염원\\deep_see\\models\\chronos_lora512_do\\finetuned-ckpt",
+    "adapter": "models/chronos_lora512_do/finetuned-ckpt",
     "version": "lora512",
     "context": 512,
     "val_metrics": {},
@@ -8,7 +8,7 @@
     "history": []
   },
   "toc": {
-    "adapter": "C:\\Users\\minsoo\\Desktop\\수질측정 및 오염원\\deep_see\\models\\chronos_lora512_toc\\finetuned-ckpt",
+    "adapter": "models/chronos_lora512_toc/finetuned-ckpt",
     "version": "lora512",
     "context": 512,
     "val_metrics": {},
@@ -16,7 +16,7 @@
     "history": []
   },
   "tn": {
-    "adapter": "C:\\Users\\minsoo\\Desktop\\수질측정 및 오염원\\deep_see\\models\\chronos_lora512_tn\\finetuned-ckpt",
+    "adapter": "models/chronos_lora512_tn/finetuned-ckpt",
     "version": "lora512",
     "context": 512,
     "val_metrics": {},
@@ -24,7 +24,7 @@
     "history": []
   },
   "tp": {
-    "adapter": "C:\\Users\\minsoo\\Desktop\\수질측정 및 오염원\\deep_see\\models\\chronos_lora512_tp\\finetuned-ckpt",
+    "adapter": "models/chronos_lora512_tp/finetuned-ckpt",
     "version": "lora512",
     "context": 512,
     "val_metrics": {},
@@ -32,7 +32,7 @@
     "history": []
   },
   "chl-a": {
-    "adapter": "C:\\Users\\minsoo\\Desktop\\수질측정 및 오염원\\deep_see\\models\\chronos_lora512_chl-a\\finetuned-ckpt",
+    "adapter": "models/chronos_lora512_chl-a/finetuned-ckpt",
     "version": "lora512",
     "context": 512,
     "val_metrics": {},

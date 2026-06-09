@@ -7,6 +7,9 @@ __pycache__/
 *$py.class
 .ipynb_checkpoints/
 
+# 롤링 비교 플롯(요청에 따라 git 제외)
+plots/
+
 # OS
 .DS_Store
 Thumbs.db
