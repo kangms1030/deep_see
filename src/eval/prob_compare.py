@@ -103,7 +103,7 @@ def _load_pair(river, station, target, use_system=True):
     if not os.path.exists(lf):
         return None
     leg = pd.read_parquet(lf)
-    leg["origin_time"] = pd.to_datetime(leg["origin_time"])
+    leg["origin_time"] = pd.to_datetime(leg["origin_time"]).dt.normalize()
 
     sys_path = os.path.join(S.DEEP_SEE, "system_out", "forecasts", f"{river}_{station}.parquet")
     if use_system and os.path.exists(sys_path):
@@ -111,7 +111,7 @@ def _load_pair(river, station, target, use_system=True):
         df = df[df["target"] == target].copy()
         if df.empty:
             return None
-        df["origin_time"] = pd.to_datetime(df["asof"])
+        df["origin_time"] = pd.to_datetime(df["asof"]).dt.normalize()
         
         # pivot the long format of system forecasts into wide format
         pivoted = pd.DataFrame(index=df["origin_time"].unique())
@@ -121,6 +121,8 @@ def _load_pair(river, station, target, use_system=True):
             d_df = df[df["horizon_day"] == d].set_index("origin_time")
             if d_df.empty:
                 continue
+            # Remove duplicate index if any
+            d_df = d_df[~d_df.index.duplicated(keep='first')]
             pivoted[f"obs_d{d}"] = d_df["obs"]
             for q in Q:
                 pivoted[f"q{q}_d{d}"] = d_df[f"q{q}"]
@@ -131,7 +133,7 @@ def _load_pair(river, station, target, use_system=True):
         if not os.path.exists(cf):
             return None
         chr_df = pd.read_parquet(cf)
-        chr_df["origin_time"] = pd.to_datetime(chr_df["origin_time"])
+        chr_df["origin_time"] = pd.to_datetime(chr_df["origin_time"]).dt.normalize()
         
     return leg.merge(chr_df, on="origin_time", suffixes=("_leg", "_chr"))
 
