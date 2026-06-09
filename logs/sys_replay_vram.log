@@ -413,3 +413,4 @@
 [VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.83GB
 [VRAM-MON] VRAM alloc=0.46 reserved=1.10 peak=1.11/15.93GB, smi_used=2.83GB
 [VRAM-MON] VRAM alloc=0.45 reserved=1.10 peak=1.11/15.93GB, smi_used=2.83GB
+[VRAM-MON] VRAM alloc=0.46 reserved=1.11 peak=1.11/15.93GB, smi_used=2.76GB

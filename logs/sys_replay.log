@@ -380,3 +380,8 @@
 [21:47:53] toc replay:  94% (63/67) elapsed=   6.8s eta=   0.4s
 [21:47:53] toc replay: 100% (67/67) elapsed=   7.2s eta=   0.0s
 [21:47:56] 저장 완료: forecasts 67지점 / alert_log 갱신(2개 타깃 머지)
+[12:17:45] [do] 어댑터 로드 models\chronos_lora512_do\finetuned-ckpt ctx=512 | VRAM alloc=0.45 reserved=0.48 peak=0.48/15.93GB, smi_used=2.10GB
+[12:17:55] do/han predict: 100% (1/1) elapsed=  10.9s eta=   0.0s
+[12:17:55] [do] pooledδ(d5)={80: 0.172, 90: 0.37} α*=0.5 thr=5(low)
+[12:17:56] do replay: 100% (1/1) elapsed=   0.1s eta=   0.0s
+[12:17:56] 저장 완료: forecasts 1지점 / alert_log 갱신(1개 타깃 머지)

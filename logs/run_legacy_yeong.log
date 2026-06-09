@@ -1,0 +1,907 @@
+[12:27:05] === yeong 지점목록 ['S04001', 'S04002', 'S04003', 'S04004', 'S04005', 'S04006', 'S04007', 'S04008', 'S04009'] (scope=all) ===
+[12:27:07] GAIN 학습 시작 n=38840 dim=10 iters=3000 dev=cuda
+[12:27:08] GAIN   5% it=150/3000 D=0.154 G_mse=0.0257 | VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.03GB
+[12:27:10] GAIN  15% it=450/3000 D=0.093 G_mse=0.0171 | VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.04GB
+[12:27:13] GAIN  25% it=750/3000 D=0.069 G_mse=0.0117 | VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.04GB
+[12:27:15] GAIN  35% it=1050/3000 D=0.070 G_mse=0.0062 | VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.04GB
+[12:27:17] GAIN  45% it=1350/3000 D=0.054 G_mse=0.0043 | VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.04GB
+[12:27:19] GAIN  55% it=1650/3000 D=0.043 G_mse=0.0033 | VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.04GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.04GB
+[12:27:22] GAIN  65% it=1950/3000 D=0.027 G_mse=0.0028 | VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.04GB
+[12:27:24] GAIN  75% it=2250/3000 D=0.021 G_mse=0.0020 | VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.81GB
+[12:27:27] GAIN  85% it=2550/3000 D=0.016 G_mse=0.0013 | VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.82GB
+[12:27:29] GAIN  95% it=2850/3000 D=0.009 G_mse=0.0017 | VRAM alloc=0.02 reserved=0.02 peak=0.02/15.93GB, smi_used=3.83GB
+[12:27:31] yeong/S04001/do 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:27:31] GRU 학습 yeong/S04001/do: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:27:34] GRU yeong/S04001/do   3% ep=1/30 train_mse=0.6645 val_mse=1.0895 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:27:36] GRU yeong/S04001/do   6% ep=2/30 train_mse=0.4923 val_mse=1.0376 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:27:39] GRU yeong/S04001/do  10% ep=3/30 train_mse=0.4763 val_mse=0.9037 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.41GB
+[12:27:42] GRU yeong/S04001/do  13% ep=4/30 train_mse=0.4659 val_mse=1.7540 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.40GB
+[12:27:44] GRU yeong/S04001/do  16% ep=5/30 train_mse=0.4701 val_mse=1.1751 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.40GB
+[12:27:47] GRU yeong/S04001/do  20% ep=6/30 train_mse=0.4626 val_mse=2.0271 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:27:49] GRU yeong/S04001/do  23% ep=7/30 train_mse=0.4547 val_mse=1.8445 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:27:52] GRU yeong/S04001/do  26% ep=8/30 train_mse=0.4493 val_mse=1.8677 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:27:54] GRU yeong/S04001/do  30% ep=9/30 train_mse=0.4399 val_mse=1.6795 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:27:54] GRU yeong/S04001/do early stop @ep9 (best val_mse=0.9037)
+[12:27:54] yeong/S04001/do ▶ NSE(legacy)=0.454 NSE(obs)=0.676 RMSE=2.087
+[12:27:54] yeong/S04001/toc 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:27:54] GRU 학습 yeong/S04001/toc: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:27:57] GRU yeong/S04001/toc   3% ep=1/30 train_mse=0.7292 val_mse=0.8294 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:27:59] GRU yeong/S04001/toc   6% ep=2/30 train_mse=0.5824 val_mse=0.6969 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:02] GRU yeong/S04001/toc  10% ep=3/30 train_mse=0.5588 val_mse=0.5475 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:04] GRU yeong/S04001/toc  13% ep=4/30 train_mse=0.5540 val_mse=0.5916 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:07] GRU yeong/S04001/toc  16% ep=5/30 train_mse=0.5473 val_mse=0.4932 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:09] GRU yeong/S04001/toc  20% ep=6/30 train_mse=0.5423 val_mse=0.4938 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:12] GRU yeong/S04001/toc  23% ep=7/30 train_mse=0.5298 val_mse=0.6928 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:14] GRU yeong/S04001/toc  26% ep=8/30 train_mse=0.5312 val_mse=0.6509 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:17] GRU yeong/S04001/toc  30% ep=9/30 train_mse=0.5198 val_mse=0.6688 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:19] GRU yeong/S04001/toc  33% ep=10/30 train_mse=0.5142 val_mse=0.6423 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:22] GRU yeong/S04001/toc  36% ep=11/30 train_mse=0.5094 val_mse=0.5383 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:22] GRU yeong/S04001/toc early stop @ep11 (best val_mse=0.4932)
+[12:28:22] yeong/S04001/toc ▶ NSE(legacy)=0.446 NSE(obs)=0.336 RMSE=0.243
+[12:28:22] yeong/S04001/tn 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:28:22] GRU 학습 yeong/S04001/tn: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:28:24] GRU yeong/S04001/tn   3% ep=1/30 train_mse=0.7947 val_mse=1.4861 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:27] GRU yeong/S04001/tn   6% ep=2/30 train_mse=0.6865 val_mse=1.1758 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:29] GRU yeong/S04001/tn  10% ep=3/30 train_mse=0.6780 val_mse=1.3403 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:31] GRU yeong/S04001/tn  13% ep=4/30 train_mse=0.6579 val_mse=1.3116 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:34] GRU yeong/S04001/tn  16% ep=5/30 train_mse=0.6548 val_mse=1.2798 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:36] GRU yeong/S04001/tn  20% ep=6/30 train_mse=0.6512 val_mse=0.9127 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:39] GRU yeong/S04001/tn  23% ep=7/30 train_mse=0.6352 val_mse=0.7763 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:41] GRU yeong/S04001/tn  26% ep=8/30 train_mse=0.6276 val_mse=1.1825 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:44] GRU yeong/S04001/tn  30% ep=9/30 train_mse=0.6212 val_mse=0.9541 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:46] GRU yeong/S04001/tn  33% ep=10/30 train_mse=0.6148 val_mse=1.4247 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:48] GRU yeong/S04001/tn  36% ep=11/30 train_mse=0.6050 val_mse=0.8579 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:51] GRU yeong/S04001/tn  40% ep=12/30 train_mse=0.6170 val_mse=1.9743 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:53] GRU yeong/S04001/tn  43% ep=13/30 train_mse=0.6144 val_mse=1.1932 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:28:53] GRU yeong/S04001/tn early stop @ep13 (best val_mse=0.7763)
+[12:28:53] yeong/S04001/tn ▶ NSE(legacy)=0.297 NSE(obs)=-0.370 RMSE=0.287
+[12:28:53] yeong/S04001/tp 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:28:53] GRU 학습 yeong/S04001/tp: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:28:55] GRU yeong/S04001/tp   3% ep=1/30 train_mse=0.5920 val_mse=0.1844 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:28:58] GRU yeong/S04001/tp   6% ep=2/30 train_mse=0.3970 val_mse=0.2024 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:29:00] GRU yeong/S04001/tp  10% ep=3/30 train_mse=0.3899 val_mse=0.1828 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:29:02] GRU yeong/S04001/tp  13% ep=4/30 train_mse=0.3772 val_mse=0.1287 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:29:04] GRU yeong/S04001/tp  16% ep=5/30 train_mse=0.3729 val_mse=0.2965 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:29:06] GRU yeong/S04001/tp  20% ep=6/30 train_mse=0.3723 val_mse=0.1948 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:29:08] GRU yeong/S04001/tp  23% ep=7/30 train_mse=0.3640 val_mse=0.1991 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:29:10] GRU yeong/S04001/tp  26% ep=8/30 train_mse=0.3555 val_mse=0.3330 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:29:12] GRU yeong/S04001/tp  30% ep=9/30 train_mse=0.3550 val_mse=0.3482 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:29:13] GRU yeong/S04001/tp  33% ep=10/30 train_mse=0.3469 val_mse=0.1642 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:29:13] GRU yeong/S04001/tp early stop @ep10 (best val_mse=0.1287)
+[12:29:13] yeong/S04001/tp ▶ NSE(legacy)=0.441 NSE(obs)=0.391 RMSE=0.003
+[12:29:14] yeong/S04001/chl-a 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:29:14] GRU 학습 yeong/S04001/chl-a: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:29:15] GRU yeong/S04001/chl-a   3% ep=1/30 train_mse=0.6243 val_mse=0.6443 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:29:17] GRU yeong/S04001/chl-a   6% ep=2/30 train_mse=0.4287 val_mse=0.6293 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:29:19] GRU yeong/S04001/chl-a  10% ep=3/30 train_mse=0.4005 val_mse=0.6574 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:29:21] GRU yeong/S04001/chl-a  13% ep=4/30 train_mse=0.3936 val_mse=0.5856 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.44GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.44GB
+[12:29:23] GRU yeong/S04001/chl-a  16% ep=5/30 train_mse=0.3995 val_mse=0.6844 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.41GB
+[12:29:25] GRU yeong/S04001/chl-a  20% ep=6/30 train_mse=0.3864 val_mse=0.6228 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.41GB
+[12:29:27] GRU yeong/S04001/chl-a  23% ep=7/30 train_mse=0.3717 val_mse=0.7076 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.43GB
+[12:29:29] GRU yeong/S04001/chl-a  26% ep=8/30 train_mse=0.3635 val_mse=0.5896 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.43GB
+[12:29:31] GRU yeong/S04001/chl-a  30% ep=9/30 train_mse=0.3561 val_mse=0.6959 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.44GB
+[12:29:33] GRU yeong/S04001/chl-a  33% ep=10/30 train_mse=0.3487 val_mse=0.5760 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.44GB
+[12:29:35] GRU yeong/S04001/chl-a  36% ep=11/30 train_mse=0.3380 val_mse=0.6986 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.40GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:29:37] GRU yeong/S04001/chl-a  40% ep=12/30 train_mse=0.3502 val_mse=0.6861 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:29:40] GRU yeong/S04001/chl-a  43% ep=13/30 train_mse=0.3235 val_mse=0.8361 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:29:42] GRU yeong/S04001/chl-a  46% ep=14/30 train_mse=0.3332 val_mse=0.6511 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:29:45] GRU yeong/S04001/chl-a  50% ep=15/30 train_mse=0.3096 val_mse=0.8308 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:29:47] GRU yeong/S04001/chl-a  53% ep=16/30 train_mse=0.2949 val_mse=1.2034 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:29:47] GRU yeong/S04001/chl-a early stop @ep16 (best val_mse=0.5760)
+[12:29:48] yeong/S04001/chl-a ▶ NSE(legacy)=0.527 NSE(obs)=0.514 RMSE=5.091
+[12:29:48] GAIN 학습 시작 n=38840 dim=10 iters=3000 dev=cuda
+[12:29:49] GAIN   5% it=150/3000 D=0.228 G_mse=0.0274 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:29:52] GAIN  15% it=450/3000 D=0.081 G_mse=0.0215 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:29:56] GAIN  25% it=750/3000 D=0.083 G_mse=0.0088 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:29:59] GAIN  35% it=1050/3000 D=0.063 G_mse=0.0061 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:02] GAIN  45% it=1350/3000 D=0.062 G_mse=0.0036 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:06] GAIN  55% it=1650/3000 D=0.052 G_mse=0.0027 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:09] GAIN  65% it=1950/3000 D=0.027 G_mse=0.0024 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:12] GAIN  75% it=2250/3000 D=0.030 G_mse=0.0030 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:15] GAIN  85% it=2550/3000 D=0.045 G_mse=0.0023 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:30:19] GAIN  95% it=2850/3000 D=0.054 G_mse=0.0021 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:20] yeong/S04002/do 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:30:20] GRU 학습 yeong/S04002/do: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:23] GRU yeong/S04002/do   3% ep=1/30 train_mse=0.7561 val_mse=0.6772 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:25] GRU yeong/S04002/do   6% ep=2/30 train_mse=0.6361 val_mse=0.6593 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:28] GRU yeong/S04002/do  10% ep=3/30 train_mse=0.6183 val_mse=0.6493 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:30] GRU yeong/S04002/do  13% ep=4/30 train_mse=0.6078 val_mse=0.6396 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:33] GRU yeong/S04002/do  16% ep=5/30 train_mse=0.6020 val_mse=0.6684 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:35] GRU yeong/S04002/do  20% ep=6/30 train_mse=0.5893 val_mse=0.6428 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:37] GRU yeong/S04002/do  23% ep=7/30 train_mse=0.5860 val_mse=0.6383 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:40] GRU yeong/S04002/do  26% ep=8/30 train_mse=0.5803 val_mse=0.6361 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:42] GRU yeong/S04002/do  30% ep=9/30 train_mse=0.5717 val_mse=0.6478 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:45] GRU yeong/S04002/do  33% ep=10/30 train_mse=0.5646 val_mse=0.6396 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.35GB
+[12:30:47] GRU yeong/S04002/do  36% ep=11/30 train_mse=0.5718 val_mse=0.6275 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:50] GRU yeong/S04002/do  40% ep=12/30 train_mse=0.5563 val_mse=0.6389 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:52] GRU yeong/S04002/do  43% ep=13/30 train_mse=0.5441 val_mse=0.6284 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:54] GRU yeong/S04002/do  46% ep=14/30 train_mse=0.5398 val_mse=0.6652 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:57] GRU yeong/S04002/do  50% ep=15/30 train_mse=0.5362 val_mse=0.6526 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:30:59] GRU yeong/S04002/do  53% ep=16/30 train_mse=0.5377 val_mse=0.6732 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:31:02] GRU yeong/S04002/do  56% ep=17/30 train_mse=0.5349 val_mse=0.6529 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:31:02] GRU yeong/S04002/do early stop @ep17 (best val_mse=0.6275)
+[12:31:02] yeong/S04002/do ▶ NSE(legacy)=-0.256 NSE(obs)=0.168 RMSE=4.912
+[12:31:02] yeong/S04002/toc 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:31:02] GRU 학습 yeong/S04002/toc: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:31:04] GRU yeong/S04002/toc   3% ep=1/30 train_mse=0.7206 val_mse=0.3885 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:31:07] GRU yeong/S04002/toc   6% ep=2/30 train_mse=0.5866 val_mse=0.3786 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.35GB
+[12:31:09] GRU yeong/S04002/toc  10% ep=3/30 train_mse=0.5691 val_mse=0.3850 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.35GB
+[12:31:11] GRU yeong/S04002/toc  13% ep=4/30 train_mse=0.5698 val_mse=0.3937 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.35GB
+[12:31:14] GRU yeong/S04002/toc  16% ep=5/30 train_mse=0.5622 val_mse=0.3797 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:17] GRU yeong/S04002/toc  20% ep=6/30 train_mse=0.5541 val_mse=0.4073 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:31:19] GRU yeong/S04002/toc  23% ep=7/30 train_mse=0.5513 val_mse=0.3802 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.50GB
+[12:31:22] GRU yeong/S04002/toc  26% ep=8/30 train_mse=0.5403 val_mse=0.3843 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.49GB
+[12:31:22] GRU yeong/S04002/toc early stop @ep8 (best val_mse=0.3786)
+[12:31:22] yeong/S04002/toc ▶ NSE(legacy)=0.291 NSE(obs)=-0.090 RMSE=0.981
+[12:31:22] yeong/S04002/tn 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:31:22] GRU 학습 yeong/S04002/tn: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.43GB
+[12:31:24] GRU yeong/S04002/tn   3% ep=1/30 train_mse=0.5067 val_mse=0.5726 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:31:27] GRU yeong/S04002/tn   6% ep=2/30 train_mse=0.3132 val_mse=0.5323 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:29] GRU yeong/S04002/tn  10% ep=3/30 train_mse=0.2874 val_mse=0.5423 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:32] GRU yeong/S04002/tn  13% ep=4/30 train_mse=0.2774 val_mse=0.5570 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:34] GRU yeong/S04002/tn  16% ep=5/30 train_mse=0.2699 val_mse=0.5533 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:31:36] GRU yeong/S04002/tn  20% ep=6/30 train_mse=0.2651 val_mse=0.5514 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:31:38] GRU yeong/S04002/tn  23% ep=7/30 train_mse=0.2665 val_mse=0.5717 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:31:41] GRU yeong/S04002/tn  26% ep=8/30 train_mse=0.2553 val_mse=0.5607 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:41] GRU yeong/S04002/tn early stop @ep8 (best val_mse=0.5323)
+[12:31:41] yeong/S04002/tn ▶ NSE(legacy)=0.519 NSE(obs)=0.491 RMSE=1.342
+[12:31:41] yeong/S04002/tp 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:31:41] GRU 학습 yeong/S04002/tp: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:31:43] GRU yeong/S04002/tp   3% ep=1/30 train_mse=0.7281 val_mse=0.5230 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:45] GRU yeong/S04002/tp   6% ep=2/30 train_mse=0.6106 val_mse=0.4663 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:48] GRU yeong/S04002/tp  10% ep=3/30 train_mse=0.6040 val_mse=0.4726 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:50] GRU yeong/S04002/tp  13% ep=4/30 train_mse=0.5926 val_mse=0.4699 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:31:52] GRU yeong/S04002/tp  16% ep=5/30 train_mse=0.5914 val_mse=0.4776 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:53] GRU yeong/S04002/tp  20% ep=6/30 train_mse=0.5762 val_mse=0.4952 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:31:55] GRU yeong/S04002/tp  23% ep=7/30 train_mse=0.5708 val_mse=0.4996 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:57] GRU yeong/S04002/tp  26% ep=8/30 train_mse=0.5707 val_mse=0.5007 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:31:57] GRU yeong/S04002/tp early stop @ep8 (best val_mse=0.4663)
+[12:31:57] yeong/S04002/tp ▶ NSE(legacy)=0.178 NSE(obs)=0.207 RMSE=0.041
+[12:31:58] yeong/S04002/chl-a 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:31:58] GRU 학습 yeong/S04002/chl-a: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:32:00] GRU yeong/S04002/chl-a   3% ep=1/30 train_mse=0.6582 val_mse=0.3957 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:02] GRU yeong/S04002/chl-a   6% ep=2/30 train_mse=0.4585 val_mse=0.4258 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:32:03] GRU yeong/S04002/chl-a  10% ep=3/30 train_mse=0.4332 val_mse=0.4343 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:32:05] GRU yeong/S04002/chl-a  13% ep=4/30 train_mse=0.4345 val_mse=0.3951 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:32:07] GRU yeong/S04002/chl-a  16% ep=5/30 train_mse=0.4153 val_mse=0.5135 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:09] GRU yeong/S04002/chl-a  20% ep=6/30 train_mse=0.4183 val_mse=0.3888 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:11] GRU yeong/S04002/chl-a  23% ep=7/30 train_mse=0.3970 val_mse=0.3675 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:32:13] GRU yeong/S04002/chl-a  26% ep=8/30 train_mse=0.3895 val_mse=0.4071 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:15] GRU yeong/S04002/chl-a  30% ep=9/30 train_mse=0.3870 val_mse=0.4485 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:17] GRU yeong/S04002/chl-a  33% ep=10/30 train_mse=0.3848 val_mse=0.4065 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:19] GRU yeong/S04002/chl-a  36% ep=11/30 train_mse=0.3787 val_mse=0.4030 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:21] GRU yeong/S04002/chl-a  40% ep=12/30 train_mse=0.3642 val_mse=0.3993 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:23] GRU yeong/S04002/chl-a  43% ep=13/30 train_mse=0.3606 val_mse=0.3883 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:23] GRU yeong/S04002/chl-a early stop @ep13 (best val_mse=0.3675)
+[12:32:24] yeong/S04002/chl-a ▶ NSE(legacy)=0.308 NSE(obs)=0.247 RMSE=43.411
+[12:32:24] GAIN 학습 시작 n=38840 dim=10 iters=3000 dev=cuda
+[12:32:25] GAIN   5% it=150/3000 D=0.139 G_mse=0.0215 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:28] GAIN  15% it=450/3000 D=0.062 G_mse=0.0121 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:30] GAIN  25% it=750/3000 D=0.060 G_mse=0.0052 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:34] GAIN  35% it=1050/3000 D=0.039 G_mse=0.0047 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:37] GAIN  45% it=1350/3000 D=0.042 G_mse=0.0036 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:32:41] GAIN  55% it=1650/3000 D=0.037 G_mse=0.0026 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:32:44] GAIN  65% it=1950/3000 D=0.027 G_mse=0.0017 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:47] GAIN  75% it=2250/3000 D=0.028 G_mse=0.0016 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:50] GAIN  85% it=2550/3000 D=0.025 G_mse=0.0014 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:54] GAIN  95% it=2850/3000 D=0.035 G_mse=0.0015 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:32:55] yeong/S04003/do 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:32:55] GRU 학습 yeong/S04003/do: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:32:58] GRU yeong/S04003/do   3% ep=1/30 train_mse=0.8273 val_mse=0.7205 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:00] GRU yeong/S04003/do   6% ep=2/30 train_mse=0.6934 val_mse=0.7041 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:03] GRU yeong/S04003/do  10% ep=3/30 train_mse=0.6722 val_mse=0.7207 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:05] GRU yeong/S04003/do  13% ep=4/30 train_mse=0.6561 val_mse=0.7247 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:07] GRU yeong/S04003/do  16% ep=5/30 train_mse=0.6507 val_mse=0.7394 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:10] GRU yeong/S04003/do  20% ep=6/30 train_mse=0.6473 val_mse=0.7479 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:12] GRU yeong/S04003/do  23% ep=7/30 train_mse=0.6402 val_mse=0.7283 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:14] GRU yeong/S04003/do  26% ep=8/30 train_mse=0.6370 val_mse=0.7318 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:14] GRU yeong/S04003/do early stop @ep8 (best val_mse=0.7041)
+[12:33:15] yeong/S04003/do ▶ NSE(legacy)=0.363 NSE(obs)=0.429 RMSE=2.449
+[12:33:15] yeong/S04003/toc 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:33:15] GRU 학습 yeong/S04003/toc: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:33:17] GRU yeong/S04003/toc   3% ep=1/30 train_mse=0.7031 val_mse=0.3599 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:20] GRU yeong/S04003/toc   6% ep=2/30 train_mse=0.5658 val_mse=0.3483 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:22] GRU yeong/S04003/toc  10% ep=3/30 train_mse=0.5502 val_mse=0.3688 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:24] GRU yeong/S04003/toc  13% ep=4/30 train_mse=0.5532 val_mse=0.3731 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:27] GRU yeong/S04003/toc  16% ep=5/30 train_mse=0.5356 val_mse=0.3569 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:29] GRU yeong/S04003/toc  20% ep=6/30 train_mse=0.5309 val_mse=0.3511 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:32] GRU yeong/S04003/toc  23% ep=7/30 train_mse=0.5040 val_mse=0.3567 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:34] GRU yeong/S04003/toc  26% ep=8/30 train_mse=0.4981 val_mse=0.3660 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:34] GRU yeong/S04003/toc early stop @ep8 (best val_mse=0.3483)
+[12:33:34] yeong/S04003/toc ▶ NSE(legacy)=0.264 NSE(obs)=0.230 RMSE=1.129
+[12:33:34] [skip] yeong/S04003/tn 타깃 관측 부족
+[12:33:34] [skip] yeong/S04003/tp 타깃 관측 부족
+[12:33:34] yeong/S04003/chl-a 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:33:34] GRU 학습 yeong/S04003/chl-a: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:33:36] GRU yeong/S04003/chl-a   3% ep=1/30 train_mse=0.7279 val_mse=0.0469 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[VRAM-MON] VRAM alloc=0.08 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:38] GRU yeong/S04003/chl-a   6% ep=2/30 train_mse=0.6006 val_mse=0.0865 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:41] GRU yeong/S04003/chl-a  10% ep=3/30 train_mse=0.5672 val_mse=0.0521 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:43] GRU yeong/S04003/chl-a  13% ep=4/30 train_mse=0.5504 val_mse=0.0963 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:45] GRU yeong/S04003/chl-a  16% ep=5/30 train_mse=0.5613 val_mse=0.0454 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:47] GRU yeong/S04003/chl-a  20% ep=6/30 train_mse=0.5378 val_mse=0.0749 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:49] GRU yeong/S04003/chl-a  23% ep=7/30 train_mse=0.5301 val_mse=0.0222 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:51] GRU yeong/S04003/chl-a  26% ep=8/30 train_mse=0.5101 val_mse=0.0188 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:53] GRU yeong/S04003/chl-a  30% ep=9/30 train_mse=0.5201 val_mse=0.0149 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:33:55] GRU yeong/S04003/chl-a  33% ep=10/30 train_mse=0.4927 val_mse=0.8003 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:57] GRU yeong/S04003/chl-a  36% ep=11/30 train_mse=0.5599 val_mse=0.0429 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:33:59] GRU yeong/S04003/chl-a  40% ep=12/30 train_mse=0.5195 val_mse=0.0990 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:02] GRU yeong/S04003/chl-a  43% ep=13/30 train_mse=0.5020 val_mse=0.0856 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:04] GRU yeong/S04003/chl-a  46% ep=14/30 train_mse=0.4923 val_mse=0.0411 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:06] GRU yeong/S04003/chl-a  50% ep=15/30 train_mse=0.4624 val_mse=0.0417 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:06] GRU yeong/S04003/chl-a early stop @ep15 (best val_mse=0.0149)
+[12:34:06] yeong/S04003/chl-a ▶ NSE(legacy)=0.307 NSE(obs)=0.347 RMSE=15.946
+[12:34:06] GAIN 학습 시작 n=38840 dim=10 iters=3000 dev=cuda
+[12:34:08] GAIN   5% it=150/3000 D=0.300 G_mse=0.0299 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:10] GAIN  15% it=450/3000 D=0.091 G_mse=0.0172 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:13] GAIN  25% it=750/3000 D=0.071 G_mse=0.0073 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:16] GAIN  35% it=1050/3000 D=0.062 G_mse=0.0052 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:18] GAIN  45% it=1350/3000 D=0.068 G_mse=0.0045 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:21] GAIN  55% it=1650/3000 D=0.053 G_mse=0.0030 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:23] GAIN  65% it=1950/3000 D=0.045 G_mse=0.0027 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:26] GAIN  75% it=2250/3000 D=0.033 G_mse=0.0030 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:29] GAIN  85% it=2550/3000 D=0.033 G_mse=0.0024 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:31] GAIN  95% it=2850/3000 D=0.032 G_mse=0.0025 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:33] yeong/S04004/do 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:34:33] GRU 학습 yeong/S04004/do: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:34:35] GRU yeong/S04004/do   3% ep=1/30 train_mse=0.6084 val_mse=0.2454 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:37] GRU yeong/S04004/do   6% ep=2/30 train_mse=0.4423 val_mse=0.2596 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:39] GRU yeong/S04004/do  10% ep=3/30 train_mse=0.4214 val_mse=0.2628 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:42] GRU yeong/S04004/do  13% ep=4/30 train_mse=0.4099 val_mse=0.3073 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:44] GRU yeong/S04004/do  16% ep=5/30 train_mse=0.3950 val_mse=0.2791 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:46] GRU yeong/S04004/do  20% ep=6/30 train_mse=0.3917 val_mse=0.2535 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:48] GRU yeong/S04004/do  23% ep=7/30 train_mse=0.3861 val_mse=0.3160 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:48] GRU yeong/S04004/do early stop @ep7 (best val_mse=0.2454)
+[12:34:48] yeong/S04004/do ▶ NSE(legacy)=0.247 NSE(obs)=0.463 RMSE=1.845
+[12:34:49] yeong/S04004/toc 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:34:49] GRU 학습 yeong/S04004/toc: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:34:51] GRU yeong/S04004/toc   3% ep=1/30 train_mse=0.5060 val_mse=0.4055 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:53] GRU yeong/S04004/toc   6% ep=2/30 train_mse=0.3042 val_mse=0.3678 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:55] GRU yeong/S04004/toc  10% ep=3/30 train_mse=0.2817 val_mse=0.3632 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:34:58] GRU yeong/S04004/toc  13% ep=4/30 train_mse=0.2808 val_mse=0.3927 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:00] GRU yeong/S04004/toc  16% ep=5/30 train_mse=0.2730 val_mse=0.3897 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:02] GRU yeong/S04004/toc  20% ep=6/30 train_mse=0.2841 val_mse=0.3601 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:04] GRU yeong/S04004/toc  23% ep=7/30 train_mse=0.2603 val_mse=0.3614 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:07] GRU yeong/S04004/toc  26% ep=8/30 train_mse=0.2538 val_mse=0.3557 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:09] GRU yeong/S04004/toc  30% ep=9/30 train_mse=0.2514 val_mse=0.3575 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:11] GRU yeong/S04004/toc  33% ep=10/30 train_mse=0.2483 val_mse=0.3536 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:13] GRU yeong/S04004/toc  36% ep=11/30 train_mse=0.2467 val_mse=0.3551 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:16] GRU yeong/S04004/toc  40% ep=12/30 train_mse=0.2424 val_mse=0.3414 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:18] GRU yeong/S04004/toc  43% ep=13/30 train_mse=0.2394 val_mse=0.3648 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:20] GRU yeong/S04004/toc  46% ep=14/30 train_mse=0.2367 val_mse=0.3350 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:22] GRU yeong/S04004/toc  50% ep=15/30 train_mse=0.2304 val_mse=0.3316 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:25] GRU yeong/S04004/toc  53% ep=16/30 train_mse=0.2292 val_mse=0.3535 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:27] GRU yeong/S04004/toc  56% ep=17/30 train_mse=0.2285 val_mse=0.3327 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:29] GRU yeong/S04004/toc  60% ep=18/30 train_mse=0.2230 val_mse=0.3450 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:31] GRU yeong/S04004/toc  63% ep=19/30 train_mse=0.2374 val_mse=0.3380 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:33] GRU yeong/S04004/toc  66% ep=20/30 train_mse=0.2192 val_mse=0.3392 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:35] GRU yeong/S04004/toc  70% ep=21/30 train_mse=0.2208 val_mse=0.3419 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:35] GRU yeong/S04004/toc early stop @ep21 (best val_mse=0.3316)
+[12:35:35] yeong/S04004/toc ▶ NSE(legacy)=0.611 NSE(obs)=0.599 RMSE=0.458
+[12:35:36] yeong/S04004/tn 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:35:36] GRU 학습 yeong/S04004/tn: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:35:37] GRU yeong/S04004/tn   3% ep=1/30 train_mse=0.5432 val_mse=0.4090 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.44 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:39] GRU yeong/S04004/tn   6% ep=2/30 train_mse=0.3411 val_mse=0.3994 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:41] GRU yeong/S04004/tn  10% ep=3/30 train_mse=0.3296 val_mse=0.3863 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:43] GRU yeong/S04004/tn  13% ep=4/30 train_mse=0.3100 val_mse=0.3668 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:45] GRU yeong/S04004/tn  16% ep=5/30 train_mse=0.2998 val_mse=0.3688 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:47] GRU yeong/S04004/tn  20% ep=6/30 train_mse=0.2893 val_mse=0.3422 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:49] GRU yeong/S04004/tn  23% ep=7/30 train_mse=0.2864 val_mse=0.3611 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:51] GRU yeong/S04004/tn  26% ep=8/30 train_mse=0.2779 val_mse=0.3333 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:52] GRU yeong/S04004/tn  30% ep=9/30 train_mse=0.2728 val_mse=0.3496 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:54] GRU yeong/S04004/tn  33% ep=10/30 train_mse=0.2828 val_mse=0.3448 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:56] GRU yeong/S04004/tn  36% ep=11/30 train_mse=0.2720 val_mse=0.3814 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:35:58] GRU yeong/S04004/tn  40% ep=12/30 train_mse=0.2692 val_mse=0.3332 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:00] GRU yeong/S04004/tn  43% ep=13/30 train_mse=0.2764 val_mse=0.3683 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:02] GRU yeong/S04004/tn  46% ep=14/30 train_mse=0.2605 val_mse=0.3627 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:04] GRU yeong/S04004/tn  50% ep=15/30 train_mse=0.2606 val_mse=0.3711 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:07] GRU yeong/S04004/tn  53% ep=16/30 train_mse=0.2592 val_mse=0.3876 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:09] GRU yeong/S04004/tn  56% ep=17/30 train_mse=0.2548 val_mse=0.3867 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.47 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:11] GRU yeong/S04004/tn  60% ep=18/30 train_mse=0.2513 val_mse=0.4428 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:11] GRU yeong/S04004/tn early stop @ep18 (best val_mse=0.3332)
+[12:36:11] yeong/S04004/tn ▶ NSE(legacy)=0.685 NSE(obs)=0.695 RMSE=0.308
+[12:36:12] yeong/S04004/tp 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:36:12] GRU 학습 yeong/S04004/tp: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:36:14] GRU yeong/S04004/tp   3% ep=1/30 train_mse=0.6200 val_mse=0.2048 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:16] GRU yeong/S04004/tp   6% ep=2/30 train_mse=0.4304 val_mse=0.1690 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:18] GRU yeong/S04004/tp  10% ep=3/30 train_mse=0.4138 val_mse=0.1660 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:21] GRU yeong/S04004/tp  13% ep=4/30 train_mse=0.3970 val_mse=0.1752 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:23] GRU yeong/S04004/tp  16% ep=5/30 train_mse=0.3908 val_mse=0.1725 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:25] GRU yeong/S04004/tp  20% ep=6/30 train_mse=0.3796 val_mse=0.1717 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:27] GRU yeong/S04004/tp  23% ep=7/30 train_mse=0.3839 val_mse=0.1774 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:29] GRU yeong/S04004/tp  26% ep=8/30 train_mse=0.3693 val_mse=0.1913 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:31] GRU yeong/S04004/tp  30% ep=9/30 train_mse=0.3612 val_mse=0.1648 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:33] GRU yeong/S04004/tp  33% ep=10/30 train_mse=0.3984 val_mse=0.1710 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:35] GRU yeong/S04004/tp  36% ep=11/30 train_mse=0.3665 val_mse=0.1673 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:37] GRU yeong/S04004/tp  40% ep=12/30 train_mse=0.3628 val_mse=0.1673 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:40] GRU yeong/S04004/tp  43% ep=13/30 train_mse=0.3509 val_mse=0.1714 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:42] GRU yeong/S04004/tp  46% ep=14/30 train_mse=0.3534 val_mse=0.2093 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:44] GRU yeong/S04004/tp  50% ep=15/30 train_mse=0.3463 val_mse=0.1750 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:44] GRU yeong/S04004/tp early stop @ep15 (best val_mse=0.1648)
+[12:36:44] yeong/S04004/tp ▶ NSE(legacy)=0.521 NSE(obs)=0.610 RMSE=0.004
+[12:36:44] yeong/S04004/chl-a 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:36:44] GRU 학습 yeong/S04004/chl-a: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:36:46] GRU yeong/S04004/chl-a   3% ep=1/30 train_mse=0.5952 val_mse=0.8195 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:48] GRU yeong/S04004/chl-a   6% ep=2/30 train_mse=0.3726 val_mse=0.7601 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:50] GRU yeong/S04004/chl-a  10% ep=3/30 train_mse=0.3602 val_mse=0.6699 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:52] GRU yeong/S04004/chl-a  13% ep=4/30 train_mse=0.3469 val_mse=0.6326 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:54] GRU yeong/S04004/chl-a  16% ep=5/30 train_mse=0.3426 val_mse=0.6740 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:57] GRU yeong/S04004/chl-a  20% ep=6/30 train_mse=0.3375 val_mse=0.6821 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:36:59] GRU yeong/S04004/chl-a  23% ep=7/30 train_mse=0.3491 val_mse=0.6651 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:01] GRU yeong/S04004/chl-a  26% ep=8/30 train_mse=0.3284 val_mse=0.6923 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:03] GRU yeong/S04004/chl-a  30% ep=9/30 train_mse=0.3285 val_mse=0.7055 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:05] GRU yeong/S04004/chl-a  33% ep=10/30 train_mse=0.3129 val_mse=0.8000 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:05] GRU yeong/S04004/chl-a early stop @ep10 (best val_mse=0.6326)
+[12:37:06] yeong/S04004/chl-a ▶ NSE(legacy)=0.460 NSE(obs)=0.457 RMSE=9.109
+[12:37:06] GAIN 학습 시작 n=38270 dim=10 iters=3000 dev=cuda
+[12:37:07] GAIN   5% it=150/3000 D=0.218 G_mse=0.0246 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:10] GAIN  15% it=450/3000 D=0.087 G_mse=0.0145 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:13] GAIN  25% it=750/3000 D=0.095 G_mse=0.0076 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:16] GAIN  35% it=1050/3000 D=0.065 G_mse=0.0041 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:19] GAIN  45% it=1350/3000 D=0.030 G_mse=0.0029 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:22] GAIN  55% it=1650/3000 D=0.058 G_mse=0.0024 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:25] GAIN  65% it=1950/3000 D=0.053 G_mse=0.0027 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:28] GAIN  75% it=2250/3000 D=0.046 G_mse=0.0021 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:31] GAIN  85% it=2550/3000 D=0.050 G_mse=0.0019 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:34] GAIN  95% it=2850/3000 D=0.022 G_mse=0.0013 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:36] yeong/S04005/do 윈도우 tr=(3160, 240, 14) va=(213, 240, 14) te=(441, 240, 14)
+[12:37:36] GRU 학습 yeong/S04005/do: epochs=30 batches/epoch=25 dev=cuda Xtr=(3160, 240, 14)
+[12:37:38] GRU yeong/S04005/do   3% ep=1/30 train_mse=0.7968 val_mse=0.7404 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:40] GRU yeong/S04005/do   6% ep=2/30 train_mse=0.6583 val_mse=0.8056 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:42] GRU yeong/S04005/do  10% ep=3/30 train_mse=0.6345 val_mse=0.7552 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:44] GRU yeong/S04005/do  13% ep=4/30 train_mse=0.6200 val_mse=0.7988 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:46] GRU yeong/S04005/do  16% ep=5/30 train_mse=0.6133 val_mse=0.7464 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:48] GRU yeong/S04005/do  20% ep=6/30 train_mse=0.6083 val_mse=0.7517 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:50] GRU yeong/S04005/do  23% ep=7/30 train_mse=0.6030 val_mse=0.8712 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:50] GRU yeong/S04005/do early stop @ep7 (best val_mse=0.7404)
+[12:37:50] yeong/S04005/do ▶ NSE(legacy)=-0.179 NSE(obs)=-0.182 RMSE=2.201
+[12:37:51] yeong/S04005/toc 윈도우 tr=(3160, 240, 14) va=(213, 240, 14) te=(441, 240, 14)
+[12:37:51] GRU 학습 yeong/S04005/toc: epochs=30 batches/epoch=25 dev=cuda Xtr=(3160, 240, 14)
+[12:37:52] GRU yeong/S04005/toc   3% ep=1/30 train_mse=0.6700 val_mse=0.8959 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:54] GRU yeong/S04005/toc   6% ep=2/30 train_mse=0.5096 val_mse=0.8183 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:56] GRU yeong/S04005/toc  10% ep=3/30 train_mse=0.4895 val_mse=0.9539 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:58] GRU yeong/S04005/toc  13% ep=4/30 train_mse=0.4881 val_mse=0.8396 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:37:59] GRU yeong/S04005/toc  16% ep=5/30 train_mse=0.4841 val_mse=0.9710 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:01] GRU yeong/S04005/toc  20% ep=6/30 train_mse=0.4762 val_mse=1.0627 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:03] GRU yeong/S04005/toc  23% ep=7/30 train_mse=0.4703 val_mse=1.2068 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:04] GRU yeong/S04005/toc  26% ep=8/30 train_mse=0.4682 val_mse=1.2376 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:04] GRU yeong/S04005/toc early stop @ep8 (best val_mse=0.8183)
+[12:38:05] yeong/S04005/toc ▶ NSE(legacy)=-1.574 NSE(obs)=0.300 RMSE=1.532
+[12:38:05] yeong/S04005/tn 윈도우 tr=(3160, 240, 14) va=(213, 240, 14) te=(441, 240, 14)
+[12:38:05] GRU 학습 yeong/S04005/tn: epochs=30 batches/epoch=25 dev=cuda Xtr=(3160, 240, 14)
+[12:38:06] GRU yeong/S04005/tn   3% ep=1/30 train_mse=0.5657 val_mse=0.2813 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:08] GRU yeong/S04005/tn   6% ep=2/30 train_mse=0.3711 val_mse=0.2437 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:10] GRU yeong/S04005/tn  10% ep=3/30 train_mse=0.3587 val_mse=0.2929 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:12] GRU yeong/S04005/tn  13% ep=4/30 train_mse=0.3512 val_mse=0.2856 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:14] GRU yeong/S04005/tn  16% ep=5/30 train_mse=0.3376 val_mse=0.2051 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:15] GRU yeong/S04005/tn  20% ep=6/30 train_mse=0.3326 val_mse=0.1954 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:17] GRU yeong/S04005/tn  23% ep=7/30 train_mse=0.3251 val_mse=0.4862 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:19] GRU yeong/S04005/tn  26% ep=8/30 train_mse=0.3227 val_mse=0.3429 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:22] GRU yeong/S04005/tn  30% ep=9/30 train_mse=0.3084 val_mse=0.4100 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:24] GRU yeong/S04005/tn  33% ep=10/30 train_mse=0.3022 val_mse=0.4457 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:26] GRU yeong/S04005/tn  36% ep=11/30 train_mse=0.2964 val_mse=0.4286 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:28] GRU yeong/S04005/tn  40% ep=12/30 train_mse=0.2910 val_mse=0.2537 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:28] GRU yeong/S04005/tn early stop @ep12 (best val_mse=0.1954)
+[12:38:28] yeong/S04005/tn ▶ NSE(legacy)=0.571 NSE(obs)=-0.687 RMSE=1.409
+[12:38:28] yeong/S04005/tp 윈도우 tr=(3160, 240, 14) va=(213, 240, 14) te=(441, 240, 14)
+[12:38:28] GRU 학습 yeong/S04005/tp: epochs=30 batches/epoch=25 dev=cuda Xtr=(3160, 240, 14)
+[12:38:30] GRU yeong/S04005/tp   3% ep=1/30 train_mse=0.8017 val_mse=1.1578 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:33] GRU yeong/S04005/tp   6% ep=2/30 train_mse=0.6763 val_mse=1.1608 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:35] GRU yeong/S04005/tp  10% ep=3/30 train_mse=0.6546 val_mse=1.1173 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:37] GRU yeong/S04005/tp  13% ep=4/30 train_mse=0.6467 val_mse=1.3331 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:39] GRU yeong/S04005/tp  16% ep=5/30 train_mse=0.6370 val_mse=1.2073 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:42] GRU yeong/S04005/tp  20% ep=6/30 train_mse=0.6267 val_mse=1.1430 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:44] GRU yeong/S04005/tp  23% ep=7/30 train_mse=0.6249 val_mse=1.3399 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:46] GRU yeong/S04005/tp  26% ep=8/30 train_mse=0.6151 val_mse=1.3081 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:48] GRU yeong/S04005/tp  30% ep=9/30 train_mse=0.6214 val_mse=1.4717 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:48] GRU yeong/S04005/tp early stop @ep9 (best val_mse=1.1173)
+[12:38:48] yeong/S04005/tp ▶ NSE(legacy)=-1.127 NSE(obs)=-0.025 RMSE=0.112
+[12:38:48] yeong/S04005/chl-a 윈도우 tr=(3160, 240, 14) va=(213, 240, 14) te=(441, 240, 14)
+[12:38:48] GRU 학습 yeong/S04005/chl-a: epochs=30 batches/epoch=25 dev=cuda Xtr=(3160, 240, 14)
+[12:38:51] GRU yeong/S04005/chl-a   3% ep=1/30 train_mse=0.7612 val_mse=1.0374 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:53] GRU yeong/S04005/chl-a   6% ep=2/30 train_mse=0.6128 val_mse=0.9972 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:55] GRU yeong/S04005/chl-a  10% ep=3/30 train_mse=0.6035 val_mse=0.9935 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:57] GRU yeong/S04005/chl-a  13% ep=4/30 train_mse=0.5902 val_mse=1.1027 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:38:59] GRU yeong/S04005/chl-a  16% ep=5/30 train_mse=0.5903 val_mse=1.1351 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:01] GRU yeong/S04005/chl-a  20% ep=6/30 train_mse=0.5859 val_mse=1.2023 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:03] GRU yeong/S04005/chl-a  23% ep=7/30 train_mse=0.5759 val_mse=1.2132 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:05] GRU yeong/S04005/chl-a  26% ep=8/30 train_mse=0.5734 val_mse=1.1183 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:07] GRU yeong/S04005/chl-a  30% ep=9/30 train_mse=0.5664 val_mse=1.2800 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:07] GRU yeong/S04005/chl-a early stop @ep9 (best val_mse=0.9935)
+[12:39:07] yeong/S04005/chl-a ▶ NSE(legacy)=-2.976 NSE(obs)=-0.126 RMSE=43.894
+[12:39:07] GAIN 학습 시작 n=37347 dim=10 iters=3000 dev=cuda
+[12:39:09] GAIN   5% it=150/3000 D=0.268 G_mse=0.0360 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:11] GAIN  15% it=450/3000 D=0.124 G_mse=0.0112 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:14] GAIN  25% it=750/3000 D=0.069 G_mse=0.0088 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:17] GAIN  35% it=1050/3000 D=0.057 G_mse=0.0042 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:20] GAIN  45% it=1350/3000 D=0.050 G_mse=0.0035 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:22] GAIN  55% it=1650/3000 D=0.046 G_mse=0.0022 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:25] GAIN  65% it=1950/3000 D=0.026 G_mse=0.0020 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:28] GAIN  75% it=2250/3000 D=0.013 G_mse=0.0018 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:31] GAIN  85% it=2550/3000 D=0.018 G_mse=0.0020 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:34] GAIN  95% it=2850/3000 D=0.010 G_mse=0.0016 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:36] yeong/S04006/do 윈도우 tr=(3083, 240, 14) va=(208, 240, 14) te=(430, 240, 14)
+[12:39:36] GRU 학습 yeong/S04006/do: epochs=30 batches/epoch=25 dev=cuda Xtr=(3083, 240, 14)
+[12:39:38] GRU yeong/S04006/do   3% ep=1/30 train_mse=0.5947 val_mse=0.3444 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:40] GRU yeong/S04006/do   6% ep=2/30 train_mse=0.4072 val_mse=0.1267 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:42] GRU yeong/S04006/do  10% ep=3/30 train_mse=0.3858 val_mse=0.3684 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:44] GRU yeong/S04006/do  13% ep=4/30 train_mse=0.3730 val_mse=1.0404 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:47] GRU yeong/S04006/do  16% ep=5/30 train_mse=0.3642 val_mse=1.6050 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:49] GRU yeong/S04006/do  20% ep=6/30 train_mse=0.3680 val_mse=0.6535 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:51] GRU yeong/S04006/do  23% ep=7/30 train_mse=0.3572 val_mse=1.2676 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:53] GRU yeong/S04006/do  26% ep=8/30 train_mse=0.3441 val_mse=1.7987 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:53] GRU yeong/S04006/do early stop @ep8 (best val_mse=0.1267)
+[12:39:53] yeong/S04006/do ▶ NSE(legacy)=0.685 NSE(obs)=0.537 RMSE=1.430
+[12:39:53] yeong/S04006/toc 윈도우 tr=(3083, 240, 14) va=(208, 240, 14) te=(430, 240, 14)
+[12:39:53] GRU 학습 yeong/S04006/toc: epochs=30 batches/epoch=25 dev=cuda Xtr=(3083, 240, 14)
+[12:39:55] GRU yeong/S04006/toc   3% ep=1/30 train_mse=0.5916 val_mse=0.0416 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:57] GRU yeong/S04006/toc   6% ep=2/30 train_mse=0.4555 val_mse=0.0722 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:39:59] GRU yeong/S04006/toc  10% ep=3/30 train_mse=0.4501 val_mse=0.0447 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:01] GRU yeong/S04006/toc  13% ep=4/30 train_mse=0.4415 val_mse=0.2666 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:03] GRU yeong/S04006/toc  16% ep=5/30 train_mse=0.4403 val_mse=0.2378 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:05] GRU yeong/S04006/toc  20% ep=6/30 train_mse=0.4202 val_mse=0.5839 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:07] GRU yeong/S04006/toc  23% ep=7/30 train_mse=0.4264 val_mse=0.2440 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:07] GRU yeong/S04006/toc early stop @ep7 (best val_mse=0.0416)
+[12:40:07] yeong/S04006/toc ▶ NSE(legacy)=0.143 NSE(obs)=0.161 RMSE=0.608
+[12:40:08] yeong/S04006/tn 윈도우 tr=(3083, 240, 14) va=(208, 240, 14) te=(430, 240, 14)
+[12:40:08] GRU 학습 yeong/S04006/tn: epochs=30 batches/epoch=25 dev=cuda Xtr=(3083, 240, 14)
+[12:40:10] GRU yeong/S04006/tn   3% ep=1/30 train_mse=0.6291 val_mse=0.2347 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:12] GRU yeong/S04006/tn   6% ep=2/30 train_mse=0.4799 val_mse=0.4642 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:14] GRU yeong/S04006/tn  10% ep=3/30 train_mse=0.4676 val_mse=0.4291 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:16] GRU yeong/S04006/tn  13% ep=4/30 train_mse=0.4476 val_mse=0.8962 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:18] GRU yeong/S04006/tn  16% ep=5/30 train_mse=0.4472 val_mse=1.5254 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:19] GRU yeong/S04006/tn  20% ep=6/30 train_mse=0.4192 val_mse=2.2200 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:21] GRU yeong/S04006/tn  23% ep=7/30 train_mse=0.4203 val_mse=0.6937 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:21] GRU yeong/S04006/tn early stop @ep7 (best val_mse=0.2347)
+[12:40:21] yeong/S04006/tn ▶ NSE(legacy)=0.470 NSE(obs)=-0.049 RMSE=0.504
+[12:40:21] yeong/S04006/tp 윈도우 tr=(3083, 240, 14) va=(208, 240, 14) te=(430, 240, 14)
+[12:40:21] GRU 학습 yeong/S04006/tp: epochs=30 batches/epoch=25 dev=cuda Xtr=(3083, 240, 14)
+[12:40:23] GRU yeong/S04006/tp   3% ep=1/30 train_mse=0.5808 val_mse=0.2838 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:25] GRU yeong/S04006/tp   6% ep=2/30 train_mse=0.4012 val_mse=0.1069 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:27] GRU yeong/S04006/tp  10% ep=3/30 train_mse=0.3912 val_mse=0.9389 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:29] GRU yeong/S04006/tp  13% ep=4/30 train_mse=0.3607 val_mse=1.0426 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:31] GRU yeong/S04006/tp  16% ep=5/30 train_mse=0.3512 val_mse=1.8845 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:33] GRU yeong/S04006/tp  20% ep=6/30 train_mse=0.3489 val_mse=1.0230 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:35] GRU yeong/S04006/tp  23% ep=7/30 train_mse=0.3339 val_mse=3.3193 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:37] GRU yeong/S04006/tp  26% ep=8/30 train_mse=0.3945 val_mse=0.0388 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:39] GRU yeong/S04006/tp  30% ep=9/30 train_mse=0.3910 val_mse=0.2291 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:41] GRU yeong/S04006/tp  33% ep=10/30 train_mse=0.3488 val_mse=0.3599 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:43] GRU yeong/S04006/tp  36% ep=11/30 train_mse=0.3283 val_mse=0.2876 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:45] GRU yeong/S04006/tp  40% ep=12/30 train_mse=0.3183 val_mse=0.9566 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:47] GRU yeong/S04006/tp  43% ep=13/30 train_mse=0.3166 val_mse=1.5247 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:49] GRU yeong/S04006/tp  46% ep=14/30 train_mse=0.3091 val_mse=0.8789 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:49] GRU yeong/S04006/tp early stop @ep14 (best val_mse=0.0388)
+[12:40:49] yeong/S04006/tp ▶ NSE(legacy)=0.456 NSE(obs)=0.322 RMSE=0.016
+[12:40:50] [skip] yeong/S04006/chl-a 타깃 관측 부족
+[12:40:50] GAIN 학습 시작 n=38840 dim=10 iters=3000 dev=cuda
+[12:40:51] GAIN   5% it=150/3000 D=0.167 G_mse=0.0274 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:54] GAIN  15% it=450/3000 D=0.090 G_mse=0.0101 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:40:57] GAIN  25% it=750/3000 D=0.058 G_mse=0.0070 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:00] GAIN  35% it=1050/3000 D=0.047 G_mse=0.0053 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:03] GAIN  45% it=1350/3000 D=0.034 G_mse=0.0035 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:06] GAIN  55% it=1650/3000 D=0.025 G_mse=0.0028 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:09] GAIN  65% it=1950/3000 D=0.024 G_mse=0.0027 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:11] GAIN  75% it=2250/3000 D=0.026 G_mse=0.0020 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:14] GAIN  85% it=2550/3000 D=0.021 G_mse=0.0014 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:17] GAIN  95% it=2850/3000 D=0.028 G_mse=0.0019 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:19] yeong/S04007/do 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:41:19] GRU 학습 yeong/S04007/do: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:41:21] GRU yeong/S04007/do   3% ep=1/30 train_mse=0.6293 val_mse=0.4510 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:23] GRU yeong/S04007/do   6% ep=2/30 train_mse=0.4808 val_mse=0.3791 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:25] GRU yeong/S04007/do  10% ep=3/30 train_mse=0.4696 val_mse=0.3773 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:27] GRU yeong/S04007/do  13% ep=4/30 train_mse=0.4562 val_mse=0.3770 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:29] GRU yeong/S04007/do  16% ep=5/30 train_mse=0.4475 val_mse=0.3721 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:31] GRU yeong/S04007/do  20% ep=6/30 train_mse=0.4473 val_mse=0.3586 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:33] GRU yeong/S04007/do  23% ep=7/30 train_mse=0.4400 val_mse=0.4078 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:35] GRU yeong/S04007/do  26% ep=8/30 train_mse=0.4488 val_mse=0.3805 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:38] GRU yeong/S04007/do  30% ep=9/30 train_mse=0.4385 val_mse=0.3675 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:40] GRU yeong/S04007/do  33% ep=10/30 train_mse=0.4321 val_mse=0.3885 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:42] GRU yeong/S04007/do  36% ep=11/30 train_mse=0.4345 val_mse=0.3963 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:44] GRU yeong/S04007/do  40% ep=12/30 train_mse=0.4266 val_mse=0.3506 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:46] GRU yeong/S04007/do  43% ep=13/30 train_mse=0.4329 val_mse=0.3547 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:48] GRU yeong/S04007/do  46% ep=14/30 train_mse=0.4277 val_mse=0.3511 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:51] GRU yeong/S04007/do  50% ep=15/30 train_mse=0.4157 val_mse=0.3739 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:53] GRU yeong/S04007/do  53% ep=16/30 train_mse=0.4092 val_mse=0.3473 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:55] GRU yeong/S04007/do  56% ep=17/30 train_mse=0.3955 val_mse=0.3407 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:57] GRU yeong/S04007/do  60% ep=18/30 train_mse=0.3937 val_mse=0.3505 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:41:59] GRU yeong/S04007/do  63% ep=19/30 train_mse=0.3858 val_mse=0.3533 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:01] GRU yeong/S04007/do  66% ep=20/30 train_mse=0.3787 val_mse=0.3723 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:03] GRU yeong/S04007/do  70% ep=21/30 train_mse=0.3885 val_mse=0.3398 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:05] GRU yeong/S04007/do  73% ep=22/30 train_mse=0.3830 val_mse=0.3749 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:07] GRU yeong/S04007/do  76% ep=23/30 train_mse=0.3746 val_mse=0.3922 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:09] GRU yeong/S04007/do  80% ep=24/30 train_mse=0.3614 val_mse=0.3740 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:11] GRU yeong/S04007/do  83% ep=25/30 train_mse=0.3536 val_mse=0.3688 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:13] GRU yeong/S04007/do  86% ep=26/30 train_mse=0.3579 val_mse=0.3588 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:15] GRU yeong/S04007/do  90% ep=27/30 train_mse=0.3461 val_mse=0.3826 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:15] GRU yeong/S04007/do early stop @ep27 (best val_mse=0.3398)
+[12:42:15] yeong/S04007/do ▶ NSE(legacy)=0.142 NSE(obs)=0.629 RMSE=1.607
+[12:42:16] yeong/S04007/toc 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:42:16] GRU 학습 yeong/S04007/toc: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:42:18] GRU yeong/S04007/toc   3% ep=1/30 train_mse=0.6311 val_mse=0.5221 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:20] GRU yeong/S04007/toc   6% ep=2/30 train_mse=0.4286 val_mse=0.5311 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:22] GRU yeong/S04007/toc  10% ep=3/30 train_mse=0.4245 val_mse=0.4959 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:25] GRU yeong/S04007/toc  13% ep=4/30 train_mse=0.4138 val_mse=0.4129 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:27] GRU yeong/S04007/toc  16% ep=5/30 train_mse=0.4140 val_mse=0.4635 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:29] GRU yeong/S04007/toc  20% ep=6/30 train_mse=0.4021 val_mse=0.4600 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:31] GRU yeong/S04007/toc  23% ep=7/30 train_mse=0.4004 val_mse=0.4700 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:34] GRU yeong/S04007/toc  26% ep=8/30 train_mse=0.3973 val_mse=0.4857 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:36] GRU yeong/S04007/toc  30% ep=9/30 train_mse=0.4017 val_mse=0.4892 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:38] GRU yeong/S04007/toc  33% ep=10/30 train_mse=0.3872 val_mse=0.4552 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.36GB
+[12:42:38] GRU yeong/S04007/toc early stop @ep10 (best val_mse=0.4129)
+[12:42:38] yeong/S04007/toc ▶ NSE(legacy)=0.585 NSE(obs)=-0.294 RMSE=0.367
+[12:42:38] yeong/S04007/tn 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:42:38] GRU 학습 yeong/S04007/tn: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:42:40] GRU yeong/S04007/tn   3% ep=1/30 train_mse=0.7414 val_mse=0.6072 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.38GB
+[12:42:42] GRU yeong/S04007/tn   6% ep=2/30 train_mse=0.6284 val_mse=0.5560 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:42:44] GRU yeong/S04007/tn  10% ep=3/30 train_mse=0.6188 val_mse=0.5543 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:42:46] GRU yeong/S04007/tn  13% ep=4/30 train_mse=0.6125 val_mse=0.5282 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:42:48] GRU yeong/S04007/tn  16% ep=5/30 train_mse=0.6128 val_mse=0.5653 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.40GB
+[12:42:50] GRU yeong/S04007/tn  20% ep=6/30 train_mse=0.6142 val_mse=0.5504 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.39GB
+[12:42:52] GRU yeong/S04007/tn  23% ep=7/30 train_mse=0.6043 val_mse=0.5160 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:42:54] GRU yeong/S04007/tn  26% ep=8/30 train_mse=0.5949 val_mse=0.5693 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[12:42:56] GRU yeong/S04007/tn  30% ep=9/30 train_mse=0.6019 val_mse=0.5235 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.37GB
+[VRAM-MON] VRAM alloc=0.65 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:42:58] GRU yeong/S04007/tn  33% ep=10/30 train_mse=0.5937 val_mse=0.5647 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:43:00] GRU yeong/S04007/tn  36% ep=11/30 train_mse=0.5946 val_mse=0.5199 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:02] GRU yeong/S04007/tn  40% ep=12/30 train_mse=0.5728 val_mse=0.5371 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:04] GRU yeong/S04007/tn  43% ep=13/30 train_mse=0.5752 val_mse=0.5216 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:04] GRU yeong/S04007/tn early stop @ep13 (best val_mse=0.5160)
+[12:43:04] yeong/S04007/tn ▶ NSE(legacy)=0.114 NSE(obs)=-0.115 RMSE=0.234
+[12:43:04] yeong/S04007/tp 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:43:04] GRU 학습 yeong/S04007/tp: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:43:06] GRU yeong/S04007/tp   3% ep=1/30 train_mse=0.9102 val_mse=0.7318 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:08] GRU yeong/S04007/tp   6% ep=2/30 train_mse=0.8464 val_mse=0.7088 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:11] GRU yeong/S04007/tp  10% ep=3/30 train_mse=0.8294 val_mse=0.6987 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:13] GRU yeong/S04007/tp  13% ep=4/30 train_mse=0.8209 val_mse=0.6939 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:16] GRU yeong/S04007/tp  16% ep=5/30 train_mse=0.8164 val_mse=0.6974 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:19] GRU yeong/S04007/tp  20% ep=6/30 train_mse=0.8198 val_mse=0.6975 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:21] GRU yeong/S04007/tp  23% ep=7/30 train_mse=0.8054 val_mse=0.7007 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:24] GRU yeong/S04007/tp  26% ep=8/30 train_mse=0.8109 val_mse=0.6920 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:26] GRU yeong/S04007/tp  30% ep=9/30 train_mse=0.8014 val_mse=0.6967 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:29] GRU yeong/S04007/tp  33% ep=10/30 train_mse=0.8193 val_mse=0.6964 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:31] GRU yeong/S04007/tp  36% ep=11/30 train_mse=0.7896 val_mse=0.6895 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:33] GRU yeong/S04007/tp  40% ep=12/30 train_mse=0.7751 val_mse=0.7010 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:36] GRU yeong/S04007/tp  43% ep=13/30 train_mse=0.7899 val_mse=0.6856 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:38] GRU yeong/S04007/tp  46% ep=14/30 train_mse=0.8143 val_mse=0.6925 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:40] GRU yeong/S04007/tp  50% ep=15/30 train_mse=0.7671 val_mse=0.6955 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:42] GRU yeong/S04007/tp  53% ep=16/30 train_mse=0.7626 val_mse=0.6950 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:44] GRU yeong/S04007/tp  56% ep=17/30 train_mse=0.7474 val_mse=0.7017 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:46] GRU yeong/S04007/tp  60% ep=18/30 train_mse=0.7382 val_mse=0.6972 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:49] GRU yeong/S04007/tp  63% ep=19/30 train_mse=0.7517 val_mse=0.7023 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:49] GRU yeong/S04007/tp early stop @ep19 (best val_mse=0.6856)
+[12:43:49] yeong/S04007/tp ▶ NSE(legacy)=-0.112 NSE(obs)=-5482555.219 RMSE=105.517
+[12:43:49] yeong/S04007/chl-a 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:43:49] GRU 학습 yeong/S04007/chl-a: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:43:51] GRU yeong/S04007/chl-a   3% ep=1/30 train_mse=0.5337 val_mse=0.6414 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:53] GRU yeong/S04007/chl-a   6% ep=2/30 train_mse=0.3244 val_mse=0.7168 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:43:56] GRU yeong/S04007/chl-a  10% ep=3/30 train_mse=0.3122 val_mse=0.6326 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.28GB
+[12:43:58] GRU yeong/S04007/chl-a  13% ep=4/30 train_mse=0.3081 val_mse=0.6206 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.25GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.25GB
+[12:44:00] GRU yeong/S04007/chl-a  16% ep=5/30 train_mse=0.3029 val_mse=0.7999 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.25GB
+[12:44:02] GRU yeong/S04007/chl-a  20% ep=6/30 train_mse=0.2975 val_mse=0.6813 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:05] GRU yeong/S04007/chl-a  23% ep=7/30 train_mse=0.2929 val_mse=0.6531 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:07] GRU yeong/S04007/chl-a  26% ep=8/30 train_mse=0.2869 val_mse=0.8145 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:10] GRU yeong/S04007/chl-a  30% ep=9/30 train_mse=0.2856 val_mse=0.7907 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:12] GRU yeong/S04007/chl-a  33% ep=10/30 train_mse=0.2783 val_mse=0.7412 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:12] GRU yeong/S04007/chl-a early stop @ep10 (best val_mse=0.6206)
+[12:44:12] yeong/S04007/chl-a ▶ NSE(legacy)=0.262 NSE(obs)=0.274 RMSE=3.586
+[12:44:12] GAIN 학습 시작 n=38840 dim=10 iters=3000 dev=cuda
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:14] GAIN   5% it=150/3000 D=0.334 G_mse=0.0530 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:17] GAIN  15% it=450/3000 D=0.143 G_mse=0.0201 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:21] GAIN  25% it=750/3000 D=0.081 G_mse=0.0094 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:24] GAIN  35% it=1050/3000 D=0.057 G_mse=0.0062 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:27] GAIN  45% it=1350/3000 D=0.047 G_mse=0.0047 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:31] GAIN  55% it=1650/3000 D=0.046 G_mse=0.0026 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:34] GAIN  65% it=1950/3000 D=0.035 G_mse=0.0018 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:37] GAIN  75% it=2250/3000 D=0.030 G_mse=0.0020 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:41] GAIN  85% it=2550/3000 D=0.030 G_mse=0.0020 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:43] GAIN  95% it=2850/3000 D=0.033 G_mse=0.0015 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:45] yeong/S04008/do 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:44:45] GRU 학습 yeong/S04008/do: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:44:47] GRU yeong/S04008/do   3% ep=1/30 train_mse=0.5971 val_mse=0.3181 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:49] GRU yeong/S04008/do   6% ep=2/30 train_mse=0.4240 val_mse=0.3067 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:52] GRU yeong/S04008/do  10% ep=3/30 train_mse=0.4073 val_mse=0.2965 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:54] GRU yeong/S04008/do  13% ep=4/30 train_mse=0.3988 val_mse=0.2969 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:56] GRU yeong/S04008/do  16% ep=5/30 train_mse=0.3913 val_mse=0.2929 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:44:58] GRU yeong/S04008/do  20% ep=6/30 train_mse=0.3858 val_mse=0.3288 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:00] GRU yeong/S04008/do  23% ep=7/30 train_mse=0.3756 val_mse=0.3117 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:02] GRU yeong/S04008/do  26% ep=8/30 train_mse=0.3680 val_mse=0.2970 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:05] GRU yeong/S04008/do  30% ep=9/30 train_mse=0.3640 val_mse=0.3041 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:07] GRU yeong/S04008/do  33% ep=10/30 train_mse=0.3641 val_mse=0.3009 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:09] GRU yeong/S04008/do  36% ep=11/30 train_mse=0.3903 val_mse=0.2937 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:09] GRU yeong/S04008/do early stop @ep11 (best val_mse=0.2929)
+[12:45:09] yeong/S04008/do ▶ NSE(legacy)=0.527 NSE(obs)=0.512 RMSE=1.411
+[12:45:09] yeong/S04008/toc 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:45:09] GRU 학습 yeong/S04008/toc: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:45:12] GRU yeong/S04008/toc   3% ep=1/30 train_mse=0.6899 val_mse=0.2947 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:14] GRU yeong/S04008/toc   6% ep=2/30 train_mse=0.5311 val_mse=0.2746 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:16] GRU yeong/S04008/toc  10% ep=3/30 train_mse=0.5142 val_mse=0.2617 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:19] GRU yeong/S04008/toc  13% ep=4/30 train_mse=0.5132 val_mse=0.2708 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:21] GRU yeong/S04008/toc  16% ep=5/30 train_mse=0.5057 val_mse=0.2749 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:23] GRU yeong/S04008/toc  20% ep=6/30 train_mse=0.5091 val_mse=0.2693 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:25] GRU yeong/S04008/toc  23% ep=7/30 train_mse=0.5034 val_mse=0.2786 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:28] GRU yeong/S04008/toc  26% ep=8/30 train_mse=0.4962 val_mse=0.2814 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:30] GRU yeong/S04008/toc  30% ep=9/30 train_mse=0.4887 val_mse=0.2762 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:30] GRU yeong/S04008/toc early stop @ep9 (best val_mse=0.2617)
+[12:45:30] yeong/S04008/toc ▶ NSE(legacy)=0.347 NSE(obs)=0.266 RMSE=0.283
+[12:45:30] yeong/S04008/tn 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:45:30] GRU 학습 yeong/S04008/tn: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:45:32] GRU yeong/S04008/tn   3% ep=1/30 train_mse=0.7473 val_mse=0.6057 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:34] GRU yeong/S04008/tn   6% ep=2/30 train_mse=0.6296 val_mse=0.6243 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.24GB
+[12:45:36] GRU yeong/S04008/tn  10% ep=3/30 train_mse=0.6251 val_mse=0.5882 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:45:38] GRU yeong/S04008/tn  13% ep=4/30 train_mse=0.6142 val_mse=0.5902 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:45:41] GRU yeong/S04008/tn  16% ep=5/30 train_mse=0.6114 val_mse=0.5711 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:45:43] GRU yeong/S04008/tn  20% ep=6/30 train_mse=0.6054 val_mse=0.5811 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:45:45] GRU yeong/S04008/tn  23% ep=7/30 train_mse=0.6009 val_mse=0.6024 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:45:47] GRU yeong/S04008/tn  26% ep=8/30 train_mse=0.6077 val_mse=0.5388 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:45:50] GRU yeong/S04008/tn  30% ep=9/30 train_mse=0.5937 val_mse=0.5285 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:45:52] GRU yeong/S04008/tn  33% ep=10/30 train_mse=0.5817 val_mse=0.5343 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:45:55] GRU yeong/S04008/tn  36% ep=11/30 train_mse=0.5748 val_mse=0.5700 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:45:57] GRU yeong/S04008/tn  40% ep=12/30 train_mse=0.5631 val_mse=0.5018 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:45:59] GRU yeong/S04008/tn  43% ep=13/30 train_mse=0.5583 val_mse=0.4880 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:46:02] GRU yeong/S04008/tn  46% ep=14/30 train_mse=0.5488 val_mse=0.5043 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:04] GRU yeong/S04008/tn  50% ep=15/30 train_mse=0.5382 val_mse=0.4720 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:07] GRU yeong/S04008/tn  53% ep=16/30 train_mse=0.5332 val_mse=0.4822 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:09] GRU yeong/S04008/tn  56% ep=17/30 train_mse=0.5179 val_mse=0.4986 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:12] GRU yeong/S04008/tn  60% ep=18/30 train_mse=0.5111 val_mse=0.4889 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:14] GRU yeong/S04008/tn  63% ep=19/30 train_mse=0.5029 val_mse=0.4890 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:17] GRU yeong/S04008/tn  66% ep=20/30 train_mse=0.4913 val_mse=0.5022 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:19] GRU yeong/S04008/tn  70% ep=21/30 train_mse=0.4866 val_mse=0.5942 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:19] GRU yeong/S04008/tn early stop @ep21 (best val_mse=0.4720)
+[12:46:19] yeong/S04008/tn ▶ NSE(legacy)=0.207 NSE(obs)=0.121 RMSE=0.347
+[12:46:19] yeong/S04008/tp 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:46:19] GRU 학습 yeong/S04008/tp: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[12:46:21] GRU yeong/S04008/tp   3% ep=1/30 train_mse=0.9245 val_mse=0.3658 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:24] GRU yeong/S04008/tp   6% ep=2/30 train_mse=0.8418 val_mse=0.3767 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:26] GRU yeong/S04008/tp  10% ep=3/30 train_mse=0.8233 val_mse=0.3808 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:28] GRU yeong/S04008/tp  13% ep=4/30 train_mse=0.8145 val_mse=0.3670 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:30] GRU yeong/S04008/tp  16% ep=5/30 train_mse=0.8093 val_mse=0.3639 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:32] GRU yeong/S04008/tp  20% ep=6/30 train_mse=0.8105 val_mse=0.3671 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:35] GRU yeong/S04008/tp  23% ep=7/30 train_mse=0.8119 val_mse=0.3689 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:37] GRU yeong/S04008/tp  26% ep=8/30 train_mse=0.8036 val_mse=0.3815 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:39] GRU yeong/S04008/tp  30% ep=9/30 train_mse=0.7942 val_mse=0.3851 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:41] GRU yeong/S04008/tp  33% ep=10/30 train_mse=0.7739 val_mse=0.4411 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:43] GRU yeong/S04008/tp  36% ep=11/30 train_mse=0.7763 val_mse=0.3789 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:43] GRU yeong/S04008/tp early stop @ep11 (best val_mse=0.3639)
+[12:46:43] yeong/S04008/tp ▶ NSE(legacy)=0.134 NSE(obs)=-154283770.940 RMSE=155.064
+[12:46:43] yeong/S04008/chl-a 윈도우 tr=(3207, 240, 14) va=(217, 240, 14) te=(448, 240, 14)
+[12:46:43] GRU 학습 yeong/S04008/chl-a: epochs=30 batches/epoch=26 dev=cuda Xtr=(3207, 240, 14)
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:46] GRU yeong/S04008/chl-a   3% ep=1/30 train_mse=0.7023 val_mse=0.1885 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:48] GRU yeong/S04008/chl-a   6% ep=2/30 train_mse=0.3985 val_mse=0.1778 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:50] GRU yeong/S04008/chl-a  10% ep=3/30 train_mse=0.3368 val_mse=0.1870 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:53] GRU yeong/S04008/chl-a  13% ep=4/30 train_mse=0.3331 val_mse=0.1678 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:46:55] GRU yeong/S04008/chl-a  16% ep=5/30 train_mse=0.3913 val_mse=0.1653 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:46:58] GRU yeong/S04008/chl-a  20% ep=6/30 train_mse=0.3255 val_mse=0.1728 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:47:00] GRU yeong/S04008/chl-a  23% ep=7/30 train_mse=0.3148 val_mse=0.1691 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:47:02] GRU yeong/S04008/chl-a  26% ep=8/30 train_mse=0.3113 val_mse=0.1808 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:47:04] GRU yeong/S04008/chl-a  30% ep=9/30 train_mse=0.3105 val_mse=0.1687 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:47:06] GRU yeong/S04008/chl-a  33% ep=10/30 train_mse=0.3058 val_mse=0.1801 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:47:09] GRU yeong/S04008/chl-a  36% ep=11/30 train_mse=0.3011 val_mse=0.1646 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:47:11] GRU yeong/S04008/chl-a  40% ep=12/30 train_mse=0.3019 val_mse=0.1800 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.26GB
+[12:47:13] GRU yeong/S04008/chl-a  43% ep=13/30 train_mse=0.3119 val_mse=0.1659 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.26GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.25GB
+[12:47:15] GRU yeong/S04008/chl-a  46% ep=14/30 train_mse=0.3056 val_mse=0.1754 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.25GB
+[12:47:18] GRU yeong/S04008/chl-a  50% ep=15/30 train_mse=0.3198 val_mse=0.1763 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.25GB
+[12:47:20] GRU yeong/S04008/chl-a  53% ep=16/30 train_mse=0.3008 val_mse=0.1738 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.25GB
+[12:47:22] GRU yeong/S04008/chl-a  56% ep=17/30 train_mse=0.2906 val_mse=0.1660 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:47:22] GRU yeong/S04008/chl-a early stop @ep17 (best val_mse=0.1646)
+[12:47:22] yeong/S04008/chl-a ▶ NSE(legacy)=0.393 NSE(obs)=0.408 RMSE=14.702
+[12:47:22] GAIN 학습 시작 n=37312 dim=10 iters=3000 dev=cuda
+[12:47:24] GAIN   5% it=150/3000 D=0.314 G_mse=0.0239 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:47:27] GAIN  15% it=450/3000 D=0.150 G_mse=0.0127 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:47:30] GAIN  25% it=750/3000 D=0.061 G_mse=0.0069 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:47:34] GAIN  35% it=1050/3000 D=0.029 G_mse=0.0050 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:47:37] GAIN  45% it=1350/3000 D=0.028 G_mse=0.0044 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:47:41] GAIN  55% it=1650/3000 D=0.050 G_mse=0.0033 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:47:45] GAIN  65% it=1950/3000 D=0.043 G_mse=0.0033 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:47:48] GAIN  75% it=2250/3000 D=0.039 G_mse=0.0033 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:47:51] GAIN  85% it=2550/3000 D=0.028 G_mse=0.0024 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:47:55] GAIN  95% it=2850/3000 D=0.030 G_mse=0.0019 | VRAM alloc=0.02 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:47:56] yeong/S04009/do 윈도우 tr=(3080, 240, 14) va=(208, 240, 14) te=(430, 240, 14)
+[12:47:56] GRU 학습 yeong/S04009/do: epochs=30 batches/epoch=25 dev=cuda Xtr=(3080, 240, 14)
+[12:47:59] GRU yeong/S04009/do   3% ep=1/30 train_mse=0.6220 val_mse=0.7419 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:01] GRU yeong/S04009/do   6% ep=2/30 train_mse=0.4546 val_mse=0.7205 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:03] GRU yeong/S04009/do  10% ep=3/30 train_mse=0.4157 val_mse=0.7397 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:05] GRU yeong/S04009/do  13% ep=4/30 train_mse=0.3972 val_mse=0.6963 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:07] GRU yeong/S04009/do  16% ep=5/30 train_mse=0.3887 val_mse=0.6784 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:09] GRU yeong/S04009/do  20% ep=6/30 train_mse=0.3778 val_mse=0.6539 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:11] GRU yeong/S04009/do  23% ep=7/30 train_mse=0.3859 val_mse=0.6897 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:13] GRU yeong/S04009/do  26% ep=8/30 train_mse=0.3698 val_mse=0.6817 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:15] GRU yeong/S04009/do  30% ep=9/30 train_mse=0.3776 val_mse=0.7743 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:18] GRU yeong/S04009/do  33% ep=10/30 train_mse=0.3818 val_mse=0.6985 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:20] GRU yeong/S04009/do  36% ep=11/30 train_mse=0.3730 val_mse=0.7309 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:22] GRU yeong/S04009/do  40% ep=12/30 train_mse=0.3605 val_mse=0.7500 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:22] GRU yeong/S04009/do early stop @ep12 (best val_mse=0.6539)
+[12:48:22] yeong/S04009/do ▶ NSE(legacy)=0.448 NSE(obs)=0.583 RMSE=2.965
+[12:48:22] yeong/S04009/toc 윈도우 tr=(3080, 240, 14) va=(208, 240, 14) te=(430, 240, 14)
+[12:48:22] GRU 학습 yeong/S04009/toc: epochs=30 batches/epoch=25 dev=cuda Xtr=(3080, 240, 14)
+[12:48:24] GRU yeong/S04009/toc   3% ep=1/30 train_mse=0.6558 val_mse=0.1538 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:27] GRU yeong/S04009/toc   6% ep=2/30 train_mse=0.4664 val_mse=0.1448 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:29] GRU yeong/S04009/toc  10% ep=3/30 train_mse=0.4589 val_mse=0.1475 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:32] GRU yeong/S04009/toc  13% ep=4/30 train_mse=0.4474 val_mse=0.1488 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:34] GRU yeong/S04009/toc  16% ep=5/30 train_mse=0.4392 val_mse=0.1841 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:36] GRU yeong/S04009/toc  20% ep=6/30 train_mse=0.4344 val_mse=0.1421 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:39] GRU yeong/S04009/toc  23% ep=7/30 train_mse=0.4347 val_mse=0.1724 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:41] GRU yeong/S04009/toc  26% ep=8/30 train_mse=0.4236 val_mse=0.1490 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:43] GRU yeong/S04009/toc  30% ep=9/30 train_mse=0.4196 val_mse=0.1451 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:46] GRU yeong/S04009/toc  33% ep=10/30 train_mse=0.4131 val_mse=0.1598 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:48] GRU yeong/S04009/toc  36% ep=11/30 train_mse=0.4102 val_mse=0.1635 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:51] GRU yeong/S04009/toc  40% ep=12/30 train_mse=0.4052 val_mse=0.1582 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:51] GRU yeong/S04009/toc early stop @ep12 (best val_mse=0.1421)
+[12:48:51] yeong/S04009/toc ▶ NSE(legacy)=0.194 NSE(obs)=0.077 RMSE=0.982
+[12:48:51] yeong/S04009/tn 윈도우 tr=(3080, 240, 14) va=(208, 240, 14) te=(430, 240, 14)
+[12:48:51] GRU 학습 yeong/S04009/tn: epochs=30 batches/epoch=25 dev=cuda Xtr=(3080, 240, 14)
+[12:48:53] GRU yeong/S04009/tn   3% ep=1/30 train_mse=0.6550 val_mse=0.5868 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:56] GRU yeong/S04009/tn   6% ep=2/30 train_mse=0.4931 val_mse=0.5518 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:48:58] GRU yeong/S04009/tn  10% ep=3/30 train_mse=0.4837 val_mse=0.5462 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:00] GRU yeong/S04009/tn  13% ep=4/30 train_mse=0.4783 val_mse=0.5642 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:03] GRU yeong/S04009/tn  16% ep=5/30 train_mse=0.4559 val_mse=0.5818 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:05] GRU yeong/S04009/tn  20% ep=6/30 train_mse=0.4381 val_mse=0.5673 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:07] GRU yeong/S04009/tn  23% ep=7/30 train_mse=0.4330 val_mse=0.6002 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:09] GRU yeong/S04009/tn  26% ep=8/30 train_mse=0.4189 val_mse=0.6166 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:11] GRU yeong/S04009/tn  30% ep=9/30 train_mse=0.4117 val_mse=0.6646 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:11] GRU yeong/S04009/tn early stop @ep9 (best val_mse=0.5462)
+[12:49:11] yeong/S04009/tn ▶ NSE(legacy)=0.145 NSE(obs)=-0.100 RMSE=0.698
+[12:49:12] yeong/S04009/tp 윈도우 tr=(3080, 240, 14) va=(208, 240, 14) te=(430, 240, 14)
+[12:49:12] GRU 학습 yeong/S04009/tp: epochs=30 batches/epoch=25 dev=cuda Xtr=(3080, 240, 14)
+[12:49:14] GRU yeong/S04009/tp   3% ep=1/30 train_mse=0.7096 val_mse=0.3652 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[VRAM-MON] VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:16] GRU yeong/S04009/tp   6% ep=2/30 train_mse=0.5619 val_mse=0.3444 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:18] GRU yeong/S04009/tp  10% ep=3/30 train_mse=0.5470 val_mse=0.3166 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:20] GRU yeong/S04009/tp  13% ep=4/30 train_mse=0.5385 val_mse=0.3471 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:22] GRU yeong/S04009/tp  16% ep=5/30 train_mse=0.5376 val_mse=0.3399 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:24] GRU yeong/S04009/tp  20% ep=6/30 train_mse=0.5082 val_mse=0.3565 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:27] GRU yeong/S04009/tp  23% ep=7/30 train_mse=0.5261 val_mse=0.3263 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:29] GRU yeong/S04009/tp  26% ep=8/30 train_mse=0.5167 val_mse=0.3645 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:31] GRU yeong/S04009/tp  30% ep=9/30 train_mse=0.4981 val_mse=0.3114 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:33] GRU yeong/S04009/tp  33% ep=10/30 train_mse=0.4829 val_mse=0.3347 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:35] GRU yeong/S04009/tp  36% ep=11/30 train_mse=0.4731 val_mse=0.3150 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:37] GRU yeong/S04009/tp  40% ep=12/30 train_mse=0.4598 val_mse=0.3260 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:39] GRU yeong/S04009/tp  43% ep=13/30 train_mse=0.4638 val_mse=0.3132 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:41] GRU yeong/S04009/tp  46% ep=14/30 train_mse=0.4552 val_mse=0.3365 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.23GB
+[12:49:43] GRU yeong/S04009/tp  50% ep=15/30 train_mse=0.4482 val_mse=0.3286 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:43] GRU yeong/S04009/tp early stop @ep15 (best val_mse=0.3114)
+[12:49:43] yeong/S04009/tp ▶ NSE(legacy)=0.119 NSE(obs)=0.052 RMSE=0.037
+[12:49:43] yeong/S04009/chl-a 윈도우 tr=(3080, 240, 14) va=(208, 240, 14) te=(430, 240, 14)
+[12:49:43] GRU 학습 yeong/S04009/chl-a: epochs=30 batches/epoch=25 dev=cuda Xtr=(3080, 240, 14)
+[12:49:45] GRU yeong/S04009/chl-a   3% ep=1/30 train_mse=0.5656 val_mse=0.6724 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[VRAM-MON] VRAM alloc=0.61 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:47] GRU yeong/S04009/chl-a   6% ep=2/30 train_mse=0.3113 val_mse=0.5167 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:49] GRU yeong/S04009/chl-a  10% ep=3/30 train_mse=0.2895 val_mse=0.4489 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:52] GRU yeong/S04009/chl-a  13% ep=4/30 train_mse=0.2633 val_mse=0.5113 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:54] GRU yeong/S04009/chl-a  16% ep=5/30 train_mse=0.2819 val_mse=0.5112 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:56] GRU yeong/S04009/chl-a  20% ep=6/30 train_mse=0.2636 val_mse=0.5338 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:49:58] GRU yeong/S04009/chl-a  23% ep=7/30 train_mse=0.2567 val_mse=0.4669 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:50:00] GRU yeong/S04009/chl-a  26% ep=8/30 train_mse=0.2347 val_mse=0.5030 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[VRAM-MON] VRAM alloc=0.67 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:50:02] GRU yeong/S04009/chl-a  30% ep=9/30 train_mse=0.2271 val_mse=0.4883 | VRAM alloc=0.03 reserved=0.80 peak=0.80/15.93GB, smi_used=5.22GB
+[12:50:02] GRU yeong/S04009/chl-a early stop @ep9 (best val_mse=0.4489)
+[12:50:02] yeong/S04009/chl-a ▶ NSE(legacy)=0.233 NSE(obs)=0.360 RMSE=13.442
+[12:50:02] 완료. legacy_metrics_yeong.csv 저장 (42 조합)
+river station target       nse       nse_obs       rmse
+yeong  S04001     do  0.454390  6.759156e-01   2.087044
+yeong  S04001    toc  0.445948  3.364461e-01   0.242523
+yeong  S04001     tn  0.297067 -3.701555e-01   0.286559
+yeong  S04001     tp  0.440579  3.909560e-01   0.003195
+yeong  S04001  chl-a  0.527171  5.137780e-01   5.091403
+yeong  S04002     do -0.256235  1.676890e-01   4.912180
+yeong  S04002    toc  0.291247 -9.040119e-02   0.980803
+yeong  S04002     tn  0.518739  4.911574e-01   1.341842
+yeong  S04002     tp  0.178241  2.069866e-01   0.040873
+yeong  S04002  chl-a  0.308416  2.470533e-01  43.411180
+yeong  S04003     do  0.363250  4.292742e-01   2.449077
+yeong  S04003    toc  0.263907  2.295072e-01   1.128653
+yeong  S04003  chl-a  0.306676  3.470660e-01  15.946332
+yeong  S04004     do  0.247156  4.631478e-01   1.844510
+yeong  S04004    toc  0.611103  5.994983e-01   0.457918
+yeong  S04004     tn  0.684562  6.954508e-01   0.307552
+yeong  S04004     tp  0.520988  6.103735e-01   0.003982
+yeong  S04004  chl-a  0.460194  4.565222e-01   9.109096
+yeong  S04005     do -0.179082 -1.817465e-01   2.201330
+yeong  S04005    toc -1.573888  2.999699e-01   1.531554
+yeong  S04005     tn  0.570793 -6.867125e-01   1.408863
+yeong  S04005     tp -1.127470 -2.501517e-02   0.112063
+yeong  S04005  chl-a -2.976493 -1.255364e-01  43.893825
+yeong  S04006     do  0.684628  5.365632e-01   1.429909
+yeong  S04006    toc  0.143359  1.608434e-01   0.608087
+yeong  S04006     tn  0.469653 -4.850354e-02   0.504139
+yeong  S04006     tp  0.455690  3.224042e-01   0.016220
+yeong  S04007     do  0.141818  6.287434e-01   1.606625
+yeong  S04007    toc  0.585162 -2.936707e-01   0.366899
+yeong  S04007     tn  0.113882 -1.145488e-01   0.233835
+yeong  S04007     tp -0.112270 -5.482555e+06 105.517291
+yeong  S04007  chl-a  0.261719  2.741350e-01   3.586102
+yeong  S04008     do  0.526817  5.118609e-01   1.411210
+yeong  S04008    toc  0.347120  2.656803e-01   0.282979
+yeong  S04008     tn  0.207105  1.206824e-01   0.346921
+yeong  S04008     tp  0.133875 -1.542838e+08 155.064028
+yeong  S04008  chl-a  0.392590  4.082391e-01  14.702489
+yeong  S04009     do  0.447995  5.831411e-01   2.964722
+yeong  S04009    toc  0.193663  7.711747e-02   0.982153
+yeong  S04009     tn  0.144709 -1.001534e-01   0.697590
+yeong  S04009     tp  0.119261  5.193502e-02   0.036796
+yeong  S04009  chl-a  0.232649  3.597509e-01  13.441802
