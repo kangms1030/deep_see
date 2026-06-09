@@ -60,8 +60,9 @@ def fig_alert_bss():
 
 
 def fig_delta_nse_ci():
-    """타깃별 집계 ΔNSE(Chr−Leg)와 지점수준(K=4) 95% CI."""
+    """타깃별 집계 ΔNSE(Chr−Leg)와 지점수준 95% CI."""
     bt = pd.read_csv(os.path.join(REP, "robustness_bootstrap.csv"))
+    k = bt["station"].nunique() if not bt.empty else 4
     names, means, los, his = [], [], [], []
     for t in TGS:
         vals = bt[bt.target == t]["dNSE"].tolist()
@@ -75,7 +76,7 @@ def fig_delta_nse_ci():
     ax.axhline(0, color="k", lw=1)
     ax.set_xticks(x); ax.set_xticklabels(names)
     ax.set_ylabel("ΔNSE  (Chronos − Legacy)")
-    ax.set_title("Verification B: Aggregate ΔNSE with 95% CI (station bootstrap, K=4)")
+    ax.set_title(f"Verification B: Aggregate ΔNSE with 95% CI (station bootstrap, K={k})")
     ax.grid(axis="y", alpha=0.3)
     ax.text(0.99, 0.02, "blue = CI excludes 0 (significant) · gray = CI includes 0",
             transform=ax.transAxes, ha="right", va="bottom", fontsize=8, color="#555")
@@ -87,13 +88,16 @@ def fig_dm_significance():
     names = [DISP[t] for t in TGS]
     pt = [int(dm[dm.target == t]["point_sig5"].sum()) for t in TGS]
     cr = [int(dm[dm.target == t]["crps_sig5"].sum()) for t in TGS]
+    max_pts = [int(dm[dm.target == t]["point_sig5"].count()) for t in TGS]
+    max_cells = max_pts[0] if max_pts else 4
     fig, ax = plt.subplots(figsize=(8, 4.2))
     x = np.arange(len(names)); w = 0.38
     ax.bar(x - w / 2, pt, w, label="Point (squared error)", color="#7f7f7f")
     ax.bar(x + w / 2, cr, w, label="Probabilistic (CRPS)", color=C_CHR)
-    ax.set_ylim(0, 4.5); ax.set_yticks(range(5))
+    max_y = max(max(pt), max(cr), 4)
+    ax.set_ylim(0, max_y + 0.5)
     ax.set_xticks(x); ax.set_xticklabels(names)
-    ax.set_ylabel("# cells significant (of 4)")
+    ax.set_ylabel(f"# cells significant (of {max_cells})")
     ax.set_title("Verification B: Diebold-Mariano significance (p<0.05, Chronos better)\nHAC=Newey-West + HLN")
     ax.legend(fontsize=9); ax.grid(axis="y", alpha=0.3)
     p = os.path.join(FIG, "verify_dm_significance.png"); fig.savefig(p); plt.close(fig); return p
