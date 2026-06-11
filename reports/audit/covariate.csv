@@ -1,0 +1,4 @@
+﻿metric,comparison,n,mean_delta,median_delta,improved_count
+nse,zs_cov_minus_nocov,4,-0.006121771659683278,-0.005537453812909543,1
+crps,zs_cov_minus_nocov,4,0.00022144235979182358,0.00024844689803762976,2
+cov80,zs_cov_minus_nocov,4,0.025555179873057332,0.028970772680627865,3

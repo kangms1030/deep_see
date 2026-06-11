@@ -1,0 +1,12 @@
+{
+  "forecast_rows": 600630,
+  "alert_rows": 458760,
+  "stations": 67,
+  "targets": [
+    "chl-a",
+    "do",
+    "tn",
+    "toc",
+    "tp"
+  ]
+}
