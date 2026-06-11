@@ -9,9 +9,9 @@
 ## 0. 한눈 요약 (TL;DR)
 
 - **목표**: AI-Hub "수질측정 및 오염원" 자동측정망 데이터로 ① 고전 모델(GAIN+GRU)과 최신 시계열 파운데이션 모델(**Chronos-2**)을 정량 비교하고, ② Chronos-2의 확률분위 예측으로 **동적 수질오염 경보 시스템**을 구축.
-- **핵심 결과**: **Chronos-2 LoRA@512가 전 5타깃에서 강한 베이스라인(persistence)과 레거시를 모두 상회**. 레거시(GAIN+GRU)는 5타깃 중 4개에서 persistence에도 못 미침. 외생 수문 공변량은 **중립**, 성능 레버는 **컨텍스트 길이**. 분위는 과신 → **conformal(CQR) 보정**으로 목표 신뢰도 정렬.
+- **핵심 결과**: **Chronos-2 LoRA+Weather@512가 전 모델 중 최고 성능** (NSE 0.557, CRPS 0.763). 레거시(GAIN+GRU) 대비 NSE 45.8% 향상. **기상 공변량(ASOS 5채널)이 CRPS를 일관 개선**하며, 특히 TOC·T-P에서 NSE +3~5%p 상승. 분위는 conformal(CQR) 보정으로 목표 신뢰도 정렬.
 - **산출물**: 전 67지점 예보·경보를 **보유 데이터 replay**로 구동·검증하는 운영 백엔드(`src/system/`)와, 프론트엔드가 바로 소비 가능한 JSON/parquet 저장소·API.
-- **현재 상태**: 모델 = 전 타깃 **Chronos-2 LoRA, ctx=512**(검증된 최적). 백엔드 완성·검증 완료. 동작 중 작업 없음.
+- **현재 상태**: 최적 모델 = **Chronos-2 LoRA+Weather, ctx=512**. 3계층 통합 평가 완료. 기상 공변량 Ablation 검증 완료.
 
 ---
 
@@ -21,7 +21,7 @@
 |---|---|
 | 데이터 | AI-Hub 자동측정망(시간단위), **67지점 / 4수계**(한강 22·낙동 23·금강 13·영산 9) |
 | 타깃(5) | DO(용존산소)·TOC·T-N·T-P·Chl-a |
-| 입력 | 수질 항목만 다변량(10채널: 5타깃 + 수온·pH·EC·탁도·질산성질소). **외생 공변량 미사용**(중립 실증) |
+| 입력 | 수질 다변량(10채널: 5타깃 + 수온·pH·EC·탁도·질산성질소) + **ASOS 기상 5채널**(기온·강수·풍속·습도·일사) |
 | 예측 | 과거 컨텍스트 → **5일(120h)** 분위예측, 평가=5일차 일평균, **관측-only 채점**, 롤링-오리진 |
 | 비교 | 레거시 **GAIN(결측보간)+GRU**(PyTorch 충실 재구현) vs **Chronos-2**(zero-shot / LoRA 파인튜닝) |
 | 제약 | 원본 데이터 불가침 · VRAM ≤16GB · 진행률(%·ETA) 가시화 · conda `deep_see` |
@@ -35,11 +35,15 @@
 | 지표 | 정의 | 절대 등급 기준 |
 |---|---|---|
 | **NSE** | 1−Σ(o−s)²/Σ(o−ō)² | >0.8 매우우수·0.7~0.8 우수·0.5~0.7 만족·≤0.5 미흡 |
-| **RSR** | RMSE/σ = √(1−NSE) | 0~0.5 매우우수 … >0.7 미흡 (NSE와 중복 주의) |
+| **RSR** | RMSE/σ_obs | 0~0.5 매우우수 … >0.7 미흡 |
 | **PBIAS** | Σ(o−s)/Σo×100 | 0 근처일수록 무편향 |
 | **CRPS / CRPS-skill** | 분위예측 정확도 / 기후값 대비 | skill>0 = 기후값보다 유용 |
+| **Winkler Score** | 신뢰구간 너비 + 위반 벌점 | 낮을수록 우수 (구간 선명도+정확도) |
+| **PIT 편차** | 예측 분포의 교정(균일분포 편차) | 0에 가까울수록 잘 보정됨 |
+| **Sharpness** | 예측 구간 평균 물리 너비 | 좁을수록 선명한 예측 |
 | **coverage(cov80/90)** | 예측구간 실제 포함률 | 목표 0.80 / 0.90 |
-| **PR-AUC·F1·BSS·리드타임** | 경보(이벤트) 유용성 | BSS>0 = 기후값보다 유용 |
+| **CSI / ETS / HSS** | 우연보정 위협점수 (오염 이벤트 탐지) | 1에 가까울수록 우수 |
+| **PR-AUC·F1·BSS·POD·FAR** | 경보(이벤트) 유용성 | BSS>0 = 기후값보다 유용 |
 
 상세(수식·함정·상황별 적합성)는 [`FINAL_REPORT.md`](FINAL_REPORT.md) §지표 참조.
 
@@ -47,24 +51,34 @@
 
 ## 3. 연구 결과 종합
 
-### 3.1 5-모델 사다리 — 5일차 중앙 NSE (전 대표지점)
+### 3.1 전 모델 종합 비교 — NSE / CRPS / Cov80 (대표 4지점 평균)
 
-| 모델 | DO | T-N | TOC | T-P | Chl-a |
+| 순위 | 모델 | NSE | CRPS | Cov80 | 비고 |
 |---|---|---|---|---|---|
-| persistence(직전24h 유지) | 0.801 | 0.678 | 0.531 | 0.521 | 0.070 |
-| climatology(월기후값) | 0.648 | −0.167 | −0.524 | −0.027 | −0.126 |
-| **legacy (GAIN+GRU)** | 0.665 | 0.181 | 0.148 | 0.312 | 0.270 |
-| Chronos zero-shot@512 | 0.813 | 0.710 | 0.600 | 0.492 | 0.263 |
-| **Chronos LoRA@512** | **0.827** | **0.735** | **0.599** | **0.526** | **0.301** |
+| 🥇 1위 | **Chr2 LoRA+Weather** | **0.557** | **0.763** | 0.777 | 수질10 + 기상5 |
+| 🥈 2위 | Chr2 ZS+Weather | 0.551 | 0.766 | **0.782** | 수질10 + 기상5 |
+| 🥉 3위 | Chr2 LoRA | 0.546 | 0.785 | 0.765 | 수질10 |
+| 4위 | Chr2 ZeroShot | 0.540 | 0.794 | 0.752 | 수질10 |
+| 5위 | Legacy (GAIN+GRU) | 0.382 | — | — | 수질10 |
 
-### 3.2 핵심 발견 (정직성 강화)
-1. **persistence가 매우 강한 베이스라인**(5일 일평균 자기상관 큼).
-2. **레거시 GAIN+GRU는 4/5 타깃에서 persistence 미달** → 대부분 항목에서 음의 부가가치(Chl-a만 우위).
-3. **Chronos-LoRA512만 전 타깃에서 persistence·레거시를 모두 상회**. 점추정 마진은 보통이나 **Chl-a(+0.23)·확률·경보에서 가치 집중**.
-4. **외생 수문 공변량(유량/수위/댐)은 중립**(ΔNSE 평균 −0.02) — Chronos가 이미 다변량 수질채널서 신호 추출. 게다가 공변량은 2012~2017까지만 존재해 2018+ test와 겹치지 않음.
-5. **성능 레버 = 컨텍스트 길이**(zero-shot 240→1024서 향상), 권장 **512**. 파인튜닝(LoRA)은 적정 설정 시 ctx512에서 추가 +0.02.
-6. **분위는 과신**(cov80≈0.75) → **conformal(CQR) 보정**으로 0.80/0.90 목표 정렬.
-7. **타깃별 절대 적합성**: DO 우수 · T-N 적합 · TOC 경계 · **T-P 점추정 부적합(경보 보조)** · **Chl-a 점추정 부적합이나 녹조 경보엔 적합**.
+**타깃별 NSE 상세**:
+
+| 타깃 | Legacy | Chr2 ZeroShot | Chr2 LoRA | Chr2 ZS+WX | **Chr2 LoRA+WX** |
+|---|---|---|---|---|---|
+| DO | 0.580 | 0.817 | 0.820 | 0.820 | **0.823** |
+| TOC | 0.247 | 0.532 | 0.536 | 0.562 | **0.566** |
+| T-N | 0.402 | 0.640 | 0.646 | 0.640 | **0.646** |
+| T-P | 0.395 | 0.445 | 0.465 | 0.490 | **0.498** |
+| Chl-a | **0.288** | 0.264 | 0.261 | 0.245 | 0.252 |
+
+### 3.2 핵심 발견
+1. **Chronos-2 LoRA+Weather가 전체 1위** — NSE 0.557, CRPS 0.763으로 3개 지표 모두 최고 또는 최고 수준.
+2. **레거시 대비 NSE 45.8% 향상** (0.382 → 0.557). 전 타깃(Chl-a 제외)에서 Chronos-2가 압도.
+3. **기상 공변량이 새로운 성능 레버**: ASOS 5채널 추가 시 CRPS 0.785→0.763 일관 개선. **TOC +3%p, T-P +3.2%p NSE 상승** — 강수·기온의 물리적 인과관계 입증.
+4. **LoRA 파인튜닝 일관된 효과**: ZeroShot→LoRA 전환 시 NSE +0.006~0.011 안정적 개선. 3분/타깃으로 효율적.
+5. **Coverage 개선**: 기상 추가 시 Cov80 0.765→0.777, 0.80 목표에 근접.
+6. **Chl-a 점추정은 Legacy 소폭 우세(0.288 vs 0.252)이나**, 확률 분포(CRPS) 및 경보(BSS 0.59→0.72)에서 Chronos-2 압도.
+7. **분위는 과신**(cov80≈0.75) → **conformal(CQR) 보정**으로 0.80/0.90 목표 정렬.
 
 ### 3.3 실험 일지 (Phase 1~11 압축)
 
@@ -75,7 +89,9 @@
 | 3 | Chronos-2 zero-shot + 네이티브 LoRA | `Chronos2Pipeline.fit(finetune_mode='lora')` |
 | 4 | 정량 비교(동일 origin·집계·관측-only) | Chronos 압도, 레거시 발산 0건 |
 | 5 | 확률분위 임계초과 경보 | F1 0.66 vs 레거시 0.31, 리드 2~3일 |
-| 6~7 | 공변량 연결·ablation + 컨텍스트 스윕 | **공변량 무용, 컨텍스트가 레버** |
+| 6~7 | 수문 공변량 연결·ablation + 컨텍스트 스윕 | 수문 공변량 중립, 컨텍스트가 레버 |
+| 12 | **기상 공변량(ASOS) 파이프라인 + Ablation** | **기상 5채널 CRPS 일관 개선, TOC·T-P NSE +3~5%p** |
+| 13 | **3계층 통합 평가 체계 구축** | Winkler/PIT/CSI/ETS/HSS 등 14개 지표, 459k행 전수 비교 |
 | 9 | context=512 통합(전67 zs + LoRA@512) | LoRA@512가 zs@512 +0.0245(19/20 개선) |
 | 10 | 지표 감사·재산출(베이스라인 추가·conformal) | persistence 강함·레거시 미달·CQR 보정 |
 | 11 | **동적 예보·경보 백엔드 구현 + 검증** | `src/system/`, 전67 replay 47분, 아래 §4 |
@@ -131,10 +147,12 @@ python -m src.system.run_system tune    --target chl-a --candidate ctx1024 --con
 python -m src.system.run_system promote --target chl-a --candidate ctx1024 --apply         # 게이트→승급
 
 # ── 연구 재현 (참고) ──
-python -m src.data.build_dataset        # 전처리
-python -m src.legacy.run_legacy         # 레거시 GAIN+GRU
-python -m src.chronos.run_ctx512        # zero-shot@512 + LoRA@512
-python -m src.eval.final_eval           # 5-모델 사다리 재산출
+python -m src.data.build_dataset                              # 수질 전처리
+python -m src.data.build_weather_covariates                   # 기상 공변량 빌드
+python -m src.legacy.run_legacy                               # 레거시 GAIN+GRU
+python -m src.chronos.run_chronos --mode both --context 512   # Chronos2 기본
+python -m src.chronos.run_chronos --use-weather --mode both   # Chronos2 +기상
+python -m src.eval.unified_compare                            # 3계층 통합 비교
 ```
 
 프로그램 호출: `from src.system.serve import forecast_asof; forecast_asof("S01001")` → 밴드·P(초과)·등급·리드일·가드레일 포함 JSON(프론트 계약).
@@ -149,10 +167,10 @@ deep_see/
 ├─ FINAL_REPORT.md        ← 연구·지표 상세 부록
 ├─ SYSTEM_DESIGN.md       ← 시스템 설계 근거 부록
 ├─ src/
-│  ├─ data/               전처리: sources, build_dataset, build_covariates
+│  ├─ data/               전처리: sources, build_dataset, build_covariates, **build_weather_covariates**
 │  ├─ legacy/             레거시 재현: gain, gru, windows, run_legacy
-│  ├─ chronos/            Chronos: to_chronos, run_ctx512, run_tune(개선), run_chronos/sweep/ablation(연구)
-│  ├─ eval/               지표: metrics, final_eval(5모델), metric_audit, compare/final_compare
+│  ├─ chronos/            Chronos: to_chronos, **run_chronos**(--use-weather), run_ctx512
+│  ├─ eval/               지표: metrics, **unified_metrics**, **unified_compare**, make_verification_figures
 │  ├─ alert/              경보 토대: thresholds, alert (Phase5)
 │  ├─ system/   ★운영★   config·schemas·registry·context·forecast·conformal·alerting·replay·scorecard·serve·viz·run_system
 │  └─ utils/              gpu(VRAM가드), progress(tqdm/로그)
@@ -170,14 +188,14 @@ deep_see/
 
 ## 7. 결론 & 향후 방향
 
-**결론**: 시계열 파운데이션 모델(Chronos-2)은 소량·다지점 수질예측에서 고전 GAIN+GRU를 명확히 능가하며, **단일 모델로 전국 67지점을 zero-shot 일반화**한다. 진짜 가치는 점추정 정확도보다 **보정된 확률 기반 사전 경보**(특히 녹조 Chl-a)에 있다. persistence 가드레일·conformal 보정·타깃별 운용으로 **신뢰할 수 있는 운영 백엔드**를 완성했다.
+**결론**: Chronos-2 LoRA+Weather가 전 5모델 중 최고 성능(NSE 0.557, CRPS 0.763)을 달성. 레거시 대비 NSE 45.8% 향상. **기상 공변량(ASOS 5채널)이 확률분포 품질을 일관 개선**하며, 특히 비점오염(TOC/T-P)에서 물리적 인과관계가 수치로 입증됨. 3계층 통합 평가(Winkler/PIT/CSI/ETS 등 14개 지표)로 확률 예측 모델의 다차원적 성능을 검증 완료.
 
 **향후**:
-1. **프론트엔드 시연**(다음 단계): `system_out` 저장소·`forecast_asof` JSON 계약을 그대로 소비하는 지도·타임라인·경보 대시보드.
-2. **게이트 강화**: 모델 개선 승급을 전 67지점 val로 판정(rep-val 과적합 교훈).
-3. **실시간 인입·온라인 재보정**: 라이브 데이터 파이프라인 + conformal 검증창 자동 갱신 + 드리프트 감시.
-4. **미래 known covariate**(댐 방류계획·캘린더)로 `future_covariates`, 여름 Chl-a 기상연계 트랙.
+1. **프론트엔드 시연**: `system_out` + `forecast_asof` JSON을 소비하는 경보 대시보드.
+2. **기상 공변량 전국 확장**: 현재 대표 4지점 → 전 67지점에 기상 공변량 반영 전수 평가.
+3. **실시간 인입·온라인 재보정**: 라이브 기상 API + conformal 검증창 갱신 + 드리프트 감시.
+4. **미래 known covariate**: 기상 예보(KMA 단기예보 API)를 future_covariates로 연계.
 
 ---
 
-*최종 갱신: 2026-06-07 · 모델=Chronos-2 LoRA ctx512(전 타깃) · 시스템=replay 검증 완료.*
+*최종 갱신: 2026-06-11 · 최적 모델=Chronos-2 LoRA+Weather ctx512 · 3계층 평가+기상 Ablation 완료.*

@@ -61,3 +61,59 @@
 [20:07:53] geum/S03009/chl-a [lora] ▶ NSE=0.232 RMSE=1.355 CRPS=0.545 cov80=0.74 cov90=0.87
 [20:07:55] yeong/S04008/chl-a [lora] ▶ NSE=0.349 RMSE=16.935 CRPS=4.688 cov80=0.76 cov90=0.88
 [20:07:55] 완료. chronos_metrics.csv (40행)
+[16:39:53] Chronos-2 로드... mode=zeroshot context=512
+[16:39:54] 로드 완료 | use_cov=False use_weather=True out=C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\reports\tables\chronos_metrics_wx.csv | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=1.90GB
+[16:40:04] han/S01001/do [zeroshot_wx] ▶ NSE=0.844 RMSE=0.752 CRPS=0.319 cov80=0.75 cov90=0.87
+[16:40:13] han/S01001/toc [zeroshot_wx] ▶ NSE=0.722 RMSE=0.177 CRPS=0.081 cov80=0.81 cov90=0.88
+[16:40:22] han/S01001/tn [zeroshot_wx] ▶ NSE=0.684 RMSE=0.170 CRPS=0.070 cov80=0.76 cov90=0.87
+[16:40:31] han/S01001/tp [zeroshot_wx] ▶ NSE=0.259 RMSE=0.003 CRPS=0.001 cov80=0.84 cov90=0.90
+[16:40:40] han/S01001/chl-a [zeroshot_wx] ▶ NSE=0.313 RMSE=8.640 CRPS=2.816 cov80=0.77 cov90=0.88
+[16:40:49] nak/S02020/do [zeroshot_wx] ▶ NSE=0.793 RMSE=1.370 CRPS=0.622 cov80=0.78 cov90=0.87
+[16:40:58] nak/S02020/toc [zeroshot_wx] ▶ NSE=0.284 RMSE=0.577 CRPS=0.228 cov80=0.75 cov90=0.84
+[16:41:07] nak/S02020/tn [zeroshot_wx] ▶ NSE=0.330 RMSE=0.556 CRPS=0.227 cov80=0.75 cov90=0.86
+[16:41:15] nak/S02020/tp [zeroshot_wx] ▶ NSE=0.386 RMSE=0.015 CRPS=0.006 cov80=0.83 cov90=0.89
+[16:41:24] nak/S02020/chl-a [zeroshot_wx] ▶ NSE=0.120 RMSE=12.421 CRPS=4.863 cov80=0.74 cov90=0.86
+[16:41:33] geum/S03009/do [zeroshot_wx] ▶ NSE=0.958 RMSE=0.627 CRPS=0.279 cov80=0.67 cov90=0.81
+[16:41:42] geum/S03009/toc [zeroshot_wx] ▶ NSE=0.735 RMSE=0.118 CRPS=0.049 cov80=0.76 cov90=0.86
+[16:41:51] geum/S03009/tn [zeroshot_wx] ▶ NSE=0.726 RMSE=0.134 CRPS=0.060 cov80=0.86 cov90=0.95
+[16:42:00] geum/S03009/tp [zeroshot_wx] ▶ NSE=0.785 RMSE=0.006 CRPS=0.002 cov80=0.83 cov90=0.92
+[16:42:09] geum/S03009/chl-a [zeroshot_wx] ▶ NSE=0.243 RMSE=1.259 CRPS=0.502 cov80=0.75 cov90=0.88
+[16:42:18] yeong/S04008/do [zeroshot_wx] ▶ NSE=0.684 RMSE=1.032 CRPS=0.427 cov80=0.73 cov90=0.85
+[16:42:27] yeong/S04008/toc [zeroshot_wx] ▶ NSE=0.506 RMSE=0.259 CRPS=0.092 cov80=0.81 cov90=0.89
+[16:42:36] yeong/S04008/tn [zeroshot_wx] ▶ NSE=0.819 RMSE=0.154 CRPS=0.071 cov80=0.87 cov90=0.93
+[16:42:44] yeong/S04008/tp [zeroshot_wx] ▶ NSE=0.529 RMSE=0.002 CRPS=0.001 cov80=0.82 cov90=0.90
+[16:42:53] yeong/S04008/chl-a [zeroshot_wx] ▶ NSE=0.304 RMSE=17.718 CRPS=4.605 cov80=0.74 cov90=0.86
+[16:42:53] 완료. chronos_metrics.csv (20행)
+[16:43:13] Chronos-2 로드... mode=lora context=512
+[16:43:14] 로드 완료 | use_cov=False use_weather=True out=C:\Users\minsoo\Desktop\수질측정 및 오염원\deep_see\reports\tables\chronos_metrics_wx.csv | VRAM alloc=0.45 reserved=0.45 peak=0.45/15.93GB, smi_used=1.81GB
+[16:43:18] [LoRA_wx/do] fit items=67 val=67 steps=1000 bs=32
+[16:45:59] [LoRA_wx/do] 학습 완료 | VRAM alloc=0.91 reserved=2.39 peak=2.39/15.93GB, smi_used=3.62GB
+[16:46:05] han/S01001/do [lora_wx] ▶ NSE=0.847 RMSE=0.743 CRPS=0.317 cov80=0.75 cov90=0.86
+[16:46:10] nak/S02020/do [lora_wx] ▶ NSE=0.800 RMSE=1.350 CRPS=0.615 cov80=0.79 cov90=0.87
+[16:46:16] geum/S03009/do [lora_wx] ▶ NSE=0.958 RMSE=0.622 CRPS=0.278 cov80=0.66 cov90=0.81
+[16:46:22] yeong/S04008/do [lora_wx] ▶ NSE=0.685 RMSE=1.030 CRPS=0.426 cov80=0.72 cov90=0.85
+[16:46:26] [LoRA_wx/toc] fit items=67 val=67 steps=1000 bs=32
+[16:49:12] [LoRA_wx/toc] 학습 완료 | VRAM alloc=0.91 reserved=2.39 peak=3.06/15.93GB, smi_used=3.59GB
+[16:49:17] han/S01001/toc [lora_wx] ▶ NSE=0.724 RMSE=0.177 CRPS=0.081 cov80=0.80 cov90=0.87
+[16:49:23] nak/S02020/toc [lora_wx] ▶ NSE=0.290 RMSE=0.574 CRPS=0.226 cov80=0.74 cov90=0.83
+[16:49:29] geum/S03009/toc [lora_wx] ▶ NSE=0.739 RMSE=0.117 CRPS=0.049 cov80=0.75 cov90=0.85
+[16:49:35] yeong/S04008/toc [lora_wx] ▶ NSE=0.510 RMSE=0.258 CRPS=0.092 cov80=0.80 cov90=0.88
+[16:49:39] [LoRA_wx/tn] fit items=67 val=67 steps=1000 bs=32
+[16:52:24] [LoRA_wx/tn] 학습 완료 | VRAM alloc=0.91 reserved=2.39 peak=3.06/15.93GB, smi_used=3.59GB
+[16:52:30] han/S01001/tn [lora_wx] ▶ NSE=0.695 RMSE=0.167 CRPS=0.068 cov80=0.76 cov90=0.86
+[16:52:36] nak/S02020/tn [lora_wx] ▶ NSE=0.330 RMSE=0.556 CRPS=0.225 cov80=0.75 cov90=0.85
+[16:52:41] geum/S03009/tn [lora_wx] ▶ NSE=0.733 RMSE=0.133 CRPS=0.059 cov80=0.85 cov90=0.94
+[16:52:47] yeong/S04008/tn [lora_wx] ▶ NSE=0.826 RMSE=0.151 CRPS=0.069 cov80=0.86 cov90=0.93
+[16:52:51] [LoRA_wx/tp] fit items=67 val=67 steps=1000 bs=32
+[16:55:37] [LoRA_wx/tp] 학습 완료 | VRAM alloc=0.91 reserved=2.39 peak=3.06/15.93GB, smi_used=3.59GB
+[16:55:43] han/S01001/tp [lora_wx] ▶ NSE=0.278 RMSE=0.003 CRPS=0.001 cov80=0.84 cov90=0.89
+[16:55:49] nak/S02020/tp [lora_wx] ▶ NSE=0.384 RMSE=0.015 CRPS=0.006 cov80=0.83 cov90=0.87
+[16:55:54] geum/S03009/tp [lora_wx] ▶ NSE=0.786 RMSE=0.006 CRPS=0.002 cov80=0.82 cov90=0.91
+[16:56:00] yeong/S04008/tp [lora_wx] ▶ NSE=0.542 RMSE=0.002 CRPS=0.001 cov80=0.82 cov90=0.89
+[16:56:04] [LoRA_wx/chl-a] fit items=67 val=67 steps=1000 bs=32
+[16:58:50] [LoRA_wx/chl-a] 학습 완료 | VRAM alloc=0.91 reserved=2.39 peak=3.06/15.93GB, smi_used=3.58GB
+[16:58:56] han/S01001/chl-a [lora_wx] ▶ NSE=0.320 RMSE=8.594 CRPS=2.782 cov80=0.78 cov90=0.88
+[16:59:01] nak/S02020/chl-a [lora_wx] ▶ NSE=0.136 RMSE=12.308 CRPS=4.832 cov80=0.73 cov90=0.86
+[16:59:07] geum/S03009/chl-a [lora_wx] ▶ NSE=0.260 RMSE=1.245 CRPS=0.501 cov80=0.76 cov90=0.88
+[16:59:13] yeong/S04008/chl-a [lora_wx] ▶ NSE=0.292 RMSE=17.873 CRPS=4.623 cov80=0.74 cov90=0.87
+[16:59:13] 완료. chronos_metrics.csv (20행)

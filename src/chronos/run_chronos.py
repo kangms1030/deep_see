@@ -42,9 +42,10 @@ def _i_va(wide, station, splits):
     return int(np.searchsorted(t, np.datetime64(pd.Timestamp(splits[station]["val_end"]))))
 
 
-def eval_station(pipe, wide, river, station, target, splits, context_length, mode_tag, cov_wide=None):
+def eval_station(pipe, wide, river, station, target, splits, context_length, mode_tag,
+                 cov_wide=None, weather_wide=None):
     tag = f"{river}/{station}/{target}"
-    times, raw, filled, cov = TC.station_series(wide, station, cov_wide)
+    times, raw, filled, cov = TC.station_series(wide, station, cov_wide, weather_wide=weather_wide)
     n = len(filled[target])
     i_va = _i_va(wide, station, splits)
     origins = TC.test_origins(n, i_va, context_length, W.OUT_W, stride=24)
@@ -109,34 +110,49 @@ def _load_cov(river, use_cov):
     return cw
 
 
-def run_zeroshot(pipe, rivers, targets, sidx, splits, context_length, rows, use_cov, suffix):
+def _load_weather(river, use_weather):
+    if not use_weather:
+        return None
+    fp = os.path.join(OUT, f"{river}_weather_hourly.parquet")
+    if not os.path.exists(fp):
+        log(f"[WARN] 기상 파일 없음: {fp}", TASK)
+        return None
+    ww = pd.read_parquet(fp); ww["station"] = ww["station"].astype(str)
+    return ww
+
+
+def run_zeroshot(pipe, rivers, targets, sidx, splits, context_length, rows, use_cov, use_weather, suffix):
     for river in rivers:
         wide = pd.read_parquet(os.path.join(OUT, f"{river}_auto_hourly_wide.parquet"))
         wide["station"] = wide["station"].astype(str)
         cov_wide = _load_cov(river, use_cov)
+        weather_wide = _load_weather(river, use_weather)
         reps = sidx[(sidx.river == river) & (sidx.is_representative)]["station"].tolist()
         for st in reps:
             for tg in targets:
                 r = eval_station(pipe, wide, river, st, tg, splits, context_length,
-                                 "zeroshot" + suffix, cov_wide=cov_wide)
+                                 "zeroshot" + suffix, cov_wide=cov_wide,
+                                 weather_wide=weather_wide)
                 if r:
                     rows.append(r); _save(rows)
 
 
 def run_lora(base_pipe, rivers, targets, sidx, splits, context_length, num_steps,
-             lora_lr, batch_size, rows, use_cov, suffix):
+             lora_lr, batch_size, rows, use_cov, use_weather, suffix):
     """타깃별 글로벌 LoRA: 전 수계 train 시계열(+공변량)로 1개 어댑터 학습 → 대표지점 평가."""
     all_wide = {r: pd.read_parquet(os.path.join(OUT, f"{r}_auto_hourly_wide.parquet"))
                 for r in ["han", "nak", "geum", "yeong"]}
     for r in all_wide:
         all_wide[r]["station"] = all_wide[r]["station"].astype(str)
     all_cov = {r: _load_cov(r, use_cov) for r in all_wide}
+    all_weather = {r: _load_weather(r, use_weather) for r in all_wide}
 
     for tg in targets:
         fit_inputs, val_inputs = [], []
         for r, wide in all_wide.items():
             sts = sorted(wide["station"].unique())
-            fi, vi = TC.build_finetune_inputs(wide, sts, tg, splits, cov_wide=all_cov[r])
+            fi, vi = TC.build_finetune_inputs(wide, sts, tg, splits, cov_wide=all_cov[r],
+                                               weather_wide=all_weather[r])
             fit_inputs += fi; val_inputs += vi
         log(f"[LoRA{suffix}/{tg}] fit items={len(fit_inputs)} val={len(val_inputs)} "
             f"steps={num_steps} bs={batch_size}", TASK)
@@ -152,7 +168,8 @@ def run_lora(base_pipe, rivers, targets, sidx, splits, context_length, num_steps
             reps = sidx[(sidx.river == river) & (sidx.is_representative)]["station"].tolist()
             for st in reps:
                 row = eval_station(ft, wide, river, st, tg, splits, context_length,
-                                   "lora" + suffix, cov_wide=all_cov[river])
+                                   "lora" + suffix, cov_wide=all_cov[river],
+                                   weather_wide=all_weather[river])
                 if row:
                     rows.append(row); _save(rows)
         del ft
@@ -177,15 +194,19 @@ def main():
     ap.add_argument("--batch-size", type=int, default=32)
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--use-cov", action="store_true", help="수문 공변량 결합")
+    ap.add_argument("--use-weather", action="store_true", help="기상 공변량 결합 (ASOS 기온/강수/풍속/습도/일사)")
     ap.add_argument("--out", default=None, help="결과 csv 경로 override")
     args = ap.parse_args()
 
     global _ROWS_PATH
-    suffix = "_cov" if args.use_cov else ""
+    parts = []
+    if args.use_cov:     parts.append("cov")
+    if args.use_weather: parts.append("wx")
+    suffix = ("_" + "_".join(parts)) if parts else ""
     if args.out:
         _ROWS_PATH = os.path.join(REP, args.out)
-    elif args.use_cov:
-        _ROWS_PATH = os.path.join(REP, "chronos_metrics_cov.csv")
+    elif parts:
+        _ROWS_PATH = os.path.join(REP, f"chronos_metrics{'_' + '_'.join(parts)}.csv")
 
     from chronos import Chronos2Pipeline
     sidx = pd.read_csv(os.path.join(OUT, "station_index.csv")); sidx["station"] = sidx["station"].astype(str)
@@ -197,12 +218,15 @@ def main():
     with gpu.VramMonitor(log_path=os.path.join(S.DEEP_SEE, "logs", f"{TASK}_vram.log")):
         log(f"Chronos-2 로드... mode={args.mode} context={args.context}", TASK)
         pipe = Chronos2Pipeline.from_pretrained("amazon/chronos-2", device_map=args.device)
-        log(f"로드 완료 | use_cov={args.use_cov} out={_ROWS_PATH} | {gpu.fmt()}", TASK)
+        log(f"로드 완료 | use_cov={args.use_cov} use_weather={args.use_weather} "
+            f"out={_ROWS_PATH} | {gpu.fmt()}", TASK)
         if args.mode in ("zeroshot", "both"):
-            run_zeroshot(pipe, rivers, targets, sidx, splits, args.context, rows, args.use_cov, suffix)
+            run_zeroshot(pipe, rivers, targets, sidx, splits, args.context, rows,
+                         args.use_cov, args.use_weather, suffix)
         if args.mode in ("lora", "both"):
             run_lora(pipe, rivers, targets, sidx, splits, args.context,
-                     args.num_steps, args.lora_lr, args.batch_size, rows, args.use_cov, suffix)
+                     args.num_steps, args.lora_lr, args.batch_size, rows,
+                     args.use_cov, args.use_weather, suffix)
     log(f"완료. chronos_metrics.csv ({len(rows)}행)", TASK)
     if rows:
         df = pd.DataFrame(rows)
